@@ -9,8 +9,10 @@
 #include "image.h"
 #include "image_bmp.h"
 #include "image_raw.h"
+#include "image_FreeImage.h"
 #include "texture.h"
 #include "window.h"
+#include "material.h"
 
 namespace ppgso {
   /*!

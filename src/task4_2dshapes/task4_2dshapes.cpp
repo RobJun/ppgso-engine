@@ -17,21 +17,41 @@
 
 const unsigned int SIZE = 512;
 
+
+glm::mat4 basic(glm::vec3 position, glm::vec3 scale, glm::vec3 rotation, glm::mat4 parent) {
+    return  glm::translate(glm::mat4(), position) * glm::rotate(glm::mat4(), glm::radians(rotation.z), { 0,0,1 }) * parent;
+}
+glm::mat4 roatateAround(glm::vec3 position, glm::vec3 scale, glm::vec3 rotation, glm::mat4 parent) {
+    return parent* glm::rotate(glm::mat4(), glm::radians(rotation.z), { 0,0,1 }) * glm::translate(glm::mat4(), position) * glm::rotate(glm::mat4(), glm::radians(90.f), { 0,0,1 });
+}
 // Object to represent 2D OpenGL shape
 class Shape {
 private:
   // 2D vectors define points/vertices of the shape
   // TODO: Define your shape points
-  std::vector<glm::vec3> vetrices;
+    std::vector<glm::vec3> vetrices =/// { {0,0.5f,0},{0.5f,-0.5f,0},{0,-0.5f,0}, {-0.5f,-0.5f,0},{0.25f,-0.75f,0},{-0.25f,-0.75f,0} };
+    { {-0.2f,0.1f,0},
+      {0.2f,0.1f,0},
+      {0.2,-0.1f,0},
+      {-0.2f,-0.1f,0},
+      {0.3f,0,0},
+      {-0.25,-0.2,0},
+      {-0.15,-0.2,0},
+      {0.25,-0.2,0},
+      {0.15,-0.2,0},
 
+    };
   // Structure representing a triangular face, usually indexes into vertices
   struct Face {
     // TODO: Define your face structure
+      GLint p1;
+      GLint p2;
+      GLint p3;
   };
 
   // Indices define triangles that index into vertices
   // TODO: Define your mesh indices
-  std::vector<Face> mesh;
+  std::vector<Face> mesh = { {0,1,2},{2,3,0},{1,2,4},{3,5,6},{2,7,8} };
 
   // Program to associate with the object
   ppgso::Shader program = {color_vert_glsl, color_frag_glsl};
@@ -45,6 +65,8 @@ public:
   glm::vec3 rotation{0,0,0};
   glm::vec3 scale{1,1,1};
   glm::vec3 color{1,0,0};
+  glm::mat4 (*modify)(glm::vec3,glm::vec3,glm::vec3,glm::mat4);
+  Shape* parent = nullptr;
 
   // Initialize object data buffers
   Shape() {
@@ -82,8 +104,9 @@ public:
 
   // Set the object transformation matrix
   void update() {
-    // TODO: Compute transformation by scaling, rotating and then translating the shape
-    // modelMatrix = ??
+      //modelMatrix = translate(position) * scaleM(scale) * rotate(glm::radians(rotation.z));
+      modelMatrix = modify( position,scale,rotation,parent == nullptr? glm::mat4() : parent->modelMatrix);
+
   }
 
   // Draw polygons
@@ -100,11 +123,16 @@ public:
 
 class ShapeWindow : public ppgso::Window {
 private:
-  Shape shape1, shape2;
+  Shape shape1, shape2,shape3;
 public:
   ShapeWindow() : Window{"task4_2dshapes", SIZE, SIZE} {
     shape1.color = {1,0,0};
     shape2.color = {0,1,0};
+    shape3.color = { 0,0,1 };
+    shape1.modify = &basic;
+    shape2.modify = &basic;
+    shape3.modify = &roatateAround;
+    shape3.parent = &shape1;
   }
 
   void onIdle() {
@@ -117,23 +145,30 @@ public:
     auto t = (float) glfwGetTime();
 
     // TODO: manipuate shape1 and shape2 position to rotate clockwise
-    //shape1.position = ??
-    //shape2.position = -shape1.position;
+    float jump = ((int)t * 5) % 180;
+    shape1.position = { (t-1)/5,sin(t)/2 ,0 };
+    shape2.position = { (t-0.5)/10,sin(t)/2 ,0 };
+
+
+    shape3.rotation.z = 20.f * t;
+    shape3.position = { 0.5f,0,0 };
 
     // Manipulate rotation of the shape
-    shape1.rotation.z = t*5.0f;
-    shape2.rotation = -shape1.rotation;
+    //shape1.rotation.z = t*5.0f;
+    //shape2.rotation = -shape1.rotation;
 
     // Manipulate shape size
-    shape1.scale = {sin(t),sin(t), 1};
-    shape2.scale = -shape1.scale;
+    //shape1.scale = {sin(t),sin(t), 1};
+    //shape2.scale = -shape1.scale;
 
     // Update and render each shape
     shape1.update();
     shape2.update();
+    shape3.update();
 
     shape1.render();
     shape2.render();
+    shape3.render();
   }
 };
 

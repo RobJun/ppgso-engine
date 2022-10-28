@@ -22,7 +22,16 @@ class Cube {
 private:
     // 2D vectors define points/vertices of the shape
 	 // TODO: Define cube vertices
-    std::vector<glm::vec3> vertices;
+    std::vector<glm::vec3> vertices = {
+        {-1, -1,  1}, //0
+        { 1, -1,  1}, //1
+        {-1,  1,  1}, //2
+        { 1,  1,  1}, //3
+        {-1, -1, -1}, //4
+        { 1, -1, -1}, //5
+        {-1,  1, -1}, //6
+        { 1,  1, -1}  //7
+    };
 
     // Structure representing a triangular face
     struct Face {
@@ -31,7 +40,31 @@ private:
 
     // Indices define triangles that index into vertices
 	 // TODO: Define cube indices
-    std::vector<Face> indices;
+    std::vector<Face> indices = { 
+        //Top
+            {2, 6, 7},
+            {2, 3, 7},
+                    
+            //Botto}m
+            {0, 4, 5},
+            {0, 1, 5},
+                    
+            //Left }
+            {0, 2, 6},
+            {0, 4, 6},
+                    
+            //Right}
+            {1, 3, 7},
+            {1, 5, 7},
+                    
+            //Front}
+            {0, 2, 3},
+            {0, 1, 3},
+                    
+            //Back }
+            {4, 6, 7},
+            {4, 5, 7} 
+           }; // bottom
 
     // Program to associate with the object
     ppgso::Shader program = {color_vert_glsl, color_frag_glsl};
@@ -88,13 +121,13 @@ public:
     void updateModelMatrix() {
         // Compute transformation by scaling, rotating and then translating the shape
 		 // TODO: Update model matrix: modelMatrix = ... use position, rotation and scale
-
+        modelMatrix = glm::translate(glm::mat4(), position) * glm::scale(glm::mat4(), scale) * glm::rotate(glm::mat4(), rotation.z, {0,0,1});
     }
 
     void updateViewMatrix(glm::vec3 viewRotation) {
         // Compute transformation by scaling, rotating and then translating the shape
 		// TODO: Update view matrix: modelMatrix = ... use translation -20 in Z and viewRotation
-
+        viewMatrix = glm::translate(glm::mat4(), { 0,0,-20 }) * glm::rotate(glm::mat4(), viewRotation.y, { 0,1,0 }); //* glm::rotate(glm::mat4(), viewRotation.y, { 0,1,0 });
 
 
       }
@@ -122,12 +155,19 @@ public:
     OriginWindow() : Window{"task5_3d_origin", SIZE, SIZE} {
 		
 		// TODO: Set axis colors to red,green and blue...and cube color to grey
-
+        axisX.color = { 0,0,1 };
+        axisY.color = { 0,1,0 };
+        axisZ.color = { 1,0,0 };
+        cube.color = { 0.5,0.5,0.5 };
+        cube.position = { 5,5,0 };
 
         const float scaleMin = 0.03f;
         const float scaleMax = 10.00f;
 
 		// TODO: Set axis scaling in X,Y,Z directions...hint use scaleMin in tangent directions and scaleMax in the axis direction
+        axisX.scale = { scaleMax,scaleMin,scaleMin };
+        axisY.scale = { scaleMin,scaleMax,scaleMin };
+        axisZ.scale = { scaleMin,scaleMin,scaleMax };
 
     }
 
@@ -136,6 +176,8 @@ public:
         glClearColor(.1f,.1f,.1f,1.0f);
         // Clear depth and color buffers
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        glEnable(GL_DEPTH_TEST);
+        glDepthFunc(GL_LEQUAL);
 
         // Move and Render shape\    // Get time for animation
         float t = (float) glfwGetTime();
@@ -143,12 +185,23 @@ public:
         // Set rotation and scale
         cube.rotation.z = t*2.0f;
 
-        viewRotation.x = t*0.1f;
-        viewRotation.y = t*0.1f;
-        viewRotation.z = t*0.1f;
+        viewRotation.x = t*0.5f;
+        viewRotation.y = t*0.5f;
+        viewRotation.z = t*0.5f;
 
 		// TODO: update view matrix of X,Y,Z axis and cube
 		// TODO: update model matrix
+        cube.updateViewMatrix(viewRotation);
+        cube.updateModelMatrix();
+
+        axisX.updateViewMatrix(viewRotation);
+        axisY.updateViewMatrix(viewRotation);
+        axisZ.updateViewMatrix(viewRotation);
+
+        axisX.updateModelMatrix();
+        axisY.updateModelMatrix();
+        axisZ.updateModelMatrix();
+
 
         cube.render();
         axisX.render();

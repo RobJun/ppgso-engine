@@ -30,7 +30,7 @@ private:
   // Colors for vertices
   std::vector<glm::vec3> color_buffer{
       // r, g, b
-      {1.0f, 0.0f, 0.0f},
+      {0.0f, 1.0f, 0.0f},
       {0.0f, 1.0f, 0.0f},
       {0.0,  0.0f, 1.0f},
   };
