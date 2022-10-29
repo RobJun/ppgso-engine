@@ -86,13 +86,13 @@ public:
      * Window update implementation that will be called automatically from pollEvents
      */
     void onIdle() override {
+
         // Track time
         static auto time = (float)glfwGetTime();
 
         // Compute time delta
         float dt = animate ? (float)glfwGetTime() - time : 0;
 
-        time = (float)glfwGetTime();
 
         // Set gray background
         glClearColor(.5f, .5f, .5f, 0);

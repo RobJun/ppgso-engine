@@ -4,15 +4,17 @@
 #include <glm/gtc/random.hpp>
 #include <glm/gtx/compatibility.hpp>
 
-#include "mesh.h"
-#include "shader.h"
-#include "image.h"
-#include "image_bmp.h"
-#include "image_raw.h"
-#include "image_FreeImage.h"
-#include "texture.h"
-#include "window.h"
-#include "material.h"
+#include "graphics/mesh.h"
+#include "graphics/shader.h"
+#include "loaders/image.h"
+#include "loaders/image_bmp.h"
+#include "loaders/image_raw.h"
+#include "loaders/image_FreeImage.h"
+#include "graphics/texture.h"
+#include "graphics/window.h"
+#include "graphics/material.h"
+#include "graphics/lights.h"
+#include "graphics/depthMap.h"
 
 namespace ppgso {
   /*!

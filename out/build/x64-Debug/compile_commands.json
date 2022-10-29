@@ -1,0 +1,172 @@
+[
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\color_vert_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\color_vert_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/color_vert_glsl.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\color_frag_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\color_frag_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/color_frag_glsl.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\convolution_vert_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\convolution_vert_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/convolution_vert_glsl.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\convolution_frag_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\convolution_frag_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/convolution_frag_glsl.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\diffuse_vert_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\diffuse_vert_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/diffuse_vert_glsl.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\diffuse_frag_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\diffuse_frag_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/diffuse_frag_glsl.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\texture_vert_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\texture_vert_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/texture_vert_glsl.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\texture_frag_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\texture_frag_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/texture_frag_glsl.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\our_shader_vert_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\our_shader_vert_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/our_shader_vert_glsl.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\our_shader_frag_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\our_shader_frag_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/our_shader_frag_glsl.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\renderdepthmap_vert_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\renderdepthmap_vert_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/renderdepthmap_vert_glsl.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\renderdepthmap_frag_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\renderdepthmap_frag_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/renderdepthmap_frag_glsl.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\deb_vert_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\deb_vert_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/deb_vert_glsl.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\deb_frag_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\deb_frag_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/deb_frag_glsl.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\ppgso.dir\\ppgso\\graphics\\mesh.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\ppgso\\graphics\\mesh.cpp",
+  "file": "Z:/Skola/ppgso/ppgso/graphics/mesh.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\ppgso.dir\\ppgso\\loaders\\tiny_obj_loader.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\ppgso\\loaders\\tiny_obj_loader.cpp",
+  "file": "Z:/Skola/ppgso/ppgso/loaders/tiny_obj_loader.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\ppgso.dir\\ppgso\\graphics\\shader.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\ppgso\\graphics\\shader.cpp",
+  "file": "Z:/Skola/ppgso/ppgso/graphics/shader.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\ppgso.dir\\ppgso\\loaders\\image.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\ppgso\\loaders\\image.cpp",
+  "file": "Z:/Skola/ppgso/ppgso/loaders/image.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\ppgso.dir\\ppgso\\loaders\\image_bmp.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\ppgso\\loaders\\image_bmp.cpp",
+  "file": "Z:/Skola/ppgso/ppgso/loaders/image_bmp.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\ppgso.dir\\ppgso\\loaders\\image_raw.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\ppgso\\loaders\\image_raw.cpp",
+  "file": "Z:/Skola/ppgso/ppgso/loaders/image_raw.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\ppgso.dir\\ppgso\\graphics\\texture.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\ppgso\\graphics\\texture.cpp",
+  "file": "Z:/Skola/ppgso/ppgso/graphics/texture.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\ppgso.dir\\ppgso\\graphics\\window.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\ppgso\\graphics\\window.cpp",
+  "file": "Z:/Skola/ppgso/ppgso/graphics/window.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\ppgso.dir\\ppgso\\loaders\\image_FreeImage.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\ppgso\\loaders\\image_FreeImage.cpp",
+  "file": "Z:/Skola/ppgso/ppgso/loaders/image_FreeImage.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\ppgso.dir\\ppgso\\graphics\\material.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\ppgso\\graphics\\material.cpp",
+  "file": "Z:/Skola/ppgso/ppgso/graphics/material.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\playground.dir\\src\\playground\\playground.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\src\\playground\\playground.cpp",
+  "file": "Z:/Skola/ppgso/src/playground/playground.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\task6_bezier_surface.dir\\src\\task6_bezier_surface\\task6_bezier_surface.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\src\\task6_bezier_surface\\task6_bezier_surface.cpp",
+  "file": "Z:/Skola/ppgso/src/task6_bezier_surface/task6_bezier_surface.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\task7_particles.dir\\src\\task7_particles\\task7_particles.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\src\\task7_particles\\task7_particles.cpp",
+  "file": "Z:/Skola/ppgso/src/task7_particles/task7_particles.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\main.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\main.cpp",
+  "file": "Z:/Skola/ppgso/projekt/main.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\scene.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\scene.cpp",
+  "file": "Z:/Skola/ppgso/projekt/scene.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\objects\\object.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\objects\\object.cpp",
+  "file": "Z:/Skola/ppgso/projekt/objects/object.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\objects\\camera.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\objects\\camera.cpp",
+  "file": "Z:/Skola/ppgso/projekt/objects/camera.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\car.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\car.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/car.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\cube.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\cube.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/cube.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\plane.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\plane.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/plane.cpp"
+}
+]
