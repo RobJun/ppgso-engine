@@ -15,6 +15,8 @@
 #define SIZE  512
 
 
+#define DEBUG_SHADOW_MAPS 0
+
 unsigned int quadVAO = 0;
 unsigned int quadVBO;
 void renderQuad()
@@ -66,6 +68,7 @@ private:
         //hideCursor();
         glfwSetInputMode(window, GLFW_STICKY_KEYS, 1);
 
+
         // Initialize OpenGL state
         // Enable Z-buffer
         glEnable(GL_DEPTH_TEST);
@@ -75,6 +78,9 @@ private:
         glEnable(GL_CULL_FACE);
         glFrontFace(GL_CCW);
         glCullFace(GL_BACK);
+
+        glEnable(GL_BLEND);
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
         shader_debug.use();
         shader_debug.setUniform("depthMap", 0);
@@ -118,20 +124,21 @@ private:
                 light->depthMap.unbind(); 
             }
         }
-
-        /*shader_debug.use();
-        shader_debug.setUniform("near_plane", m_scene->m_globalLight.near_plane);
-        shader_debug.setUniform("far_plane", m_scene->m_globalLight.far_plane);
+#if DEBUG_SHADOW_MAPS
+        shader_debug.use();
+        shader_debug.setUniform("near_plane", m_scene->spotLights[0]->near_plane);
+        shader_debug.setUniform("far_plane", m_scene->spotLights[0]->far_plane);
         glActiveTexture(GL_TEXTURE0);
         //glBindTexture(GL_TEXTURE_2D, m_scene->m_globalLight.depthMap.getTexture());
-        glBindTexture(GL_TEXTURE_2D, m_scene->spotLights[0]->depthMap.getTexture());
-        renderQuad();*/
-        
+        glBindTexture(GL_TEXTURE_2D, m_scene->spotLights[1]->depthMap.getTexture());
+        renderQuad();
+#else    
         glViewport(0, 0, width, height);
-        glClearColor(0.3f, 0.3f, 0.5f, 0);
+        glClearColor(1.f, 1.f, 1.f, 1.f);
         // Clear depth and color buffers
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         m_scene->render();
+#endif
     }
 };
 
@@ -141,20 +148,24 @@ Scene* createScene1() {
     scene->clearObjects();
     scene->m_globalLight.direction = { 0,-1,1 };
     scene->m_globalLight.ambient = 0.2f;
-    scene->m_globalLight.diffuse = 0.9f ;
+    scene->m_globalLight.diffuse = 0.3f ;
     scene->m_globalLight.specular= 0.8f;
     scene->m_globalLight.color = {1,1,1};
 
     // Create a camera
     auto camera = std::make_unique<Camera>(60.0f, 1.0f, 0.1f, 100.0f);
-    camera->position.z = -15.0f;
+    camera->position.z = -40.0f;
     scene->m_camera = move(camera);
-    scene->m_objects.push_back(std::make_unique<Car>(scene));
     auto car = std::make_unique<Car>(scene);
-    car->position = { 5,0,5 };
+    car->position = { 0,0.75,0 };
+    car->rotation = { 0,0,3.14f / 2 };
     scene->m_objects.push_back(move(car));
+    //auto car = std::make_unique<Car>(scene);
+    //car->position = { 0,0,5 };
+    //scene->m_objects.push_back(move(car));
     car = std::make_unique<Car>(scene);
-    car->position = { -5,0,-5 };
+    car->position = { 0,0,-10 };
+    car->rotMomentum = { 0,0,0 };
     scene->m_objects.push_back(move(car));
     scene->m_objects.push_back(std::make_unique<Plane>(scene));
 

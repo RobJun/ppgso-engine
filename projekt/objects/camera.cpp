@@ -11,7 +11,7 @@ void Camera::update(float time) {
 	rotation = rotate * time;
 	position = position * glm::mat3(glm::rotate(glm::mat4(), rotation.y, glm::vec3(0,1.f,0 )));
 	back = back * glm::mat3(glm::rotate(glm::mat4(), rotation.y, glm::vec3(0, 1.f, 0)));
-	viewMatrix = lookAt(position, glm::vec3(0, 0, 0), up);//position - back, up);
+	viewMatrix = lookAt(position,position - back, up);
 }		
 
 glm::vec3 Camera::cast(double u, double v) {

@@ -14,8 +14,8 @@ private:
 	static std::unique_ptr<ppgso::Texture> texture;
 
 	struct Material {
-		float shininess = 100;
-		float transparency = 1.0f;
+		float shininess = 32;
+		float transparency = 0.8f;
 	} material;
 
 	// Age of the object in seconds

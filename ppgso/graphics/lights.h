@@ -8,12 +8,12 @@ namespace ppgso {
 	namespace light {
 		struct Light {
 			float ambient;
-			float near_plane = 0.1f, far_plane = 75.f;
+			float near_plane = 0.1f, far_plane = 100.f;
 			float diffuse;
 			float specular;
 			glm::vec3 color;
 			glm::vec3 position;
-			DepthMap depthMap = {2048,2048};
+			DepthMap depthMap = {1048,1048};
 			bool enabled = false;
 
 
@@ -27,7 +27,7 @@ namespace ppgso {
 
 			glm::mat4 calculateShadowMap() override {
 				glm::mat4 lightProjection = glm::ortho(-20.0f, 20.0f, -20.0f, 20.0f, near_plane, far_plane);
-				glm::mat4 lightView = glm::lookAt(20.f*-direction,
+				glm::mat4 lightView = glm::lookAt(10.f*-direction,
 												glm::vec3(0.0f,0.0f,0.0f),
 												  glm::vec3(0.0f, 1.0f, 0.0f));
 				glm::mat4 lightSpaceMatrix = lightProjection * lightView;
@@ -52,11 +52,13 @@ namespace ppgso {
 			float linear;
 			float quadratic;
 			float outerCutOff;
-
+			float near_plane = 1.f, far_plane = 30.f;
 			glm::mat4 calculateShadowMap() {
 				glm::mat4 lightProjection = glm::perspective(glm::radians(90.f),1.0f,near_plane,far_plane);
+				auto target = (direction + position);
+				//target.y += 0.35;
 				glm::mat4 lightView = glm::lookAt(position,
-					direction+position,
+					target,
 					glm::vec3(0.0f, 1.0f, 0.0f));
 				glm::mat4 lightSpaceMatrix = lightProjection * lightView;
 				return lightSpaceMatrix;

@@ -31,8 +31,6 @@ bool Plane::update(Scene& scene, float dt, glm::mat4 parentModelMatrix) {
 
 void Plane::render(Scene& scene) {
 	shader->use();
-	glm::mat4 lightSpaceMatrix = scene.m_globalLight.calculateShadowMap();
-	shader->setUniform("lightSpaceMatrix", lightSpaceMatrix);
 	scene.useGlobalLights(shader.get());
 	scene.useCamera(shader.get());
 	scene.useLights(shader.get());
