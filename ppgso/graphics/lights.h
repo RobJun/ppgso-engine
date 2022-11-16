@@ -13,7 +13,7 @@ namespace ppgso {
 			float specular;
 			glm::vec3 color;
 			glm::vec3 position;
-			DepthMap depthMap = {1048,1048};
+			//DepthMap depthMap = {1048,1048};
 			bool enabled = false;
 
 
@@ -22,6 +22,7 @@ namespace ppgso {
 		};
 		struct Directional : public Light {
 			glm::vec3 direction;
+			DepthMap depthMap = { 1048,1048 };
 			Directional() {};
 			Directional(glm::vec3 direction) : direction(direction) {};
 
@@ -53,6 +54,7 @@ namespace ppgso {
 			float quadratic;
 			float outerCutOff;
 			float near_plane = 1.f, far_plane = 30.f;
+			DepthMap depthMap = { 1048,1048 };
 			glm::mat4 calculateShadowMap() {
 				glm::mat4 lightProjection = glm::perspective(glm::radians(90.f),1.0f,near_plane,far_plane);
 				auto target = (direction + position);

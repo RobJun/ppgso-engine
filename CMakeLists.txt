@@ -75,6 +75,9 @@ set(PPGSO_SHADER_SRC
         shader/our_shader_vert.glsl shader/our_shader_frag.glsl
         shader/renderDepthMap_vert.glsl shader/renderDepthMap_frag.glsl
         shader/deb_vert.glsl  shader/deb_frag.glsl 
+        shader/bloomf_vert.glsl shader/bloomf_frag.glsl
+        shader/blur_vert.glsl   shader/blur_frag.glsl
+        shader/light_vert.glsl  shader/light_frag.glsl
         )
 add_resources(shaders ${PPGSO_SHADER_SRC})
 
@@ -216,21 +219,21 @@ target_include_directories(ppgso PUBLIC
 #add_custom_command(TARGET task5_3d_origin POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/data/ ${CMAKE_CURRENT_BINARY_DIR})
 
 # task6_bezier_surface
-add_executable(task6_bezier_surface src/task6_bezier_surface/task6_bezier_surface.cpp )
-target_link_libraries(task6_bezier_surface ppgso shaders)
-install(TARGETS task6_bezier_surface DESTINATION .)
+#add_executable(task6_bezier_surface src/task6_bezier_surface/task6_bezier_surface.cpp )
+#target_link_libraries(task6_bezier_surface ppgso shaders)
+#install(TARGETS task6_bezier_surface DESTINATION .)
 
 # task7_particles
-add_executable(task7_particles src/task7_particles/task7_particles.cpp )
-target_link_libraries(task7_particles ppgso shaders)
-install(TARGETS task7_particles DESTINATION .)
-add_custom_command(TARGET task7_particles POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/data/ ${CMAKE_CURRENT_BINARY_DIR})
+#add_executable(task7_particles src/task7_particles/task7_particles.cpp )
+#target_link_libraries(task7_particles ppgso shaders)
+#install(TARGETS task7_particles DESTINATION .)
+#add_custom_command(TARGET task7_particles POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/data/ ${CMAKE_CURRENT_BINARY_DIR})
 
 # Playground target
-add_executable(playground src/playground/playground.cpp )
-target_link_libraries(playground ppgso shaders)
-install (TARGETS playground DESTINATION .)
-add_custom_command(TARGET playground POST_BUILD COMMAND  ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/data/ ${CMAKE_CURRENT_BINARY_DIR})
+#add_executable(playground src/playground/playground.cpp )
+#target_link_libraries(playground ppgso shaders)
+#install (TARGETS playground DESTINATION .)
+#add_custom_command(TARGET playground POST_BUILD COMMAND  ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/data/ ${CMAKE_CURRENT_BINARY_DIR})
 
 #add_executable(pr src/projekt/main.cpp
 #                       src/projekt/scene.cpp 
@@ -240,7 +243,7 @@ add_custom_command(TARGET playground POST_BUILD COMMAND  ${CMAKE_COMMAND} -E cop
 #install (TARGETS pr DESTINATION .)
 #add_custom_command(TARGET pr POST_BUILD COMMAND  ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/data/ ${CMAKE_CURRENT_BINARY_DIR})
 
-add_executable(projekt  ./projekt/main.cpp  "projekt/scene.cpp" "projekt/objects/object.cpp" "projekt/objects/camera.cpp" "projekt/instances/car.cpp" "projekt/instances/cube.cpp" "projekt/instances/plane.cpp" )
+add_executable(projekt  ./projekt/main.cpp  "projekt/scene.cpp" "projekt/objects/object.cpp" "projekt/objects/camera.cpp" "projekt/instances/car.cpp" "projekt/instances/cube.cpp" "projekt/instances/plane.cpp"  "projekt/instances/Light.cpp")
 target_link_libraries(projekt ppgso shaders)
 install (TARGETS projekt DESTINATION .)
 add_custom_command(TARGET projekt POST_BUILD COMMAND  ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/data/ ${CMAKE_CURRENT_BINARY_DIR})

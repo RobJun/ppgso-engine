@@ -51,3 +51,10 @@ void Plane::renderMap(Scene& scene, ppgso::Shader* shader) {
 	shader->setUniform("Texture", *texture);
 	mesh->render();
 }
+
+void Plane::renderLights(Scene& scene)
+{
+	for (auto& ch : children) {
+		ch->renderLights(scene);
+	}
+}

@@ -36,6 +36,7 @@ void Cube::render(Scene& scene) {
 	shader->setUniform("ModelMatrix", modelMatrix);
 	shader->setUniform("Texture", *texture);
 	mesh->render();
+
 }
 
 
@@ -43,4 +44,11 @@ void Cube::renderMap(Scene& scene, ppgso::Shader* shader) {
 	shader->setUniform("ModelMatrix", modelMatrix);
 	shader->setUniform("Texture", *texture);
 	mesh->render();
+}
+
+void Cube::renderLights(Scene& scene)
+{
+	for (auto& ch : children) {
+		ch->renderLights(scene);
+	}
 }

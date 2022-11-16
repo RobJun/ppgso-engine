@@ -15,7 +15,7 @@ private:
 
 	struct Material {
 		float shininess = 32;
-		float transparency = 0.8f;
+		float transparency = 1.f;
 	} material;
 
 	// Age of the object in seconds
@@ -44,5 +44,7 @@ public:
 	void render(Scene& scene) override;
 
 	void renderMap(Scene& scene, ppgso::Shader* shader) override;
+
+	void renderLights(Scene& scene ) override;
 
 };

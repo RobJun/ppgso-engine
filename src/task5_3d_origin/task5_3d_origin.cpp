@@ -141,7 +141,7 @@ public:
         program.setUniform("ViewMatrix", viewMatrix);
 
         glBindVertexArray(vao);
-        glDrawElements(GL_TRIANGLES, (GLsizei) indices.size() * 3, GL_UNSIGNED_INT, 0);
+        glDrawElements(GL_TRIANGLES, (GLsizei) indices.size(), GL_UNSIGNED_INT, 0);
     };
 };
 

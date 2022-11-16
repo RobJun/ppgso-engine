@@ -24,7 +24,6 @@ private:
 	// Age of the object in seconds
 	float age{ 0.0f };
 
-
 public:
 	// Speed and rotational momentum
 	float speed=0.0;
@@ -50,5 +49,5 @@ public:
 
 	void renderMap(Scene& scene, ppgso::Shader* shader) override;
 
-
+	void renderLights(Scene& scene) override;
 };

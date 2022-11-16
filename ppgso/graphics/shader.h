@@ -119,6 +119,10 @@ namespace ppgso {
 
     void setUniform(const std::string& name, const DepthMap& texture, const int id=1) const;
 
+    void setUniform(const std::string& name, const bool value) const;
+
+    void setUniformBuffer(const std::string& name, unsigned int buffer, const int id) const;
+
   private:
     GLuint program;
   };

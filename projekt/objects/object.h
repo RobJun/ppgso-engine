@@ -21,11 +21,14 @@ public:
 	std::vector<std::unique_ptr<Object>> children;
 public:
 	Object() {};
+	virtual ~Object() {};
 
 	virtual bool update(Scene& scene,float dt, glm::mat4 parentModelMatrix = glm::mat4(1)) = 0;
 
 	virtual void render(Scene& scene) = 0;
 	virtual void renderMap(Scene& scene, ppgso::Shader* shader) = 0;
+
+	virtual void renderLights(Scene& scene) = 0;
 
 protected: 
 	void generateModelMatrix();

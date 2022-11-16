@@ -31,14 +31,22 @@ public:
     void useGlobalLights(ppgso::Shader* shader);
     void useCamera(ppgso::Shader* shader);
 
-    int  addLight(ppgso::light::Spot& l) {
-        spotLights.push_back(std::make_unique<ppgso::light::Spot>(l));
-        return spotLights.size() - 1; 
-    };
-    int  addLight(ppgso::light::Point& l) {
-        pointLights.push_back(std::make_unique<ppgso::light::Point>(l));
-        return pointLights.size() - 1;
-    };
+    int generateSpotLight(glm::vec3& position, glm::vec3& direction, glm::vec4& color, glm::vec3& phong, glm::vec3& lqc, glm::vec2& cuttoffs) {
+        spotLights.push_back(std::make_unique < ppgso::light::Spot>());
+        int last = spotLights.size() - 1;
+        spotLights[last]->position = position;
+        spotLights[last]->direction = direction;
+        spotLights[last]->color = color;
+        spotLights[last]->diffuse = phong.x;
+        spotLights[last]->ambient = phong.y;
+        spotLights[last]->specular = phong.z;
+        spotLights[last]->linear = lqc.x;
+        spotLights[last]->quadratic = lqc.y;
+        spotLights[last]->constant = lqc.z;
+        spotLights[last]->cutOff = cuttoffs.x;
+        spotLights[last]->outerCutOff = cuttoffs.y;
+        return last;
+    }
 
     void enableLight_spot(int index) {
         spotLights[index]->enabled = true;

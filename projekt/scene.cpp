@@ -20,6 +20,8 @@ void Scene::render() {
 	//std::cout << m_globalLight.direction.z << std::endl;
 	for (auto& obj : m_objects)
 		obj->render(*this);
+    for (auto& obj : m_objects)
+        obj->renderLights(*this);
 }
 
 void Scene::renderMap(ppgso::Shader* shader) {

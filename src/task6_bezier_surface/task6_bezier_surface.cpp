@@ -29,6 +29,7 @@ private:
   // Texture coordinates
   std::vector<glm::vec2> texCoords;
 
+
   // Define our face using indexes to 3 vertices
   struct face {
     GLuint v0, v1, v2;
@@ -42,43 +43,83 @@ private:
   glm::mat4 modelMatrix{1.0f};
 
   glm::vec3 bezierPoint(const glm::vec3 controlPoints[4], float t) {
-    // TODO: Compute 3D point on bezier curve
-    return {};
+      glm::vec3 p11 = (1 - t) * controlPoints[0] + t * controlPoints[1],
+          p21 = (1 - t) * controlPoints[1] + t * controlPoints[2],
+          p31 = (1 - t) * controlPoints[2] + t * controlPoints[3];
+      glm::vec3 p22 = (1 - t) * p11 + t * p21, p32 = (1 - t) * p21 + t * p31;
+      return (1 - t) * p22 + t * p32;
+  }
+
+  void doRandomSteps() {
+      for (int i = 0; i < 3; i++) {
+          for (int j = 0; j < 3; j++) {
+              controlPoints[i][j].z = (rand() % 40 - 25) / 25.f;
+          }
+      }
+  }
+
+  std::vector<glm::vec3> calculate(unsigned int PATCH_SIZE) {
+      std::vector<glm::vec3> f;
+      for (unsigned int i = 0; i < PATCH_SIZE; i++) {
+          glm::vec3 cnP[4];
+          cnP[0] = (bezierPoint(controlPoints[0], ((float)i) / PATCH_SIZE));
+          cnP[1] = (bezierPoint(controlPoints[1], ((float)i) / PATCH_SIZE));
+          cnP[2] = (bezierPoint(controlPoints[2], ((float)i) / PATCH_SIZE));
+          cnP[3] = (bezierPoint(controlPoints[3], ((float)i) / PATCH_SIZE));
+          for (unsigned int j = 0; j < PATCH_SIZE; j++) {
+              // TODO: Compute points on the bezier patch
+              // HINT: Compute u, v coordinates
+              auto result = bezierPoint(cnP, ((float)j) / PATCH_SIZE);
+              f.push_back(result);
+          }
+      }
+      return f;
   }
 
   ppgso::Shader program{texture_vert_glsl, texture_frag_glsl};
   ppgso::Texture texture{ppgso::image::loadBMP("lena.bmp")};
 public:
   // Public attributes that define position, color ..
-  glm::vec3 position{0,0,0};
+  glm::vec3 position{0,-2,-2};
   glm::vec3 rotation{0,0,0};
   glm::vec3 scale{1,1,1};
-
+  glm::vec3 controlPoints[4][4];
   // Initialize object data buffers
-  BezierPatch(const glm::vec3 controlPoints[4][4]) {
+  BezierPatch(const glm::vec3 controlPoints[4][4])
+  {
     // Generate Bezier patch points and incidences
+    for(int i = 0; i < 4;i++)
+      memcpy((void*)this->controlPoints[i], controlPoints[i], 4 * 3);
     unsigned int PATCH_SIZE = 10;
-    for(unsigned int i = 0; i < PATCH_SIZE ; i++) {
-      for (unsigned int j = 0; j < PATCH_SIZE; j++) {
+    for(unsigned int i = 0; i <= PATCH_SIZE ; i++) {
+        glm::vec3 cnP[4];
+        cnP[0]= (bezierPoint(controlPoints[0], ((float)i) / PATCH_SIZE));
+        cnP[1] = (bezierPoint(controlPoints[1], ((float)i) / PATCH_SIZE));
+        cnP[2] = (bezierPoint(controlPoints[2], ((float)i) / PATCH_SIZE));
+        cnP[3] = (bezierPoint(controlPoints[3], ((float)i) / PATCH_SIZE));
+      for (unsigned int j = 0; j <= PATCH_SIZE; j++) {
         // TODO: Compute points on the bezier patch
         // HINT: Compute u, v coordinates
-
-        // vertices.push_back(??);
-        // texCoords.push_back(??);
+          auto result = bezierPoint(cnP, ((float)j) / PATCH_SIZE);
+         vertices.push_back(result);
+         texCoords.push_back({ ((float)i) / (PATCH_SIZE),((float)j) / (PATCH_SIZE) });
       }
     }
-    // Generate indices
-    for(unsigned int i = 1; i < PATCH_SIZE; i++) {
-      for (unsigned int j = 1; j < PATCH_SIZE; j++) {
-        // TODO: Compute indices for triangle 1
-        // indices.push_back(??);
-        // indices.push_back(??);
-        // indices.push_back(??);
 
-        // TODO: Compute indices for triangle 2
-        // indices.push_back(??);
-        // indices.push_back(??);
-        // indices.push_back(??);
+    // Generate indices
+    for(unsigned int i = 1; i <= PATCH_SIZE; i++) {
+        for (unsigned int j = 1; j <= PATCH_SIZE; j++) {
+            // TODO: Compute indices for triangle 1
+            mesh.push_back({ 
+                (i-1) * (PATCH_SIZE+1) + j-1,
+                (i-1) * (PATCH_SIZE + 1) + j,
+                (i - 1)* (PATCH_SIZE + 1) + (PATCH_SIZE + 1) + j-1 });
+            mesh.push_back({ 
+               (i - 1)* (PATCH_SIZE + 1) + j,
+                (i - 1)* (PATCH_SIZE + 1) + (PATCH_SIZE + 1) + j,
+               (i - 1)* (PATCH_SIZE + 1) + (PATCH_SIZE + 1) + j-1 });
+
+
       }
     }
 
@@ -123,7 +164,11 @@ public:
   // Set the object transformation matrix
   void update() {
     // TODO: Compute transformation by scaling, rotating and then translating the shape
-    // modelMatrix = ??
+      doRandomSteps();
+      vertices = calculate(10);
+      //glBindBuffer(GL_ARRAY_BUFFER, vbo);
+      //glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(glm::vec3), vertices.data(), GL_STATIC_DRAW);
+      modelMatrix = glm::translate(glm::mat4(), position) * glm::orientate4(rotation) * glm::scale(glm::mat4(), scale);
   }
 
   // Draw polygons
@@ -139,7 +184,7 @@ public:
 
     // Create view matrix (translate camera a bit backwards, so we can see the geometry)
     // This can be seen as the camera position/rotation in space
-    auto view = glm::translate(glm::mat4{}, {0.0f, 0.0f, -3.0f});
+    auto view = glm::translate(glm::mat4{}, {0.0f, 0.0f, -6.0f});
     program.setUniform("ViewMatrix", view);
 
     // Set model position
@@ -151,19 +196,26 @@ public:
     glBindVertexArray(vao);
     // TODO: Use correct rendering mode to draw the result
     //glDrawElements(??);
+    glDrawElements(GL_TRIANGLES, (GLsizei)mesh.size() * 3, GL_UNSIGNED_INT, 0);
   };
 };
 
 class BezierSurfaceWindow : public ppgso::Window {
 private:
   // Define 16 control points
-  glm::vec3 controlPoints[4][4]{
-      { {-1,1,0}, {-0.5,1,0}, {.5,1,0}, {1,1,3}, },
-      { {-1,.5,0}, {-0.5,.5,0}, {.5,.5,0}, {1,.5,0}, },
-      { {-1,-.5,0}, {-0.5,-.5,0}, {.5,-.5,0}, {1,-.5,-1}, },
-      { {-1,-1,3}, {-0.5,-1,0}, {.5,-1,0}, {1,-1,0}, },
-  };
+  /*glm::vec3 controlPoints[4][4]{
+      { {-3,1,0}, {-0.5,1,0}, {.5,1,0}, {1,1,0}, },
+      { {-3,.5,0}, {-0.5,.5,0}, {.5,.5,0}, {1,.5,0}, },
+      { {-3,-.5,0}, {-0.5,-.5,0}, {.5,-.5,0}, {1,-.5,0}, },
+      { {-3,-1,1}, {-0.5,-1,0}, {.5,-1,0}, {1,-1,0}, },
+  };*/
 
+    glm::vec3 controlPoints[4][4]{
+      { {-2,0,-2}, {-1,0,-2}, {1,0,-2}, {2,0,-2}, },
+      { {-2,0,-1}, {-0.3,5,-1}, {0.3,5,-1}, {2,0,-1}, },
+      { {-2,0,1} , {-0.3,5,1}, {0.3,5,1}, {2,0,1}, },
+      { {-2,0,3} , {-1,0,3}, {1,0,3}, {2,0,3}, },
+    };
   BezierPatch bezier{controlPoints};
 public:
   BezierSurfaceWindow() : Window{"task6_bezier_surface", SIZE, SIZE} {

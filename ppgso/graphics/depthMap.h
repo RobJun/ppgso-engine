@@ -26,6 +26,9 @@ namespace ppgso {
 			glReadBuffer(GL_NONE);
 			glBindFramebuffer(GL_FRAMEBUFFER, 0);
 		}
+		~DepthMap() {
+			glDeleteTextures(1, &i_depthMap);
+		}
 		unsigned int getWidth() { return width; };
 		unsigned int getHeight() { return height; };
 		void bind() {

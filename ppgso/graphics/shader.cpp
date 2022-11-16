@@ -155,3 +155,17 @@ void ppgso::Shader::setUniform(const std::string& name, const DepthMap& texture,
     glUniform1i(uniform, id);
     texture.bindTexture(id);
 }
+
+void ppgso::Shader::setUniformBuffer(const std::string& name, unsigned int buffer, const int id) const {
+    use();
+    auto uniform = getUniformLocation(name.c_str());
+    glUniform1i(uniform, id);
+    glActiveTexture(GL_TEXTURE0 + id);
+    glBindTexture(GL_TEXTURE_2D, buffer);
+}
+
+void ppgso::Shader::setUniform(const std::string& name, const bool value) const {
+    use();
+    auto uniform = getUniformLocation(name.c_str());
+    glUniform1i(uniform, value);
+}
