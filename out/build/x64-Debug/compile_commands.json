@@ -101,6 +101,16 @@
 },
 {
   "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\skybox_vert_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\skybox_vert_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/skybox_vert_glsl.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\skybox_frag_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\skybox_frag_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/skybox_frag_glsl.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
   "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\ppgso.dir\\ppgso\\graphics\\mesh.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\ppgso\\graphics\\mesh.cpp",
   "file": "Z:/Skola/ppgso/ppgso/graphics/mesh.cpp"
 },

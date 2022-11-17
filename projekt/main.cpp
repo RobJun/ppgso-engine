@@ -4,6 +4,8 @@
 #include <shaders/renderDepthMap_vert_glsl.h>
 #include <shaders/renderDepthMap_frag_glsl.h>
 
+
+
 #include <shaders/deb_vert_glsl.h>
 #include <shaders/deb_frag_glsl.h>
 
@@ -46,7 +48,6 @@ class OurWindow : public ppgso::Window {
 private:
     std::unique_ptr<Scene> m_scene;
     ppgso::Shader shader = { renderdepthmap_vert_glsl , renderdepthmap_frag_glsl };
-
     ppgso::Shader shaderBloomFinal = { bloomf_vert_glsl,bloomf_frag_glsl };
     ppgso::Shader shaderBlur = { blur_vert_glsl,blur_frag_glsl };
 #if DEBUG_SHADOW_MAPS
@@ -195,14 +196,18 @@ private:
         glBindTexture(GL_TEXTURE_2D, m_scene->spotLights[1]->depthMap.getTexture());
         renderQuad();
 #else    
-        //TODO: render to buffer
         glViewport(0, 0, width, height);
         glClearColor(.0f, 0.0f, 0.0f, 1.0f);
         // Clear depth and color buffers
         glBindFramebuffer(GL_FRAMEBUFFER, hdrFBO);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-        m_scene->render(); // normal
-                           //lights only
+        m_scene->render(); 
+
+
+
+
+
+
 
        glBindFramebuffer(GL_FRAMEBUFFER, 0);
 

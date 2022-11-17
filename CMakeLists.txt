@@ -78,6 +78,7 @@ set(PPGSO_SHADER_SRC
         shader/bloomf_vert.glsl shader/bloomf_frag.glsl
         shader/blur_vert.glsl   shader/blur_frag.glsl
         shader/light_vert.glsl  shader/light_frag.glsl
+        shader/skybox_vert.glsl shader/skybox_frag.glsl 
         )
 add_resources(shaders ${PPGSO_SHADER_SRC})
 

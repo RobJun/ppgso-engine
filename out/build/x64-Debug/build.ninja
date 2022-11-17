@@ -41,7 +41,7 @@ include CMakeFiles\rules.ninja
 #############################################
 # Order-only phony target for shaders
 
-build cmake_object_order_depends_target_shaders: phony || shaders\bloomf_frag_glsl.cpp shaders\bloomf_frag_glsl.h shaders\bloomf_vert_glsl.cpp shaders\bloomf_vert_glsl.h shaders\blur_frag_glsl.cpp shaders\blur_frag_glsl.h shaders\blur_vert_glsl.cpp shaders\blur_vert_glsl.h shaders\color_frag_glsl.cpp shaders\color_frag_glsl.h shaders\color_vert_glsl.cpp shaders\color_vert_glsl.h shaders\convolution_frag_glsl.cpp shaders\convolution_frag_glsl.h shaders\convolution_vert_glsl.cpp shaders\convolution_vert_glsl.h shaders\deb_frag_glsl.cpp shaders\deb_frag_glsl.h shaders\deb_vert_glsl.cpp shaders\deb_vert_glsl.h shaders\diffuse_frag_glsl.cpp shaders\diffuse_frag_glsl.h shaders\diffuse_vert_glsl.cpp shaders\diffuse_vert_glsl.h shaders\light_frag_glsl.cpp shaders\light_frag_glsl.h shaders\light_vert_glsl.cpp shaders\light_vert_glsl.h shaders\our_shader_frag_glsl.cpp shaders\our_shader_frag_glsl.h shaders\our_shader_vert_glsl.cpp shaders\our_shader_vert_glsl.h shaders\renderdepthmap_frag_glsl.cpp shaders\renderdepthmap_frag_glsl.h shaders\renderdepthmap_vert_glsl.cpp shaders\renderdepthmap_vert_glsl.h shaders\texture_frag_glsl.cpp shaders\texture_frag_glsl.h shaders\texture_vert_glsl.cpp shaders\texture_vert_glsl.h
+build cmake_object_order_depends_target_shaders: phony || shaders\bloomf_frag_glsl.cpp shaders\bloomf_frag_glsl.h shaders\bloomf_vert_glsl.cpp shaders\bloomf_vert_glsl.h shaders\blur_frag_glsl.cpp shaders\blur_frag_glsl.h shaders\blur_vert_glsl.cpp shaders\blur_vert_glsl.h shaders\color_frag_glsl.cpp shaders\color_frag_glsl.h shaders\color_vert_glsl.cpp shaders\color_vert_glsl.h shaders\convolution_frag_glsl.cpp shaders\convolution_frag_glsl.h shaders\convolution_vert_glsl.cpp shaders\convolution_vert_glsl.h shaders\deb_frag_glsl.cpp shaders\deb_frag_glsl.h shaders\deb_vert_glsl.cpp shaders\deb_vert_glsl.h shaders\diffuse_frag_glsl.cpp shaders\diffuse_frag_glsl.h shaders\diffuse_vert_glsl.cpp shaders\diffuse_vert_glsl.h shaders\light_frag_glsl.cpp shaders\light_frag_glsl.h shaders\light_vert_glsl.cpp shaders\light_vert_glsl.h shaders\our_shader_frag_glsl.cpp shaders\our_shader_frag_glsl.h shaders\our_shader_vert_glsl.cpp shaders\our_shader_vert_glsl.h shaders\renderdepthmap_frag_glsl.cpp shaders\renderdepthmap_frag_glsl.h shaders\renderdepthmap_vert_glsl.cpp shaders\renderdepthmap_vert_glsl.h shaders\skybox_frag_glsl.cpp shaders\skybox_frag_glsl.h shaders\skybox_vert_glsl.cpp shaders\skybox_vert_glsl.h shaders\texture_frag_glsl.cpp shaders\texture_frag_glsl.h shaders\texture_vert_glsl.cpp shaders\texture_vert_glsl.h
 
 build CMakeFiles\shaders.dir\shaders\color_vert_glsl.cpp.obj: CXX_COMPILER__shaders_Debug shaders\color_vert_glsl.cpp || cmake_object_order_depends_target_shaders
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14
@@ -203,6 +203,22 @@ build CMakeFiles\shaders.dir\shaders\light_frag_glsl.cpp.obj: CXX_COMPILER__shad
   TARGET_COMPILE_PDB = CMakeFiles\shaders.dir\shaders.pdb
   TARGET_PDB = shaders.pdb
 
+build CMakeFiles\shaders.dir\shaders\skybox_vert_glsl.cpp.obj: CXX_COMPILER__shaders_Debug shaders\skybox_vert_glsl.cpp || cmake_object_order_depends_target_shaders
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14
+  INCLUDES = -I.
+  OBJECT_DIR = CMakeFiles\shaders.dir
+  OBJECT_FILE_DIR = CMakeFiles\shaders.dir\shaders
+  TARGET_COMPILE_PDB = CMakeFiles\shaders.dir\shaders.pdb
+  TARGET_PDB = shaders.pdb
+
+build CMakeFiles\shaders.dir\shaders\skybox_frag_glsl.cpp.obj: CXX_COMPILER__shaders_Debug shaders\skybox_frag_glsl.cpp || cmake_object_order_depends_target_shaders
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14
+  INCLUDES = -I.
+  OBJECT_DIR = CMakeFiles\shaders.dir
+  OBJECT_FILE_DIR = CMakeFiles\shaders.dir\shaders
+  TARGET_COMPILE_PDB = CMakeFiles\shaders.dir\shaders.pdb
+  TARGET_PDB = shaders.pdb
+
 
 # =============================================================================
 # Link build statements for STATIC_LIBRARY target shaders
@@ -211,7 +227,7 @@ build CMakeFiles\shaders.dir\shaders\light_frag_glsl.cpp.obj: CXX_COMPILER__shad
 #############################################
 # Link the static library shaders.lib
 
-build shaders.lib: CXX_STATIC_LIBRARY_LINKER__shaders_Debug CMakeFiles\shaders.dir\shaders\color_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\color_frag_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\convolution_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\convolution_frag_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\diffuse_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\diffuse_frag_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\texture_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\texture_frag_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\our_shader_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\our_shader_frag_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\renderdepthmap_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\renderdepthmap_frag_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\deb_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\deb_frag_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\bloomf_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\bloomf_frag_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\blur_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\blur_frag_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\light_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\light_frag_glsl.cpp.obj
+build shaders.lib: CXX_STATIC_LIBRARY_LINKER__shaders_Debug CMakeFiles\shaders.dir\shaders\color_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\color_frag_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\convolution_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\convolution_frag_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\diffuse_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\diffuse_frag_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\texture_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\texture_frag_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\our_shader_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\our_shader_frag_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\renderdepthmap_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\renderdepthmap_frag_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\deb_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\deb_frag_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\bloomf_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\bloomf_frag_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\blur_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\blur_frag_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\light_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\light_frag_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\skybox_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\skybox_frag_glsl.cpp.obj
   LANGUAGE_COMPILE_FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1
   LINK_FLAGS = /machine:x64
   OBJECT_DIR = CMakeFiles\shaders.dir
@@ -688,6 +704,24 @@ build shaders\light_vert_glsl.cpp shaders\light_vert_glsl.h: CUSTOM_COMMAND ..\.
 build shaders\light_frag_glsl.cpp shaders\light_frag_glsl.h: CUSTOM_COMMAND ..\..\..\shader\light_frag.glsl
   COMMAND = cmd.exe /C "cd /D Z:\Skola\ppgso\out\build\x64-Debug && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DOUTPUT_C=Z:/Skola/ppgso/out/build/x64-Debug/shaders/light_frag_glsl.cpp -DOUTPUT_H=Z:/Skola/ppgso/out/build/x64-Debug/shaders/light_frag_glsl.h -DSYMBOL=light_frag_glsl -DINPUT_FILE=Z:/Skola/ppgso/shader/light_frag.glsl -P Z:/Skola/ppgso/cmake/bin2c.cmake"
   DESC = Generating resource from Z:/Skola/ppgso/shader/light_frag.glsl
+  restat = 1
+
+
+#############################################
+# Custom command for shaders\skybox_vert_glsl.cpp
+
+build shaders\skybox_vert_glsl.cpp shaders\skybox_vert_glsl.h: CUSTOM_COMMAND ..\..\..\shader\skybox_vert.glsl
+  COMMAND = cmd.exe /C "cd /D Z:\Skola\ppgso\out\build\x64-Debug && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DOUTPUT_C=Z:/Skola/ppgso/out/build/x64-Debug/shaders/skybox_vert_glsl.cpp -DOUTPUT_H=Z:/Skola/ppgso/out/build/x64-Debug/shaders/skybox_vert_glsl.h -DSYMBOL=skybox_vert_glsl -DINPUT_FILE=Z:/Skola/ppgso/shader/skybox_vert.glsl -P Z:/Skola/ppgso/cmake/bin2c.cmake"
+  DESC = Generating resource from Z:/Skola/ppgso/shader/skybox_vert.glsl
+  restat = 1
+
+
+#############################################
+# Custom command for shaders\skybox_frag_glsl.cpp
+
+build shaders\skybox_frag_glsl.cpp shaders\skybox_frag_glsl.h: CUSTOM_COMMAND ..\..\..\shader\skybox_frag.glsl
+  COMMAND = cmd.exe /C "cd /D Z:\Skola\ppgso\out\build\x64-Debug && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DOUTPUT_C=Z:/Skola/ppgso/out/build/x64-Debug/shaders/skybox_frag_glsl.cpp -DOUTPUT_H=Z:/Skola/ppgso/out/build/x64-Debug/shaders/skybox_frag_glsl.h -DSYMBOL=skybox_frag_glsl -DINPUT_FILE=Z:/Skola/ppgso/shader/skybox_frag.glsl -P Z:/Skola/ppgso/cmake/bin2c.cmake"
+  DESC = Generating resource from Z:/Skola/ppgso/shader/skybox_frag.glsl
   restat = 1
 
 # =============================================================================

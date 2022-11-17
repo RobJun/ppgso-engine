@@ -15,7 +15,7 @@
 #include "graphics/material.h"
 #include "graphics/lights.h"
 #include "graphics/depthMap.h"
-
+#include "graphics/cubemap.h"
 namespace ppgso {
   /*!
    * PI constant as defined in glm for float.

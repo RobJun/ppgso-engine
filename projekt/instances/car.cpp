@@ -19,10 +19,6 @@ Car::Car(Scene* scene) {
 	if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadFI("res/CarTexture.png"));
 	if (!mesh) mesh = std::make_unique<ppgso::Mesh>("res/BasicCar.obj");
 
-	/*auto cube = std::make_unique<Cube>();
-	cube->scale = { 0.1,0.1,0.1 };
-	cube->position = glm::vec3(0.7,-00.35,2.1) + direction;
-	children.push_back(move(cube));*/
 	left = scene->generateSpotLight(glm::vec3( 0,4,3 ), direction, glm::vec4{ 1,0.8,0.3,1.f }, glm::vec3{ 0.8f,0.9f,1.0f }, glm::vec3{ 0.22,0.0019,1.f }, glm::vec2{ glm::radians(12.5f) ,glm::radians(17.0f) });
 	right = scene->generateSpotLight(glm::vec3(0, 4, 3), direction, glm::vec4{ 1,0.8,0.3,1.f }, glm::vec3{ 0.8f,0.9f,1.0f }, glm::vec3{ 0.22,0.0019,1.f }, glm::vec2{ glm::radians(12.5f) ,glm::radians(17.0f) });
 	scene->spotLights[left]->position = modelMatrix * glm::translate(glm::mat4(), { 0.7,-00.35,2.1 }) * glm::vec4(0, 0, 0, 1);

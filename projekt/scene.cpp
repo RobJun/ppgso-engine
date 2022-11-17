@@ -22,6 +22,11 @@ void Scene::render() {
 		obj->render(*this);
     for (auto& obj : m_objects)
         obj->renderLights(*this);
+
+
+    shaderSkybox.setUniform("view", glm::mat4(glm::mat3(m_camera->viewMatrix)));
+    shaderSkybox.setUniform("projection", m_camera->projectionMatrix);
+    skybox.render();
 }
 
 void Scene::renderMap(ppgso::Shader* shader) {

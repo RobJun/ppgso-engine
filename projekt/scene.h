@@ -8,6 +8,8 @@
 #include "objects/object.h"
 #include "objects/camera.h"
 
+#include <shaders/skybox_vert_glsl.h>
+#include <shaders/skybox_frag_glsl.h>
 
 class Scene {
 private:
@@ -20,6 +22,9 @@ public:
     std::vector <std::unique_ptr<ppgso::light::Point>> pointLights;
     int number_of_spotLights = 0;
     int number_of_pointLights = 0;
+
+    ppgso::CubeMap skybox = ppgso::CubeMap("./res/skybox");
+    ppgso::Shader shaderSkybox = { skybox_vert_glsl, skybox_frag_glsl };
 public:
     Scene() {};
     Scene(std::unique_ptr<Camera> camera) : m_camera(move(camera)) {}
