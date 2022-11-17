@@ -35,7 +35,9 @@ void Tent::render(Scene& scene)
 	shader->setUniform("material.transparency", material.transparency);
 	shader->setUniform("ModelMatrix", modelMatrix);
 	shader->setUniform("Texture", *texture);
+	glDisable(GL_CULL_FACE);
 	mesh->render();
+	glEnable(GL_CULL_FACE);
 
 	for (auto& ch : children) {
 		ch->render(scene);
