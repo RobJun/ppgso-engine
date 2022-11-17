@@ -41,7 +41,7 @@ include CMakeFiles\rules.ninja
 #############################################
 # Order-only phony target for shaders
 
-build cmake_object_order_depends_target_shaders: phony || shaders\color_frag_glsl.cpp shaders\color_frag_glsl.h shaders\color_vert_glsl.cpp shaders\color_vert_glsl.h shaders\convolution_frag_glsl.cpp shaders\convolution_frag_glsl.h shaders\convolution_vert_glsl.cpp shaders\convolution_vert_glsl.h shaders\deb_frag_glsl.cpp shaders\deb_frag_glsl.h shaders\deb_vert_glsl.cpp shaders\deb_vert_glsl.h shaders\diffuse_frag_glsl.cpp shaders\diffuse_frag_glsl.h shaders\diffuse_vert_glsl.cpp shaders\diffuse_vert_glsl.h shaders\our_shader_frag_glsl.cpp shaders\our_shader_frag_glsl.h shaders\our_shader_vert_glsl.cpp shaders\our_shader_vert_glsl.h shaders\renderdepthmap_frag_glsl.cpp shaders\renderdepthmap_frag_glsl.h shaders\renderdepthmap_vert_glsl.cpp shaders\renderdepthmap_vert_glsl.h shaders\texture_frag_glsl.cpp shaders\texture_frag_glsl.h shaders\texture_vert_glsl.cpp shaders\texture_vert_glsl.h
+build cmake_object_order_depends_target_shaders: phony || shaders\bloomf_frag_glsl.cpp shaders\bloomf_frag_glsl.h shaders\bloomf_vert_glsl.cpp shaders\bloomf_vert_glsl.h shaders\blur_frag_glsl.cpp shaders\blur_frag_glsl.h shaders\blur_vert_glsl.cpp shaders\blur_vert_glsl.h shaders\color_frag_glsl.cpp shaders\color_frag_glsl.h shaders\color_vert_glsl.cpp shaders\color_vert_glsl.h shaders\convolution_frag_glsl.cpp shaders\convolution_frag_glsl.h shaders\convolution_vert_glsl.cpp shaders\convolution_vert_glsl.h shaders\deb_frag_glsl.cpp shaders\deb_frag_glsl.h shaders\deb_vert_glsl.cpp shaders\deb_vert_glsl.h shaders\diffuse_frag_glsl.cpp shaders\diffuse_frag_glsl.h shaders\diffuse_vert_glsl.cpp shaders\diffuse_vert_glsl.h shaders\light_frag_glsl.cpp shaders\light_frag_glsl.h shaders\light_vert_glsl.cpp shaders\light_vert_glsl.h shaders\our_shader_frag_glsl.cpp shaders\our_shader_frag_glsl.h shaders\our_shader_vert_glsl.cpp shaders\our_shader_vert_glsl.h shaders\renderdepthmap_frag_glsl.cpp shaders\renderdepthmap_frag_glsl.h shaders\renderdepthmap_vert_glsl.cpp shaders\renderdepthmap_vert_glsl.h shaders\texture_frag_glsl.cpp shaders\texture_frag_glsl.h shaders\texture_vert_glsl.cpp shaders\texture_vert_glsl.h
 
 build CMakeFiles\shaders.dir\shaders\color_vert_glsl.cpp.obj: CXX_COMPILER__shaders_Debug shaders\color_vert_glsl.cpp || cmake_object_order_depends_target_shaders
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14
@@ -155,6 +155,54 @@ build CMakeFiles\shaders.dir\shaders\deb_frag_glsl.cpp.obj: CXX_COMPILER__shader
   TARGET_COMPILE_PDB = CMakeFiles\shaders.dir\shaders.pdb
   TARGET_PDB = shaders.pdb
 
+build CMakeFiles\shaders.dir\shaders\bloomf_vert_glsl.cpp.obj: CXX_COMPILER__shaders_Debug shaders\bloomf_vert_glsl.cpp || cmake_object_order_depends_target_shaders
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14
+  INCLUDES = -I.
+  OBJECT_DIR = CMakeFiles\shaders.dir
+  OBJECT_FILE_DIR = CMakeFiles\shaders.dir\shaders
+  TARGET_COMPILE_PDB = CMakeFiles\shaders.dir\shaders.pdb
+  TARGET_PDB = shaders.pdb
+
+build CMakeFiles\shaders.dir\shaders\bloomf_frag_glsl.cpp.obj: CXX_COMPILER__shaders_Debug shaders\bloomf_frag_glsl.cpp || cmake_object_order_depends_target_shaders
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14
+  INCLUDES = -I.
+  OBJECT_DIR = CMakeFiles\shaders.dir
+  OBJECT_FILE_DIR = CMakeFiles\shaders.dir\shaders
+  TARGET_COMPILE_PDB = CMakeFiles\shaders.dir\shaders.pdb
+  TARGET_PDB = shaders.pdb
+
+build CMakeFiles\shaders.dir\shaders\blur_vert_glsl.cpp.obj: CXX_COMPILER__shaders_Debug shaders\blur_vert_glsl.cpp || cmake_object_order_depends_target_shaders
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14
+  INCLUDES = -I.
+  OBJECT_DIR = CMakeFiles\shaders.dir
+  OBJECT_FILE_DIR = CMakeFiles\shaders.dir\shaders
+  TARGET_COMPILE_PDB = CMakeFiles\shaders.dir\shaders.pdb
+  TARGET_PDB = shaders.pdb
+
+build CMakeFiles\shaders.dir\shaders\blur_frag_glsl.cpp.obj: CXX_COMPILER__shaders_Debug shaders\blur_frag_glsl.cpp || cmake_object_order_depends_target_shaders
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14
+  INCLUDES = -I.
+  OBJECT_DIR = CMakeFiles\shaders.dir
+  OBJECT_FILE_DIR = CMakeFiles\shaders.dir\shaders
+  TARGET_COMPILE_PDB = CMakeFiles\shaders.dir\shaders.pdb
+  TARGET_PDB = shaders.pdb
+
+build CMakeFiles\shaders.dir\shaders\light_vert_glsl.cpp.obj: CXX_COMPILER__shaders_Debug shaders\light_vert_glsl.cpp || cmake_object_order_depends_target_shaders
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14
+  INCLUDES = -I.
+  OBJECT_DIR = CMakeFiles\shaders.dir
+  OBJECT_FILE_DIR = CMakeFiles\shaders.dir\shaders
+  TARGET_COMPILE_PDB = CMakeFiles\shaders.dir\shaders.pdb
+  TARGET_PDB = shaders.pdb
+
+build CMakeFiles\shaders.dir\shaders\light_frag_glsl.cpp.obj: CXX_COMPILER__shaders_Debug shaders\light_frag_glsl.cpp || cmake_object_order_depends_target_shaders
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14
+  INCLUDES = -I.
+  OBJECT_DIR = CMakeFiles\shaders.dir
+  OBJECT_FILE_DIR = CMakeFiles\shaders.dir\shaders
+  TARGET_COMPILE_PDB = CMakeFiles\shaders.dir\shaders.pdb
+  TARGET_PDB = shaders.pdb
+
 
 # =============================================================================
 # Link build statements for STATIC_LIBRARY target shaders
@@ -163,7 +211,7 @@ build CMakeFiles\shaders.dir\shaders\deb_frag_glsl.cpp.obj: CXX_COMPILER__shader
 #############################################
 # Link the static library shaders.lib
 
-build shaders.lib: CXX_STATIC_LIBRARY_LINKER__shaders_Debug CMakeFiles\shaders.dir\shaders\color_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\color_frag_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\convolution_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\convolution_frag_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\diffuse_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\diffuse_frag_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\texture_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\texture_frag_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\our_shader_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\our_shader_frag_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\renderdepthmap_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\renderdepthmap_frag_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\deb_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\deb_frag_glsl.cpp.obj
+build shaders.lib: CXX_STATIC_LIBRARY_LINKER__shaders_Debug CMakeFiles\shaders.dir\shaders\color_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\color_frag_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\convolution_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\convolution_frag_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\diffuse_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\diffuse_frag_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\texture_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\texture_frag_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\our_shader_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\our_shader_frag_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\renderdepthmap_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\renderdepthmap_frag_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\deb_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\deb_frag_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\bloomf_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\bloomf_frag_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\blur_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\blur_frag_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\light_vert_glsl.cpp.obj CMakeFiles\shaders.dir\shaders\light_frag_glsl.cpp.obj
   LANGUAGE_COMPILE_FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1
   LINK_FLAGS = /machine:x64
   OBJECT_DIR = CMakeFiles\shaders.dir
@@ -172,6 +220,30 @@ build shaders.lib: CXX_STATIC_LIBRARY_LINKER__shaders_Debug CMakeFiles\shaders.d
   TARGET_COMPILE_PDB = CMakeFiles\shaders.dir\shaders.pdb
   TARGET_FILE = shaders.lib
   TARGET_PDB = shaders.pdb
+
+
+#############################################
+# Utility command for install/local
+
+build CMakeFiles\install\local.util: CUSTOM_COMMAND all
+  COMMAND = cmd.exe /C "cd /D Z:\Skola\ppgso\out\build\x64-Debug && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build install\local: phony CMakeFiles\install\local.util
+
+
+#############################################
+# Utility command for install
+
+build CMakeFiles\install.util: CUSTOM_COMMAND all
+  COMMAND = cmd.exe /C "cd /D Z:\Skola\ppgso\out\build\x64-Debug && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build install: phony CMakeFiles\install.util
 
 
 #############################################
@@ -301,131 +373,11 @@ build ppgso.lib: CXX_STATIC_LIBRARY_LINKER__ppgso_Debug CMakeFiles\ppgso.dir\ppg
   TARGET_FILE = ppgso.lib
   TARGET_PDB = ppgso.pdb
 
-# =============================================================================
-# Object build statements for EXECUTABLE target playground
-
 
 #############################################
-# Order-only phony target for playground
+# Utility command for list_install_components
 
-build cmake_object_order_depends_target_playground: phony || cmake_object_order_depends_target_ppgso cmake_object_order_depends_target_shaders
-
-build CMakeFiles\playground.dir\src\playground\playground.cpp.obj: CXX_COMPILER__playground_Debug ..\..\..\src\playground\playground.cpp || cmake_object_order_depends_target_playground
-  DEFINES = -DGLEW_STATIC -DGLM_FORCE_RADIANS
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14
-  INCLUDES = -I..\..\..\ppgso -I..\..\..\dependencies\include -I..\..\..\ -I.
-  OBJECT_DIR = CMakeFiles\playground.dir
-  OBJECT_FILE_DIR = CMakeFiles\playground.dir\src\playground
-  TARGET_COMPILE_PDB = CMakeFiles\playground.dir\
-  TARGET_PDB = playground.pdb
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target playground
-
-
-#############################################
-# Link the executable playground.exe
-
-build playground.exe: CXX_EXECUTABLE_LINKER__playground_Debug CMakeFiles\playground.dir\src\playground\playground.cpp.obj | ppgso.lib shaders.lib ..\..\..\dependencies\lib\vc2019\glfw3.lib ..\..\..\dependencies\lib\vc2019\glew32s.lib ..\..\..\dependencies\lib\vc2019\FreeImage.lib || ppgso.lib shaders.lib
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1
-  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
-  LINK_LIBRARIES = ppgso.lib  shaders.lib  ..\..\..\dependencies\lib\vc2019\glfw3.lib  ..\..\..\dependencies\lib\vc2019\glew32s.lib  opengl32.lib  glu32.lib  ..\..\..\dependencies\lib\vc2019\FreeImage.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
-  OBJECT_DIR = CMakeFiles\playground.dir
-  POST_BUILD = cmd.exe /C "cd /D Z:\Skola\ppgso\out\build\x64-Debug && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_directory Z:/Skola/ppgso/data/ Z:/Skola/ppgso/out/build/x64-Debug"
-  PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\playground.dir\
-  TARGET_FILE = playground.exe
-  TARGET_IMPLIB = playground.lib
-  TARGET_PDB = playground.pdb
-
-# =============================================================================
-# Object build statements for EXECUTABLE target task6_bezier_surface
-
-
-#############################################
-# Order-only phony target for task6_bezier_surface
-
-build cmake_object_order_depends_target_task6_bezier_surface: phony || cmake_object_order_depends_target_ppgso cmake_object_order_depends_target_shaders
-
-build CMakeFiles\task6_bezier_surface.dir\src\task6_bezier_surface\task6_bezier_surface.cpp.obj: CXX_COMPILER__task6_bezier_surface_Debug ..\..\..\src\task6_bezier_surface\task6_bezier_surface.cpp || cmake_object_order_depends_target_task6_bezier_surface
-  DEFINES = -DGLEW_STATIC -DGLM_FORCE_RADIANS
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14
-  INCLUDES = -I..\..\..\ppgso -I..\..\..\dependencies\include -I..\..\..\ -I.
-  OBJECT_DIR = CMakeFiles\task6_bezier_surface.dir
-  OBJECT_FILE_DIR = CMakeFiles\task6_bezier_surface.dir\src\task6_bezier_surface
-  TARGET_COMPILE_PDB = CMakeFiles\task6_bezier_surface.dir\
-  TARGET_PDB = task6_bezier_surface.pdb
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target task6_bezier_surface
-
-
-#############################################
-# Link the executable task6_bezier_surface.exe
-
-build task6_bezier_surface.exe: CXX_EXECUTABLE_LINKER__task6_bezier_surface_Debug CMakeFiles\task6_bezier_surface.dir\src\task6_bezier_surface\task6_bezier_surface.cpp.obj | ppgso.lib shaders.lib ..\..\..\dependencies\lib\vc2019\glfw3.lib ..\..\..\dependencies\lib\vc2019\glew32s.lib ..\..\..\dependencies\lib\vc2019\FreeImage.lib || ppgso.lib shaders.lib
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1
-  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
-  LINK_LIBRARIES = ppgso.lib  shaders.lib  ..\..\..\dependencies\lib\vc2019\glfw3.lib  ..\..\..\dependencies\lib\vc2019\glew32s.lib  opengl32.lib  glu32.lib  ..\..\..\dependencies\lib\vc2019\FreeImage.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
-  OBJECT_DIR = CMakeFiles\task6_bezier_surface.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\task6_bezier_surface.dir\
-  TARGET_FILE = task6_bezier_surface.exe
-  TARGET_IMPLIB = task6_bezier_surface.lib
-  TARGET_PDB = task6_bezier_surface.pdb
-
-
-#############################################
-# Utility command for rebuild_cache
-
-build CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D Z:\Skola\ppgso\out\build\x64-Debug && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SZ:\Skola\ppgso -BZ:\Skola\ppgso\out\build\x64-Debug"
-  DESC = Running CMake to regenerate build system...
-  pool = console
-  restat = 1
-
-build rebuild_cache: phony CMakeFiles\rebuild_cache.util
-
-# =============================================================================
-# Object build statements for EXECUTABLE target task7_particles
-
-
-#############################################
-# Order-only phony target for task7_particles
-
-build cmake_object_order_depends_target_task7_particles: phony || cmake_object_order_depends_target_ppgso cmake_object_order_depends_target_shaders
-
-build CMakeFiles\task7_particles.dir\src\task7_particles\task7_particles.cpp.obj: CXX_COMPILER__task7_particles_Debug ..\..\..\src\task7_particles\task7_particles.cpp || cmake_object_order_depends_target_task7_particles
-  DEFINES = -DGLEW_STATIC -DGLM_FORCE_RADIANS
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14
-  INCLUDES = -I..\..\..\ppgso -I..\..\..\dependencies\include -I..\..\..\ -I.
-  OBJECT_DIR = CMakeFiles\task7_particles.dir
-  OBJECT_FILE_DIR = CMakeFiles\task7_particles.dir\src\task7_particles
-  TARGET_COMPILE_PDB = CMakeFiles\task7_particles.dir\
-  TARGET_PDB = task7_particles.pdb
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target task7_particles
-
-
-#############################################
-# Link the executable task7_particles.exe
-
-build task7_particles.exe: CXX_EXECUTABLE_LINKER__task7_particles_Debug CMakeFiles\task7_particles.dir\src\task7_particles\task7_particles.cpp.obj | ppgso.lib shaders.lib ..\..\..\dependencies\lib\vc2019\glfw3.lib ..\..\..\dependencies\lib\vc2019\glew32s.lib ..\..\..\dependencies\lib\vc2019\FreeImage.lib || ppgso.lib shaders.lib
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1
-  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
-  LINK_LIBRARIES = ppgso.lib  shaders.lib  ..\..\..\dependencies\lib\vc2019\glfw3.lib  ..\..\..\dependencies\lib\vc2019\glew32s.lib  opengl32.lib  glu32.lib  ..\..\..\dependencies\lib\vc2019\FreeImage.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
-  OBJECT_DIR = CMakeFiles\task7_particles.dir
-  POST_BUILD = cmd.exe /C "cd /D Z:\Skola\ppgso\out\build\x64-Debug && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_directory Z:/Skola/ppgso/data/ Z:/Skola/ppgso/out/build/x64-Debug"
-  PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\task7_particles.dir\
-  TARGET_FILE = task7_particles.exe
-  TARGET_IMPLIB = task7_particles.lib
-  TARGET_PDB = task7_particles.pdb
+build list_install_components: phony
 
 # =============================================================================
 # Object build statements for EXECUTABLE target projekt
@@ -499,6 +451,33 @@ build CMakeFiles\projekt.dir\projekt\instances\plane.cpp.obj: CXX_COMPILER__proj
   TARGET_COMPILE_PDB = CMakeFiles\projekt.dir\
   TARGET_PDB = projekt.pdb
 
+build CMakeFiles\projekt.dir\projekt\instances\Light.cpp.obj: CXX_COMPILER__projekt_Debug ..\..\..\projekt\instances\Light.cpp || cmake_object_order_depends_target_projekt
+  DEFINES = -DGLEW_STATIC -DGLM_FORCE_RADIANS
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14
+  INCLUDES = -I..\..\..\ppgso -I..\..\..\dependencies\include -I..\..\..\ -I.
+  OBJECT_DIR = CMakeFiles\projekt.dir
+  OBJECT_FILE_DIR = CMakeFiles\projekt.dir\projekt\instances
+  TARGET_COMPILE_PDB = CMakeFiles\projekt.dir\
+  TARGET_PDB = projekt.pdb
+
+build CMakeFiles\projekt.dir\projekt\instances\Tent.cpp.obj: CXX_COMPILER__projekt_Debug ..\..\..\projekt\instances\Tent.cpp || cmake_object_order_depends_target_projekt
+  DEFINES = -DGLEW_STATIC -DGLM_FORCE_RADIANS
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14
+  INCLUDES = -I..\..\..\ppgso -I..\..\..\dependencies\include -I..\..\..\ -I.
+  OBJECT_DIR = CMakeFiles\projekt.dir
+  OBJECT_FILE_DIR = CMakeFiles\projekt.dir\projekt\instances
+  TARGET_COMPILE_PDB = CMakeFiles\projekt.dir\
+  TARGET_PDB = projekt.pdb
+
+build CMakeFiles\projekt.dir\projekt\instances\lantern.cpp.obj: CXX_COMPILER__projekt_Debug ..\..\..\projekt\instances\lantern.cpp || cmake_object_order_depends_target_projekt
+  DEFINES = -DGLEW_STATIC -DGLM_FORCE_RADIANS
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14
+  INCLUDES = -I..\..\..\ppgso -I..\..\..\dependencies\include -I..\..\..\ -I.
+  OBJECT_DIR = CMakeFiles\projekt.dir
+  OBJECT_FILE_DIR = CMakeFiles\projekt.dir\projekt\instances
+  TARGET_COMPILE_PDB = CMakeFiles\projekt.dir\
+  TARGET_PDB = projekt.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target projekt
@@ -507,7 +486,7 @@ build CMakeFiles\projekt.dir\projekt\instances\plane.cpp.obj: CXX_COMPILER__proj
 #############################################
 # Link the executable projekt.exe
 
-build projekt.exe: CXX_EXECUTABLE_LINKER__projekt_Debug CMakeFiles\projekt.dir\projekt\main.cpp.obj CMakeFiles\projekt.dir\projekt\scene.cpp.obj CMakeFiles\projekt.dir\projekt\objects\object.cpp.obj CMakeFiles\projekt.dir\projekt\objects\camera.cpp.obj CMakeFiles\projekt.dir\projekt\instances\car.cpp.obj CMakeFiles\projekt.dir\projekt\instances\cube.cpp.obj CMakeFiles\projekt.dir\projekt\instances\plane.cpp.obj | ppgso.lib shaders.lib ..\..\..\dependencies\lib\vc2019\glfw3.lib ..\..\..\dependencies\lib\vc2019\glew32s.lib ..\..\..\dependencies\lib\vc2019\FreeImage.lib || ppgso.lib shaders.lib
+build projekt.exe: CXX_EXECUTABLE_LINKER__projekt_Debug CMakeFiles\projekt.dir\projekt\main.cpp.obj CMakeFiles\projekt.dir\projekt\scene.cpp.obj CMakeFiles\projekt.dir\projekt\objects\object.cpp.obj CMakeFiles\projekt.dir\projekt\objects\camera.cpp.obj CMakeFiles\projekt.dir\projekt\instances\car.cpp.obj CMakeFiles\projekt.dir\projekt\instances\cube.cpp.obj CMakeFiles\projekt.dir\projekt\instances\plane.cpp.obj CMakeFiles\projekt.dir\projekt\instances\Light.cpp.obj CMakeFiles\projekt.dir\projekt\instances\Tent.cpp.obj CMakeFiles\projekt.dir\projekt\instances\lantern.cpp.obj | ppgso.lib shaders.lib ..\..\..\dependencies\lib\vc2019\glfw3.lib ..\..\..\dependencies\lib\vc2019\glew32s.lib ..\..\..\dependencies\lib\vc2019\FreeImage.lib || ppgso.lib shaders.lib
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = ppgso.lib  shaders.lib  ..\..\..\dependencies\lib\vc2019\glfw3.lib  ..\..\..\dependencies\lib\vc2019\glew32s.lib  opengl32.lib  glu32.lib  ..\..\..\dependencies\lib\vc2019\FreeImage.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
@@ -521,33 +500,15 @@ build projekt.exe: CXX_EXECUTABLE_LINKER__projekt_Debug CMakeFiles\projekt.dir\p
 
 
 #############################################
-# Utility command for list_install_components
+# Utility command for rebuild_cache
 
-build list_install_components: phony
-
-
-#############################################
-# Utility command for install/local
-
-build CMakeFiles\install\local.util: CUSTOM_COMMAND all
-  COMMAND = cmd.exe /C "cd /D Z:\Skola\ppgso\out\build\x64-Debug && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
-  DESC = Installing only the local directory...
+build CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D Z:\Skola\ppgso\out\build\x64-Debug && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SZ:\Skola\ppgso -BZ:\Skola\ppgso\out\build\x64-Debug"
+  DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
-build install\local: phony CMakeFiles\install\local.util
-
-
-#############################################
-# Utility command for install
-
-build CMakeFiles\install.util: CUSTOM_COMMAND all
-  COMMAND = cmd.exe /C "cd /D Z:\Skola\ppgso\out\build\x64-Debug && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
-  DESC = Install the project...
-  pool = console
-  restat = 1
-
-build install: phony CMakeFiles\install.util
+build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 
 
 #############################################
@@ -675,20 +636,68 @@ build shaders\deb_frag_glsl.cpp shaders\deb_frag_glsl.h: CUSTOM_COMMAND ..\..\..
   DESC = Generating resource from Z:/Skola/ppgso/shader/deb_frag.glsl
   restat = 1
 
+
+#############################################
+# Custom command for shaders\bloomf_vert_glsl.cpp
+
+build shaders\bloomf_vert_glsl.cpp shaders\bloomf_vert_glsl.h: CUSTOM_COMMAND ..\..\..\shader\bloomf_vert.glsl
+  COMMAND = cmd.exe /C "cd /D Z:\Skola\ppgso\out\build\x64-Debug && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DOUTPUT_C=Z:/Skola/ppgso/out/build/x64-Debug/shaders/bloomf_vert_glsl.cpp -DOUTPUT_H=Z:/Skola/ppgso/out/build/x64-Debug/shaders/bloomf_vert_glsl.h -DSYMBOL=bloomf_vert_glsl -DINPUT_FILE=Z:/Skola/ppgso/shader/bloomf_vert.glsl -P Z:/Skola/ppgso/cmake/bin2c.cmake"
+  DESC = Generating resource from Z:/Skola/ppgso/shader/bloomf_vert.glsl
+  restat = 1
+
+
+#############################################
+# Custom command for shaders\bloomf_frag_glsl.cpp
+
+build shaders\bloomf_frag_glsl.cpp shaders\bloomf_frag_glsl.h: CUSTOM_COMMAND ..\..\..\shader\bloomf_frag.glsl
+  COMMAND = cmd.exe /C "cd /D Z:\Skola\ppgso\out\build\x64-Debug && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DOUTPUT_C=Z:/Skola/ppgso/out/build/x64-Debug/shaders/bloomf_frag_glsl.cpp -DOUTPUT_H=Z:/Skola/ppgso/out/build/x64-Debug/shaders/bloomf_frag_glsl.h -DSYMBOL=bloomf_frag_glsl -DINPUT_FILE=Z:/Skola/ppgso/shader/bloomf_frag.glsl -P Z:/Skola/ppgso/cmake/bin2c.cmake"
+  DESC = Generating resource from Z:/Skola/ppgso/shader/bloomf_frag.glsl
+  restat = 1
+
+
+#############################################
+# Custom command for shaders\blur_vert_glsl.cpp
+
+build shaders\blur_vert_glsl.cpp shaders\blur_vert_glsl.h: CUSTOM_COMMAND ..\..\..\shader\blur_vert.glsl
+  COMMAND = cmd.exe /C "cd /D Z:\Skola\ppgso\out\build\x64-Debug && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DOUTPUT_C=Z:/Skola/ppgso/out/build/x64-Debug/shaders/blur_vert_glsl.cpp -DOUTPUT_H=Z:/Skola/ppgso/out/build/x64-Debug/shaders/blur_vert_glsl.h -DSYMBOL=blur_vert_glsl -DINPUT_FILE=Z:/Skola/ppgso/shader/blur_vert.glsl -P Z:/Skola/ppgso/cmake/bin2c.cmake"
+  DESC = Generating resource from Z:/Skola/ppgso/shader/blur_vert.glsl
+  restat = 1
+
+
+#############################################
+# Custom command for shaders\blur_frag_glsl.cpp
+
+build shaders\blur_frag_glsl.cpp shaders\blur_frag_glsl.h: CUSTOM_COMMAND ..\..\..\shader\blur_frag.glsl
+  COMMAND = cmd.exe /C "cd /D Z:\Skola\ppgso\out\build\x64-Debug && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DOUTPUT_C=Z:/Skola/ppgso/out/build/x64-Debug/shaders/blur_frag_glsl.cpp -DOUTPUT_H=Z:/Skola/ppgso/out/build/x64-Debug/shaders/blur_frag_glsl.h -DSYMBOL=blur_frag_glsl -DINPUT_FILE=Z:/Skola/ppgso/shader/blur_frag.glsl -P Z:/Skola/ppgso/cmake/bin2c.cmake"
+  DESC = Generating resource from Z:/Skola/ppgso/shader/blur_frag.glsl
+  restat = 1
+
+
+#############################################
+# Custom command for shaders\light_vert_glsl.cpp
+
+build shaders\light_vert_glsl.cpp shaders\light_vert_glsl.h: CUSTOM_COMMAND ..\..\..\shader\light_vert.glsl
+  COMMAND = cmd.exe /C "cd /D Z:\Skola\ppgso\out\build\x64-Debug && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DOUTPUT_C=Z:/Skola/ppgso/out/build/x64-Debug/shaders/light_vert_glsl.cpp -DOUTPUT_H=Z:/Skola/ppgso/out/build/x64-Debug/shaders/light_vert_glsl.h -DSYMBOL=light_vert_glsl -DINPUT_FILE=Z:/Skola/ppgso/shader/light_vert.glsl -P Z:/Skola/ppgso/cmake/bin2c.cmake"
+  DESC = Generating resource from Z:/Skola/ppgso/shader/light_vert.glsl
+  restat = 1
+
+
+#############################################
+# Custom command for shaders\light_frag_glsl.cpp
+
+build shaders\light_frag_glsl.cpp shaders\light_frag_glsl.h: CUSTOM_COMMAND ..\..\..\shader\light_frag.glsl
+  COMMAND = cmd.exe /C "cd /D Z:\Skola\ppgso\out\build\x64-Debug && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DOUTPUT_C=Z:/Skola/ppgso/out/build/x64-Debug/shaders/light_frag_glsl.cpp -DOUTPUT_H=Z:/Skola/ppgso/out/build/x64-Debug/shaders/light_frag_glsl.h -DSYMBOL=light_frag_glsl -DINPUT_FILE=Z:/Skola/ppgso/shader/light_frag.glsl -P Z:/Skola/ppgso/cmake/bin2c.cmake"
+  DESC = Generating resource from Z:/Skola/ppgso/shader/light_frag.glsl
+  restat = 1
+
 # =============================================================================
 # Target aliases.
-
-build playground: phony playground.exe
 
 build ppgso: phony ppgso.lib
 
 build projekt: phony projekt.exe
 
 build shaders: phony shaders.lib
-
-build task6_bezier_surface: phony task6_bezier_surface.exe
-
-build task7_particles: phony task7_particles.exe
 
 # =============================================================================
 # Folder targets.
@@ -698,7 +707,7 @@ build task7_particles: phony task7_particles.exe
 #############################################
 # Folder: Z:/Skola/ppgso/out/build/x64-Debug
 
-build all: phony shaders.lib ppgso.lib playground.exe task6_bezier_surface.exe task7_particles.exe projekt.exe
+build all: phony shaders.lib ppgso.lib projekt.exe
 
 # =============================================================================
 # Unknown Build Time Dependencies.

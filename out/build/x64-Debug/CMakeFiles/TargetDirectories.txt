@@ -1,11 +1,8 @@
 Z:/Skola/ppgso/out/build/x64-Debug/CMakeFiles/shaders.dir
-Z:/Skola/ppgso/out/build/x64-Debug/CMakeFiles/edit_cache.dir
-Z:/Skola/ppgso/out/build/x64-Debug/CMakeFiles/ppgso.dir
-Z:/Skola/ppgso/out/build/x64-Debug/CMakeFiles/playground.dir
-Z:/Skola/ppgso/out/build/x64-Debug/CMakeFiles/task6_bezier_surface.dir
-Z:/Skola/ppgso/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
-Z:/Skola/ppgso/out/build/x64-Debug/CMakeFiles/task7_particles.dir
-Z:/Skola/ppgso/out/build/x64-Debug/CMakeFiles/projekt.dir
-Z:/Skola/ppgso/out/build/x64-Debug/CMakeFiles/list_install_components.dir
 Z:/Skola/ppgso/out/build/x64-Debug/CMakeFiles/install/local.dir
 Z:/Skola/ppgso/out/build/x64-Debug/CMakeFiles/install.dir
+Z:/Skola/ppgso/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+Z:/Skola/ppgso/out/build/x64-Debug/CMakeFiles/ppgso.dir
+Z:/Skola/ppgso/out/build/x64-Debug/CMakeFiles/list_install_components.dir
+Z:/Skola/ppgso/out/build/x64-Debug/CMakeFiles/projekt.dir
+Z:/Skola/ppgso/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir

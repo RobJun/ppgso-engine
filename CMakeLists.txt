@@ -243,7 +243,7 @@ target_include_directories(ppgso PUBLIC
 #install (TARGETS pr DESTINATION .)
 #add_custom_command(TARGET pr POST_BUILD COMMAND  ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/data/ ${CMAKE_CURRENT_BINARY_DIR})
 
-add_executable(projekt  ./projekt/main.cpp  "projekt/scene.cpp" "projekt/objects/object.cpp" "projekt/objects/camera.cpp" "projekt/instances/car.cpp" "projekt/instances/cube.cpp" "projekt/instances/plane.cpp"  "projekt/instances/Light.cpp")
+add_executable(projekt  ./projekt/main.cpp  "projekt/scene.cpp" "projekt/objects/object.cpp" "projekt/objects/camera.cpp" "projekt/instances/car.cpp" "projekt/instances/cube.cpp" "projekt/instances/plane.cpp"  "projekt/instances/Light.cpp" "projekt/instances/Tent.cpp" "projekt/instances/lantern.cpp")
 target_link_libraries(projekt ppgso shaders)
 install (TARGETS projekt DESTINATION .)
 add_custom_command(TARGET projekt POST_BUILD COMMAND  ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/data/ ${CMAKE_CURRENT_BINARY_DIR})

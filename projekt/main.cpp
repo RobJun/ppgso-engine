@@ -7,6 +7,7 @@
 #include <shaders/deb_vert_glsl.h>
 #include <shaders/deb_frag_glsl.h>
 
+
 #include <shaders/bloomf_frag_glsl.h>
 #include <shaders/bloomf_vert_glsl.h>
 #include <shaders/blur_vert_glsl.h>
@@ -19,6 +20,8 @@
 #include "instances/car.h"
 #include "instances/cube.h"
 #include "instances/Light.h"
+#include "instances/Tent.h"
+#include "instances/lantern.h"
 
 #include "utils/renderQuad.h"
 
@@ -149,12 +152,12 @@ private:
         float dt = (float)glfwGetTime() - time;
 
         time = (float)glfwGetTime();
-        if (time > 5 && activeScene == 1) {
+        /*if (time > 5 && activeScene == 1) {
             std::cout << "here" << std::endl;
             auto sc = createScene2();
             switchScene(move(sc));
             activeScene = 2;
-        }
+        }*/
         m_scene->update(dt);
 
         //generate shadowMap for direct light
@@ -226,7 +229,7 @@ private:
         shaderBloomFinal.setUniformBuffer("scene", colorBuffers[0],0);
         shaderBloomFinal.setUniformBuffer("bloomBlur", pingpongColorbuffers[!horizontal], 1);
         shaderBloomFinal.setUniform("bloom", true);
-        shaderBloomFinal.setUniform("exposure", 1.0f);
+        shaderBloomFinal.setUniform("exposure", 0.5f);
         renderQuad();
 #endif
     }
@@ -237,9 +240,9 @@ std::unique_ptr<Scene> createScene1() {
     auto scene = std::make_unique<Scene>();
     scene->clearObjects();
     scene->m_globalLight.direction = { 0,-1,1 };
-    scene->m_globalLight.ambient = 0.1f;
-    scene->m_globalLight.diffuse = 0.4f ;
-    scene->m_globalLight.specular= 0.2f;
+    scene->m_globalLight.ambient = 0.01f;
+    scene->m_globalLight.diffuse = 0.1f ;
+    scene->m_globalLight.specular= 0.00f;
     scene->m_globalLight.color = {1,1,1};
 
     // Create a camera
@@ -258,11 +261,21 @@ std::unique_ptr<Scene> createScene1() {
     scene->m_objects.push_back(move(cube));
 
     
-    auto lightCube = std::make_unique<Light>(scene.get(), "cube.obj");
-    lightCube->position = { 0,2,0 };
+    auto lightCube = std::make_unique<Light>(scene.get(), "res/BasicCar.obj");
+    lightCube->position = { 5,2,5 };
     lightCube->scale = { 2,2,2 };
     scene->m_objects.push_back(move(lightCube));
 
+
+    auto tent = std::make_unique<Tent>(scene.get());
+    tent->scale = { 0.2,0.2,0.2 };
+    scene->m_objects.push_back(move(tent));
+
+
+    auto lantern = std::make_unique<Lantern>(scene.get());
+    lantern->scale = { 0.01,0.01,0.01 };
+    lantern->position = { 2,0,1 };
+    scene->m_objects.push_back(move(lantern));
     return scene;
 }
 

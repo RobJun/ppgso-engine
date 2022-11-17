@@ -14,7 +14,7 @@ std::unique_ptr<ppgso::Shader> Plane::shader;
 Plane::Plane(Scene* scene) {
 	// Initialize static resources if needed
 	if (!shader) shader = std::make_unique<ppgso::Shader>(our_shader_vert_glsl, our_shader_frag_glsl);
-	if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadFI("res/CarTexture.png"));
+	if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadFI("res/ground_color_1k.jpg"));
 	if (!mesh) mesh = std::make_unique<ppgso::Mesh>("quad.obj");
 }
 
