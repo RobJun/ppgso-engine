@@ -1,16 +1,16 @@
-The system is: Windows - 10.0.19043 - AMD64
+The system is: Windows - 10.0.19044 - AMD64
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/cl.exe 
+Compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.30.30705/bin/Hostx64/x64/cl.exe 
 Build flags: 
 Id flags:  
 
 The output was:
 0
-Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30137 for x64
+Microsoft (R) C/C++ Optimizing Compiler Version 19.30.30706 for x64
 Copyright (C) Microsoft Corporation.  All rights reserved.
 
 CMakeCXXCompilerId.cpp
-Microsoft (R) Incremental Linker Version 14.29.30137.0
+Microsoft (R) Incremental Linker Version 14.30.30706.0
 Copyright (C) Microsoft Corporation.  All rights reserved.
 
 /out:CMakeCXXCompilerId.exe 
@@ -21,13 +21,13 @@ Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" p
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
 
-The CXX compiler identification is MSVC, found in "Z:/Skola/ppgso/out/build/x64-Debug/CMakeFiles/3.20.21032501-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.exe"
+The CXX compiler identification is MSVC, found in "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug/CMakeFiles/3.21.21080301-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.exe"
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: Z:/Skola/ppgso/out/build/x64-Debug/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_9cf8c && [1/2] Building CXX object CMakeFiles\cmTC_9cf8c.dir\CMakeCXXCompilerABI.cpp.obj
-[2/2] Linking CXX executable cmTC_9cf8c.exe
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_fd4de && [1/2] Building CXX object CMakeFiles\cmTC_fd4de.dir\CMakeCXXCompilerABI.cpp.obj
+[2/2] Linking CXX executable cmTC_fd4de.exe
 
 
 

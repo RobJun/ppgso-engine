@@ -38,7 +38,6 @@ void ppgso::Texture::update() {
   bind();
   // Upload texture to GPU
   glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, image.width, image.height, GL_RGB, GL_UNSIGNED_BYTE, image.getFramebuffer().data());
-
   // Re-generate mipmaps
   glGenerateMipmap(GL_TEXTURE_2D);
 }

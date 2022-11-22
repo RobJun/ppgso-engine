@@ -6,11 +6,13 @@ namespace ppgso {
 		ppgso::Image loadFI(const std::string& filename) {
 			FIBITMAP* dib = FreeImage_Load(FreeImage_GetFileType(filename.c_str()), filename.c_str());
 			//dib = FreeImage_ConvertTo24Bits(dib);
-			std::cout << (int)FreeImage_GetWidth(dib) <<" "<< (int)FreeImage_GetHeight(dib) << std::endl;
+			std::cout <<filename << " " << FreeImage_GetFileType(filename.c_str()) << ": " << (int)FreeImage_GetWidth(dib) << " " << (int)FreeImage_GetHeight(dib) << std::endl;
 			int width = FreeImage_GetWidth(dib), height = FreeImage_GetHeight(dib);
 			Image image{ width ,height };
-			FreeImage_FlipVertical(dib);
+			//dib = FreeImage_ConvertTo32Bits(dib);
 			dib = FreeImage_ConvertTo24Bits(dib);
+
+			FreeImage_FlipVertical(dib);
 
 			auto& framebuffer = image.getFramebuffer();
 			auto* pixels = FreeImage_GetBits(dib);
