@@ -16,7 +16,7 @@ public:
 	glm::vec3 back{ 0,0,-1 };
 	glm::vec3 Front{0,0,1};
 
-	glm::vec3 rotate = { 0,0.3,0 };
+	glm::vec3 rotate = { 0,0,0 };			//zapinanie, vypinanie rotovania kamery
 	glm::vec3 rotation = { 0,0,0 };
 
 	glm::mat4 viewMatrix;

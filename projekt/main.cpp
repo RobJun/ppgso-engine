@@ -17,31 +17,15 @@
 #include <shaders/light_vert_glsl.h>
 #include <shaders/light_frag_glsl.h>
 
-#include "scene.h"
-#include "instances/plane.h"
-#include "instances/car.h"
-#include "instances/cube.h"
-#include "instances/Light.h"
-#include "instances/Tent.h"
-#include "instances/lantern.h"
-#include "instances/Bear.h"
-#include "instances/Bat.h"
-#include "instances/Fox.h"
-#include "instances/Chicken.h"
-#include "instances/Mushroom.h"
-#include "instances/Rabbit.h"
-#include "instances/Tree1.h"
-#include "instances/Tree2.h"
-#include "instances/Tree3.h"
-#include "instances/Table.h"
-#include "instances/Seagull.h"
-#include "instances/Boat.h"
-#include "instances/Bush.h"
-#include "instances/Log.h"
-#include "instances/Flower.h"
-#include "instances/Grass.h"
-#include "instances/Bird.h"
-
+#include "scenes/scene1.h"
+#include "scenes/scene2.h"
+#include "scenes/scene3.h"
+#include "scenes/scene4.h"
+#include "scenes/scene5.h"
+#include "scenes/scene6.h"
+#include "scenes/scene8.h"
+#include "scenes/scene9.h"
+#include "scenes/scene7.h"
 
 #include "utils/renderQuad.h"
 
@@ -226,11 +210,6 @@ private:
         m_scene->render(); 
 
 
-
-
-
-
-
        glBindFramebuffer(GL_FRAMEBUFFER, 0);
 
         //blur
@@ -256,7 +235,7 @@ private:
         shaderBloomFinal.setUniformBuffer("scene", colorBuffers[0],0);
         shaderBloomFinal.setUniformBuffer("bloomBlur", pingpongColorbuffers[!horizontal], 1);
         shaderBloomFinal.setUniform("bloom", true);
-        shaderBloomFinal.setUniform("exposure", 0.5f);
+        shaderBloomFinal.setUniform("exposure", 0.9f);
         renderQuad();
 #endif
     }
@@ -273,154 +252,10 @@ private:
     }
 };
 
-
-std::unique_ptr<Scene> createScene1() {
-    auto scene = std::make_unique<Scene>();
-    scene->clearObjects();
-    scene->m_globalLight.direction = { 0,-1,1 };
-    scene->m_globalLight.ambient = 0.5f;
-    scene->m_globalLight.diffuse = 0.1f ;
-    scene->m_globalLight.specular= 0.00f;
-    scene->m_globalLight.color = {1,1,1};
-
-    // Create a camera
-    auto camera = std::make_unique<Camera>(60.0f, 1.0f, 0.1f, 100.0f);
-    camera->position.z = -40.0f;
-    scene->m_camera = move(camera);
-    
-    auto car = std::make_unique<Car>(scene.get());
-    car->position = { 0,0,-10 };
-    car->rotMomentum = { 0,0,0 };
-    scene->m_objects.push_back(move(car));
-    
-    scene->m_objects.push_back(std::make_unique<Plane>(scene.get()));
-    
-    auto cube = std::make_unique<Cube>();
-    cube->position = { 0,0,10 };
-    cube->scale = { 5,5,5 };
-    scene->m_objects.push_back(move(cube));
-
-    
-    auto lightCube = std::make_unique<Light>(scene.get(), "res/BasicCar.obj");
-    lightCube->position = { 5,2,5 };
-    lightCube->scale = { 2,2,2 };
-    scene->m_objects.push_back(move(lightCube));
-
-    auto tent = std::make_unique<Tent>(scene.get());
-    tent->scale = { 0.2,0.2,0.2 };
-    tent->position = {5,0,10 };
-    scene->m_objects.push_back(move(tent));
-
-    auto lantern = std::make_unique<Lantern>(scene.get());
-    lantern->scale = { 0.01,0.01,0.01 };
-    lantern->position = { 2,0,1 };
-    scene->m_objects.push_back(move(lantern));
-
-    auto bear = std::make_unique<Bear>(scene.get());
-    bear->scale = {.2,.2,.2};
-    bear->position = {0,0,0 };
-    scene->m_objects.push_back(move(bear));
-
-    auto bat = std::make_unique<Bat>(scene.get());
-    bat->scale = {5,5,5};
-    bat->position = {8,5,5};
-    scene->m_objects.push_back(move(bat));
-
-   auto fox = std::make_unique<Fox>(scene.get());
-    fox->scale = {0.3,0.3,0.3};
-    fox->position = {-8,0,-8};
-    scene->m_objects.push_back(move(fox));
-
-    auto chicken = std::make_unique<Chicken>(scene.get());
-    chicken->scale = {0.2,0.2,0.2};
-    chicken->position = { 2,0,2 };
-    scene->m_objects.push_back(move(chicken));
-
-    auto mushroom = std::make_unique<Mushroom>(scene.get());
-    mushroom->scale = {1,1,1};
-    mushroom->position = { -8,0,-2 };
-    scene->m_objects.push_back(move(mushroom));
-
-    auto rabbit = std::make_unique<Rabbit>(scene.get());
-    rabbit->scale = { .2,.2,.2 };
-    rabbit->position = { -8,0.3,-12 };
-    scene->m_objects.push_back(move(rabbit));
-
-    auto table = std::make_unique<Table>(scene.get());
-    table->scale = {.15,.15,.15};
-    table->position = {3,0,13 };
-    scene->m_objects.push_back(move(table));
-
-    auto seagull = std::make_unique<Seagull>(scene.get());
-    seagull->scale = {5,5,5 };
-    seagull->position = { 3,8,13 };
-    scene->m_objects.push_back(move(seagull));
-
-    auto boat = std::make_unique<Boat>(scene.get());
-    boat->scale = {0.02,.02,.02 };
-    boat->position = {17,-2,15 };
-    scene->m_objects.push_back(move(boat));
-
-    auto tree1 = std::make_unique<Tree1>(scene.get());
-    tree1->scale = {.5,.5,.5 };
-    tree1->position = { 1,0,-16 };
-    scene->m_objects.push_back(move(tree1));
-
-    auto tree2 = std::make_unique<Tree2>(scene.get());
-    tree2->scale = { .5,.5,.5 };
-    tree2->position = { 1,0,-14 };
-    scene->m_objects.push_back(move(tree2));
-
-    auto tree3 = std::make_unique<Tree3>(scene.get());
-    tree3->scale = { .5,.5,.5 };
-    tree3->position = { 1,0,-12 };
-    scene->m_objects.push_back(move(tree3));
-
-    auto bush = std::make_unique<Bush>(scene.get());
-    bush->scale = { .5,.5,.5 };
-    bush->position = {5,0,-2 };
-    scene->m_objects.push_back(move(bush));
-
-    auto log = std::make_unique<Log>(scene.get());
-    log->scale = { .5,.5,.5 };
-    log->position = { 5,0,-5 };
-    scene->m_objects.push_back(move(log));
-
-    auto flower = std::make_unique<Flower>(scene.get());
-    flower->scale = { .5,.5,.5 };
-    flower->position = { 5,0,-10 };
-    scene->m_objects.push_back(move(flower));
-
-    auto grass = std::make_unique<Grass>(scene.get());
-    grass->scale = { .5,.5,.5 };
-    grass->position = { 5,0,-10 };
-    scene->m_objects.push_back(move(grass));
-
-    auto bird = std::make_unique<Bird>(scene.get());
-    bird->scale = { 1,1,1};
-    bird->position = {15,0,-10 };
-    scene->m_objects.push_back(move(bird));
-
-
-
-
-    return scene;
-}
-
-std::unique_ptr<Scene> createScene2() {
-    auto scene = std::make_unique<Scene>();
-    scene->clearObjects();
-    auto camera = std::make_unique<Camera>(60.0f, 1.0f, 0.1f, 100.0f);
-    camera->position.z = -40.0f;
-    scene->m_camera = move(camera);
-    return scene;
-}
-
-
 int main() {
     // Initialize our window
     OurWindow window = {1200,16/9 };
-    auto scene = createScene1();
+    auto scene = createScene6();
     window.switchScene(move(scene));
 
     // Main execution loop

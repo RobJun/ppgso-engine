@@ -13,7 +13,7 @@ namespace ppgso {
         GLuint vao, vbo;
 
 		CubeMap(const std::string& directory) {
-			const std::string names[] = { "right.jpg", "left.jpg", "top.jpg", "bottom.jpg", "front.jpg", "back.jpg" };
+			const std::string names[] = { "right.png", "left.png", "top.png", "bottom.png", "front.png", "back.png" };
 			glGenTextures(1, &textureID);
 			glBindTexture(GL_TEXTURE_CUBE_MAP, textureID);
 			auto res = directory;

@@ -13,7 +13,7 @@ std::unique_ptr<ppgso::Shader> Tent::shader;
 Tent::Tent(Scene * scene)
 {
 	if (!shader) shader = std::make_unique<ppgso::Shader>(our_shader_vert_glsl, our_shader_frag_glsl);
-	if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadFI("res/camp_diffuse.jpg"));
+	if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadFI("res/tent.png"));
 	if (!mesh) mesh = std::make_unique<ppgso::Mesh>("res/Tent.obj");
 }
 
