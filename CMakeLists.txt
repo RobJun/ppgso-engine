@@ -93,7 +93,7 @@ add_library(ppgso STATIC
         ppgso/graphics/texture.cpp
         ppgso/graphics/window.cpp
         ppgso/loaders/image_FreeImage.cpp
-        ppgso/graphics/material.cpp )
+        ppgso/graphics/material.cpp  "ppgso/animations/interpolations.cpp")
 
 # Make sure GLM uses radians and GLEW is a static library
 target_compile_definitions(ppgso PUBLIC -DGLM_FORCE_RADIANS -DGLEW_STATIC)
@@ -244,7 +244,7 @@ target_include_directories(ppgso PUBLIC
 #install (TARGETS pr DESTINATION .)
 #add_custom_command(TARGET pr POST_BUILD COMMAND  ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/data/ ${CMAKE_CURRENT_BINARY_DIR})
 
-add_executable(projekt  ./projekt/main.cpp  "projekt/scene.cpp" "projekt/objects/object.cpp" "projekt/objects/camera.cpp" "projekt/instances/car.cpp" "projekt/instances/cube.cpp" "projekt/instances/plane.cpp"  "projekt/instances/Light.cpp" "projekt/instances/Tent.cpp" "projekt/instances/lantern.cpp" "projekt/instances/Bear.cpp" "projekt/instances/Bat.cpp" "projekt/instances/Fox.cpp" "projekt/instances/Chicken.cpp" "projekt/instances/Mushroom.cpp" "projekt/instances/Rabbit.cpp" "projekt/instances/Tree1.cpp" "projekt/instances/Tree2.cpp" "projekt/instances/Tree3.cpp" "projekt/instances/Table.cpp" "projekt/instances/Seagull.cpp" "projekt/instances/Boat.cpp" "projekt/instances/Bush.cpp" "projekt/instances/Log.cpp" "projekt/instances/Grass.cpp" "projekt/instances/Flower.cpp" "projekt/instances/Bird.cpp")
+add_executable(projekt  ./projekt/main.cpp  "projekt/scene.cpp" "projekt/objects/object.cpp" "projekt/objects/camera.cpp" "projekt/instances/car.cpp" "projekt/instances/cube.cpp" "projekt/instances/plane.cpp"  "projekt/instances/Light.cpp" "projekt/instances/Tent.cpp" "projekt/instances/lantern.cpp" "projekt/instances/Bear.cpp" "projekt/instances/Bat.cpp" "projekt/instances/Fox.cpp" "projekt/instances/Chicken.cpp" "projekt/instances/Mushroom.cpp" "projekt/instances/Rabbit.cpp" "projekt/instances/Tree1.cpp" "projekt/instances/Tree2.cpp" "projekt/instances/Tree3.cpp" "projekt/instances/Table.cpp" "projekt/instances/Seagull.cpp" "projekt/instances/Boat.cpp" "projekt/instances/Bush.cpp" "projekt/instances/Log.cpp" "projekt/instances/Grass.cpp" "projekt/instances/Flower.cpp" "projekt/instances/Bird.cpp" "projekt/instances/campfire.cpp" "projekt/instances/sphere.cpp")#  "projekt/objects/particleSystem.cpp")
 target_link_libraries(projekt ppgso shaders)
 install (TARGETS projekt DESTINATION .)
 add_custom_command(TARGET projekt POST_BUILD COMMAND  ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/data/ ${CMAKE_CURRENT_BINARY_DIR})

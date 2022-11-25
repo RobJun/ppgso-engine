@@ -5,7 +5,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtx/euler_angles.hpp>
 #include <glm/gtx/transform.hpp>
-#include <ppgso.h>
+#include <ppgso/ppgso.h>
 
 class Scene;
 
@@ -19,6 +19,12 @@ public:
 	glm::vec3 scale{ 1,1,1 };
 	glm::mat4 modelMatrix{ 1 };
 	std::vector<std::unique_ptr<Object>> children;
+	float age{ 0.0f };
+
+	ppgso::KeyFrames sizeFrames;
+	ppgso::KeyFrames translateFrames;
+	ppgso::KeyFrames rotationFrames;
+
 public:
 	Object() {};
 	virtual ~Object() {};

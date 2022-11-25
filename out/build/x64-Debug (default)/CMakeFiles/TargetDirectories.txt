@@ -1,8 +1,8 @@
-C:/Users/Robert/Desktop/semester 7/PPGSO/ppgso/out/build/x64-Debug (default)/CMakeFiles/shaders.dir
-C:/Users/Robert/Desktop/semester 7/PPGSO/ppgso/out/build/x64-Debug (default)/CMakeFiles/install/local.dir
-C:/Users/Robert/Desktop/semester 7/PPGSO/ppgso/out/build/x64-Debug (default)/CMakeFiles/install.dir
-C:/Users/Robert/Desktop/semester 7/PPGSO/ppgso/out/build/x64-Debug (default)/CMakeFiles/edit_cache.dir
-C:/Users/Robert/Desktop/semester 7/PPGSO/ppgso/out/build/x64-Debug (default)/CMakeFiles/ppgso.dir
-C:/Users/Robert/Desktop/semester 7/PPGSO/ppgso/out/build/x64-Debug (default)/CMakeFiles/list_install_components.dir
-C:/Users/Robert/Desktop/semester 7/PPGSO/ppgso/out/build/x64-Debug (default)/CMakeFiles/projekt.dir
-C:/Users/Robert/Desktop/semester 7/PPGSO/ppgso/out/build/x64-Debug (default)/CMakeFiles/rebuild_cache.dir
+C:/Users/Robert/Desktop/semester 7/ppgso-engine/out/build/x64-Debug (default)/CMakeFiles/shaders.dir
+C:/Users/Robert/Desktop/semester 7/ppgso-engine/out/build/x64-Debug (default)/CMakeFiles/install/local.dir
+C:/Users/Robert/Desktop/semester 7/ppgso-engine/out/build/x64-Debug (default)/CMakeFiles/install.dir
+C:/Users/Robert/Desktop/semester 7/ppgso-engine/out/build/x64-Debug (default)/CMakeFiles/edit_cache.dir
+C:/Users/Robert/Desktop/semester 7/ppgso-engine/out/build/x64-Debug (default)/CMakeFiles/ppgso.dir
+C:/Users/Robert/Desktop/semester 7/ppgso-engine/out/build/x64-Debug (default)/CMakeFiles/list_install_components.dir
+C:/Users/Robert/Desktop/semester 7/ppgso-engine/out/build/x64-Debug (default)/CMakeFiles/projekt.dir
+C:/Users/Robert/Desktop/semester 7/ppgso-engine/out/build/x64-Debug (default)/CMakeFiles/rebuild_cache.dir

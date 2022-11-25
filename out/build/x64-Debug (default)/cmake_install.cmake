@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/Robert/Desktop/semester 7/PPGSO/ppgso
+# Install script for directory: C:/Users/Robert/Desktop/semester 7/ppgso-engine
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/Robert/Desktop/semester 7/PPGSO/ppgso/_install")
+  set(CMAKE_INSTALL_PREFIX "C:/Users/Robert/Desktop/semester 7/ppgso-engine/_install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,11 +33,11 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/." TYPE EXECUTABLE FILES "C:/Users/Robert/Desktop/semester 7/PPGSO/ppgso/out/build/x64-Debug (default)/projekt.exe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/." TYPE EXECUTABLE FILES "C:/Users/Robert/Desktop/semester 7/ppgso-engine/out/build/x64-Debug (default)/projekt.exe")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/." TYPE DIRECTORY FILES "C:/Users/Robert/Desktop/semester 7/PPGSO/ppgso/data/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/." TYPE DIRECTORY FILES "C:/Users/Robert/Desktop/semester 7/ppgso-engine/data/")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -48,5 +48,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Robert/Desktop/semester 7/PPGSO/ppgso/out/build/x64-Debug (default)/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Robert/Desktop/semester 7/ppgso-engine/out/build/x64-Debug (default)/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

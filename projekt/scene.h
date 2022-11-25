@@ -53,6 +53,20 @@ public:
         return last;
     }
 
+    int generatePointLight(glm::vec3& position, glm::vec4& color, glm::vec3& phong, glm::vec3& lqc) {
+        pointLights.push_back(std::make_unique < ppgso::light::Point>());
+        int last = pointLights.size() - 1;
+        pointLights[last]->position = position;
+        pointLights[last]->color = color;
+        pointLights[last]->diffuse = phong.x;
+        pointLights[last]->ambient = phong.y;
+        pointLights[last]->specular = phong.z;
+        pointLights[last]->linear = lqc.x;
+        pointLights[last]->quadratic = lqc.y;
+        pointLights[last]->constant = lqc.z;
+        return last;
+    }
+
     void enableLight_spot(int index) {
         spotLights[index]->enabled = true;
         number_of_spotLights++;

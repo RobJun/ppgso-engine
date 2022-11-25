@@ -41,18 +41,16 @@
 #include "instances/Flower.h"
 #include "instances/Grass.h"
 #include "instances/Bird.h"
+#include "instances/campfire.h"
 
 
 #include "utils/renderQuad.h"
 
 /*
 * TODO:
-*    simple bloom effect     - 
-*    keyframes               - 
-*    particle system         - 
 *    movable camera          - 
 *    animation               -
-*    ...
+*    proceduralAnimation with ifs -
 */
 
 
@@ -256,7 +254,7 @@ private:
         shaderBloomFinal.setUniformBuffer("scene", colorBuffers[0],0);
         shaderBloomFinal.setUniformBuffer("bloomBlur", pingpongColorbuffers[!horizontal], 1);
         shaderBloomFinal.setUniform("bloom", true);
-        shaderBloomFinal.setUniform("exposure", 0.5f);
+        shaderBloomFinal.setUniform("exposure", 1.f);
         renderQuad();
 #endif
     }
@@ -278,7 +276,7 @@ std::unique_ptr<Scene> createScene1() {
     auto scene = std::make_unique<Scene>();
     scene->clearObjects();
     scene->m_globalLight.direction = { 0,-1,1 };
-    scene->m_globalLight.ambient = 0.5f;
+    scene->m_globalLight.ambient = 0.05f;
     scene->m_globalLight.diffuse = 0.1f ;
     scene->m_globalLight.specular= 0.00f;
     scene->m_globalLight.color = {1,1,1};
@@ -289,24 +287,13 @@ std::unique_ptr<Scene> createScene1() {
     scene->m_camera = move(camera);
     
     auto car = std::make_unique<Car>(scene.get());
-    car->position = { 0,0,-10 };
-    car->rotMomentum = { 0,0,0 };
+    car->position = { 0,4,-10 };
     scene->m_objects.push_back(move(car));
     
     scene->m_objects.push_back(std::make_unique<Plane>(scene.get()));
     
-    auto cube = std::make_unique<Cube>();
-    cube->position = { 0,0,10 };
-    cube->scale = { 5,5,5 };
-    scene->m_objects.push_back(move(cube));
 
-    
-    auto lightCube = std::make_unique<Light>(scene.get(), "res/BasicCar.obj");
-    lightCube->position = { 5,2,5 };
-    lightCube->scale = { 2,2,2 };
-    scene->m_objects.push_back(move(lightCube));
-
-    auto tent = std::make_unique<Tent>(scene.get());
+   /* auto tent = std::make_unique<Tent>(scene.get());
     tent->scale = { 0.2,0.2,0.2 };
     tent->position = {5,0,10 };
     scene->m_objects.push_back(move(tent));
@@ -401,6 +388,22 @@ std::unique_ptr<Scene> createScene1() {
     bird->position = {15,0,-10 };
     scene->m_objects.push_back(move(bird));
 
+    auto campfire = std::make_unique<Campfire>(scene.get());
+    campfire->scale = { 1,1,1 };
+    campfire->position = { 15,0,-10 };
+    scene->m_objects.push_back(move(campfire));
+
+    auto lightCube = std::make_unique<Light>(scene.get(), "res/fire.obj");
+    lightCube->position = { 15,0,-10 };
+    lightCube->scale = { 1,1,1 };
+    lightCube->color = { 20,4,0 };
+    scene->m_objects.push_back(move(lightCube));*/
+
+
+auto campfire = std::make_unique<Campfire>(scene.get());
+campfire->scale = { 1,1,1 };
+campfire->position = {1,0,0 };
+scene->m_objects.push_back(move(campfire));
 
 
 

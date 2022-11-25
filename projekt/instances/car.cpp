@@ -51,8 +51,8 @@ Car::Car(Scene* scene) {
 
 
 bool Car::update(Scene& scene, float dt, glm::mat4 parentModelMatrix) {
-	rotation -= rotMomentum * dt*10.f;
-	position = { position.x,0.75,position.z + speed };
+	//rotation -= rotMomentum * dt*10.f;
+	//position = { position.x,,positio;
 	generateModelMatrix();
 	modelMatrix = parentModelMatrix * modelMatrix;
 	glm::vec3 d_direction = glm::rotate(glm::mat4(), rotation.z, glm::vec3(0, 1, 0)) * glm::vec4(direction, 1);
