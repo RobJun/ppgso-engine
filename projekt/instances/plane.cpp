@@ -13,13 +13,12 @@ std::unique_ptr<ppgso::Shader> Plane::shader;
 
 Plane::Plane(Scene* scene) {
 	if (!shader) shader = std::make_unique<ppgso::Shader>(our_shader_vert_glsl, our_shader_frag_glsl);
-	if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadFI("res/ground_color_1k.jpg"));
+	if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadFI("res/grass2.jpg"));
 	if (!mesh) mesh = std::make_unique<ppgso::Mesh>("quad.obj");
 }
 
 
 bool Plane::update(Scene& scene, float dt, glm::mat4 parentModelMatrix) {
-	scale = { 20,20,20 };
 	rotation = { glm::radians(270.f),0,0 };
 	generateModelMatrix();
 	for (auto& ch : children) {
