@@ -13,6 +13,7 @@
 #include "../instances/Flower.h"
 #include "../instances/Grass.h"
 #include "../instances/Bird.h"
+#include "../instances/campfire.h"
 
 std::unique_ptr<Scene> createScene1() {
     auto scene = std::make_unique<Scene>();
@@ -96,6 +97,10 @@ std::unique_ptr<Scene> createScene1() {
     grass->scale = { .5,.5,.5 };
     grass->position = { 5,0,-10 };
     scene->m_objects.push_back(move(grass));
+
+    auto campfire = std::make_unique<Campfire>(scene.get());
+
+    scene->m_objects.push_back(move(campfire));
 
 
     return scene;

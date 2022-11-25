@@ -253,7 +253,7 @@ private:
 int main() {
     // Initialize our window
     OurWindow window = {1200,16/9 };
-    auto scene = createScene6();
+    auto scene = createScene1();
     window.switchScene(move(scene));
 
     // Main execution loop
