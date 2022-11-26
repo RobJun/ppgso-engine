@@ -21,6 +21,10 @@ bool Tree3::update(Scene& scene, float dt, glm::mat4 parentModelMatrix)
 {
 	generateModelMatrix();
 	modelMatrix = parentModelMatrix * modelMatrix;
+
+	for (auto& ch : children) {
+		ch->update(scene,dt,modelMatrix);
+	}
 	return true;
 }
 
@@ -31,8 +35,7 @@ void Tree3::render(Scene& scene)
 	scene.useCamera(shader.get());
 	scene.useLights(shader.get());
 
-	shader->setUniform("material.shininess", material.shininess);
-	shader->setUniform("material.transparency", material.transparency);
+	material.use(shader.get());
 	shader->setUniform("ModelMatrix", modelMatrix);
 	shader->setUniform("Texture", *texture);
 	mesh->render();
@@ -47,6 +50,10 @@ void Tree3::renderMap(Scene& scene, ppgso::Shader* shader)
 	shader->setUniform("ModelMatrix", modelMatrix);
 	shader->setUniform("Texture", *texture);
 	mesh->render();
+
+	for (auto& ch : children) {
+		ch->renderMap(scene,shader);
+	}
 }
 
 void Tree3::renderLights(Scene& scene)
