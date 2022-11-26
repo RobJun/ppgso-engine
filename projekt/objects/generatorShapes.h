@@ -40,7 +40,7 @@ struct RectangelGenShape : GeneratorShape {
 
 	glm::vec3 getRandomPoint() override {
 		float A_t = A * (rand() % 1000 / 1000.f);
-		float B_t = A * (rand() % 1000 / 1000.f);
+		float B_t = B * (rand() % 1000 / 1000.f);
 		float x = A_t - A / 2;
 		float z = B_t - B / 2;
 

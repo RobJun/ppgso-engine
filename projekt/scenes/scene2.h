@@ -1,5 +1,4 @@
 #include "scene.h"
-#include "../instances/plane.h"
 #include "../instances/Tree1.h"
 #include "../instances/Tree2.h"
 #include "../instances/Tree3.h"
@@ -11,6 +10,8 @@
 #include "../instances/Grass.h"
 #include "../instances/Hat.h"
 #include "../instances/Men.h"
+#include "../instances/lake.h"
+#include "../instances/water.h"
 
 std::unique_ptr<Scene> createScene2() {
     auto scene = std::make_unique<Scene>();
@@ -22,11 +23,16 @@ std::unique_ptr<Scene> createScene2() {
     scene->m_globalLight.color = {1,1,1};
 
     // Create a camera
-    auto camera = std::make_unique<Camera>(60.0f, 1.0f, 0.1f, 100.0f);
+    auto camera = std::make_unique<Camera>(60.0f, 1.0f, 0.1f, 1000.0f);
     camera->position.z = -40.0f;
     scene->m_camera = move(camera);
 
-    scene->m_objects.push_back(std::make_unique<Plane>(scene.get()));
+    auto lake = std::make_unique<Lake>(scene.get());
+    scene->m_objects.push_back(move(lake));
+    
+    auto water = std::make_unique<Water>(scene.get());
+    water->scale = { 100,100,100 };
+    water->material.transparency = 0.7f;
 
     auto seagull = std::make_unique<Seagull>(scene.get());
     seagull->scale = {2,2,2 };
@@ -82,6 +88,9 @@ std::unique_ptr<Scene> createScene2() {
     men->scale = {.51,.51,.51 };
     men->position = { 15,1.5,15 };
     scene->m_objects.push_back(move(men));
+
+
+    scene->m_objects.push_back(move(water));
 
     return scene;
 }
