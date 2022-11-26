@@ -19,7 +19,6 @@ struct CircleGenShape : GeneratorShape {
 		: radius(radius) {};
 
 	glm::vec3 getRandomPoint() override {
-		srand(time(NULL));
 		float r = radius * sqrt((rand() % 1000) / 1000.f);
 		float t = ((rand() % 1000) / 1000.f) * 2 * 3.14;
 		float x = r * cos(t);
@@ -40,7 +39,6 @@ struct RectangelGenShape : GeneratorShape {
 		:  A(A), B(B) {};
 
 	glm::vec3 getRandomPoint() override {
-		srand(time(NULL));
 		float A_t = A * (rand() % 1000 / 1000.f);
 		float B_t = A * (rand() % 1000 / 1000.f);
 		float x = A_t - A / 2;

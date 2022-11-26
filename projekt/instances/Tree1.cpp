@@ -21,6 +21,8 @@ Tree1::Tree1(Scene* scene)
 	if (!shader) shader = std::make_unique<ppgso::Shader>(our_shader_vert_glsl, our_shader_frag_glsl);
 	if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadFI("res/texture_solid.png"));
 	if (!mesh) mesh = std::make_unique<ppgso::Mesh>("res/strom1.obj");
+
+	scale = { 0.5,0.5,0.5 };
 }
 
 bool Tree1::update(Scene& scene, float dt, glm::mat4 parentModelMatrix)

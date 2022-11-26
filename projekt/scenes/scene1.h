@@ -14,6 +14,7 @@
 #include "../instances/Grass.h"
 #include "../instances/Bird.h"
 #include "../instances/campfire.h"
+#include "../objects/particleSystem.h"
 
 #include "../objects/generator.h"
 
@@ -32,9 +33,19 @@ std::unique_ptr<Scene> createScene1() {
     //camera->rotate = { 0,0.3,0 };
     scene->m_camera = move(camera);
 
+<<<<<<< HEAD
     auto car = std::make_unique<Car>(scene.get());
     car->position = { 20,1,2 };
     car->rotation = { 0,0,4.7};
+=======
+   auto plane = std::make_unique<Plane>(scene.get());
+    plane->scale = { 20, 20, 20 };
+    scene->m_objects.push_back(move(plane));
+    
+    /*auto car = std::make_unique<Car>(scene.get());
+    car->position = {10,0,3};
+    car->rotation = { 0,0,200 };
+>>>>>>> 0983cdf7195b3949b3f3c183a4f10ee64c08fee7
     car->rotMomentum = { 0,0,0 };
     car->scale = { 2,2,2 };
 
@@ -93,6 +104,7 @@ std::unique_ptr<Scene> createScene1() {
     campfire->position = { 0,0,0 };
     //campfire->rotation = {1.4, 0, 0 };
 
+<<<<<<< HEAD
     auto plane = std::make_unique<Plane>(scene.get());
     plane->scale = {30, 30, 30 };
     
@@ -107,8 +119,15 @@ std::unique_ptr<Scene> createScene1() {
     plane->children.push_back(move(bush));
     plane->children.push_back(move(flower));
     plane->children.push_back(move(grass));*/
+=======
+    scene->m_objects.push_back(move(campfire));*/
+>>>>>>> 0983cdf7195b3949b3f3c183a4f10ee64c08fee7
 
     scene->m_objects.push_back(move(plane));
+
+    //auto gen = new Generator<Tree1>(scene.get(), 5, CircleGenShape(10));
+    auto gen = std::make_unique<Generator<Tree1,Tree3>>(scene.get(), 10, &CircleGenShape(10));
+    scene->m_objects.push_back(move(gen));
 
     return scene;
 }
