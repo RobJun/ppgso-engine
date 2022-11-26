@@ -14,6 +14,7 @@
 #include "../instances/Grass.h"
 #include "../instances/Bird.h"
 #include "../instances/campfire.h"
+#include "../objects/particleSystem.h"
 
 #include "../objects/generator.h"
 
@@ -32,11 +33,11 @@ std::unique_ptr<Scene> createScene1() {
     camera->rotate = {0,0.3,0};
     scene->m_camera = move(camera);
 
-    auto plane = std::make_unique<Plane>(scene.get());
+   auto plane = std::make_unique<Plane>(scene.get());
     plane->scale = { 20, 20, 20 };
     scene->m_objects.push_back(move(plane));
     
-    auto car = std::make_unique<Car>(scene.get());
+    /*auto car = std::make_unique<Car>(scene.get());
     car->position = {10,0,3};
     car->rotation = { 0,0,200 };
     car->rotMomentum = { 0,0,0 };
@@ -103,8 +104,12 @@ std::unique_ptr<Scene> createScene1() {
 
     auto campfire = std::make_unique<Campfire>(scene.get());
 
-    scene->m_objects.push_back(move(campfire));
+    scene->m_objects.push_back(move(campfire));*/
 
+
+    //auto gen = new Generator<Tree1>(scene.get(), 5, CircleGenShape(10));
+    auto gen = std::make_unique<Generator<Tree1,Tree3>>(scene.get(), 10, &CircleGenShape(10));
+    scene->m_objects.push_back(move(gen));
 
     return scene;
 }
