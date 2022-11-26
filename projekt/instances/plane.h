@@ -16,11 +16,6 @@ private:
 	int left, right;
 	glm::vec3 direction = { 0,0,1 };
 
-	struct Material {
-		float shininess = 100.f;
-		float transparency = 1.0f;
-	} material;
-
 	// Age of the object in seconds
 	float age{ 0.0f };
 
@@ -31,6 +26,7 @@ private:
 	
 
 public:
+	ppgso::Material material;
 	Plane(Scene* scene);
 
 	bool update(Scene& scene, float dt, glm::mat4 parentModelMatrix) override;

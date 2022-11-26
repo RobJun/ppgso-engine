@@ -24,6 +24,11 @@ Campfire::Campfire(Scene* scene)
 	if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadFI("res/tree_bark.jpg"));
 	if (!mesh) mesh = std::make_unique<ppgso::Mesh>("res/logs.obj");
 
+	material.diffuse = glm::vec3{0.5,0.5,0.4};
+	material.ambient = glm::vec3{ 0.05,	0.05,	0.0 };
+	material.specular = glm::vec3{ 0.7,	0.7,	0.04 };
+	material.shininess = .078125;
+	material.transparency = 1;
 
 	auto fire = std::make_unique<Light>(scene,"./res/fire.obj");
 	fire->color = { 40,4,0 };
@@ -51,7 +56,7 @@ Campfire::Campfire(Scene* scene)
 	particles->particleLifeSpan = 10;
 	children.push_back(move(particles));
 
-	lightIndex = scene->generatePointLight(glm::vec3{ 0,1,0 }, glm::vec4{ 1.f,0.1f,0.f,1.f }, glm::vec3{ 1,0,0.5 }, glm::vec3{0.32, 0.09, 1});
+	lightIndex = scene->generatePointLight(glm::vec3{ 0,1,0 }, glm::vec3{ 1.f,.4f,0.f }, glm::vec3{ 1,0,0.5 }, glm::vec3{0.32, 0.09, 1});
 	scene->enableLight_point(lightIndex);
 }
 
@@ -73,8 +78,7 @@ void Campfire::render(Scene& scene)
 	scene.useCamera(shader.get());
 	scene.useLights(shader.get());
 
-	shader->setUniform("material.shininess", material.shininess);
-	shader->setUniform("material.transparency", material.transparency);
+	material.use(shader.get());
 	shader->setUniform("ModelMatrix", modelMatrix);
 	shader->setUniform("Texture", *texture);
 	mesh->render();
@@ -89,6 +93,9 @@ void Campfire::renderMap(Scene& scene, ppgso::Shader* shader)
 	shader->setUniform("ModelMatrix", modelMatrix);
 	shader->setUniform("Texture", *texture);
 	mesh->render();
+	for (auto& ch : children) {
+		ch->renderMap(scene, shader);
+	}
 }
 
 void Campfire::renderLights(Scene& scene)

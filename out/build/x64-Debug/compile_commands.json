@@ -161,6 +161,11 @@
 },
 {
   "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
+  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\ppgso.dir\\ppgso\\animations\\interpolations.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\\animations\\interpolations.cpp\"",
+  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\\animations\\interpolations.cpp"
+},
+{
+  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
   "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\main.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\main.cpp\"",
   "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\main.cpp"
 },
@@ -183,11 +188,6 @@
   "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
   "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\car.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\car.cpp\"",
   "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\car.cpp"
-},
-{
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\cube.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\cube.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\cube.cpp"
 },
 {
   "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
@@ -313,5 +313,15 @@
   "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
   "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Hat.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Hat.cpp\"",
   "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Hat.cpp"
+},
+{
+  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
+  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\campfire.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\campfire.cpp\"",
+  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\campfire.cpp"
+},
+{
+  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
+  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\sphere.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\sphere.cpp\"",
+  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\sphere.cpp"
 }
 ]

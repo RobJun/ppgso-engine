@@ -247,6 +247,22 @@ private:
         else if (keys[GLFW_KEY_S]) {
             m_scene->m_camera->position += 20.f *dt* m_scene->m_camera->back;
         }
+        if (keys[GLFW_KEY_A])
+            m_scene->m_camera->position -= 20.f* dt* glm::normalize(glm::cross(-m_scene->m_camera->back, m_scene->m_camera->up));
+        else if (keys[GLFW_KEY_D])
+            m_scene->m_camera->position += 20.f * dt * glm::normalize(glm::cross(-m_scene->m_camera->back, m_scene->m_camera->up));
+        if (keys[GLFW_KEY_UP]) {
+            m_scene->m_camera->pitch += 0.5 * dt;
+        }
+        if (keys[GLFW_KEY_DOWN]) {
+            m_scene->m_camera->pitch -= 0.5 * dt;
+        }
+        if (keys[GLFW_KEY_LEFT]) {
+            m_scene->m_camera->yaw -= 0.5 * dt;
+        }
+        if (keys[GLFW_KEY_RIGHT]) {
+            m_scene->m_camera->yaw += 0.5 * dt;
+        }
     }
 };
 

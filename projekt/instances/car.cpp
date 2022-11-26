@@ -1,6 +1,5 @@
 
 #include "car.h"
-#include "cube.h"
 #include "Light.h"
 #include <shaders/diffuse_vert_glsl.h>
 #include <shaders/diffuse_frag_glsl.h>
@@ -18,6 +17,13 @@ Car::Car(Scene* scene) {
 	if (!shader) shader = std::make_unique<ppgso::Shader>(our_shader_vert_glsl, our_shader_frag_glsl);
 	if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadFI("res/CarTexture.png"));
 	if (!mesh) mesh = std::make_unique<ppgso::Mesh>("res/BasicCar.obj");
+
+	material.ambient = glm::vec3{ 0.0,	0.1, 0.06 };
+	material.ambient = glm::vec3{ 0.0,	0.1, 0.06 };
+	material.diffuse = glm::vec3{ 0.0,	0.50980392,	0.50980392 };
+	material.specular = glm::vec3{ 0.50196078,	0.50196078,	0.50196078 };;
+	material.shininess = .25;
+	material.transparency = 1;
 
 	left = scene->generateSpotLight(glm::vec3( 0,4,3 ), direction, glm::vec4{ 1,0.8,0.3,1.f }, glm::vec3{ 0.8f,0.9f,1.0f }, glm::vec3{ 0.22,0.0019,1.f }, glm::vec2{ glm::radians(12.5f) ,glm::radians(17.0f) });
 	right = scene->generateSpotLight(glm::vec3(0, 4, 3), direction, glm::vec4{ 1,0.8,0.3,1.f }, glm::vec3{ 0.8f,0.9f,1.0f }, glm::vec3{ 0.22,0.0019,1.f }, glm::vec2{ glm::radians(12.5f) ,glm::radians(17.0f) });
@@ -73,8 +79,8 @@ void Car::render(Scene& scene) {
 	scene.useGlobalLights(shader.get());
 	scene.useCamera(shader.get());
 	scene.useLights(shader.get());
-	shader->setUniform("material.shininess", material.shininess);
-	shader->setUniform("material.transparency", material.transparency);
+	
+	material.use(shader.get());
 	shader->setUniform("ModelMatrix", modelMatrix);
 	shader->setUniform("Texture", *texture);
 	mesh->render();
@@ -89,6 +95,9 @@ void Car::renderMap(Scene& scene, ppgso::Shader* shader) {
 	shader->setUniform("ModelMatrix", modelMatrix);
 	shader->setUniform("Texture", *texture);
 	mesh->render();
+	for (auto& ch : children) {
+		ch->renderMap(scene, shader);
+	}
 }
 
 void Car::renderLights(Scene& scene)

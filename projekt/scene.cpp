@@ -66,7 +66,6 @@ void Scene::useLights(ppgso::Shader* shader) {
             shader->setUniform("lightSpaceMatrix_spot[" + std::to_string(i) + "]",spot->calculateShadowMap());
             shader->setUniform("spotLight[" + std::to_string(i) + "].shadowMap", spot->depthMap, j);
             shader->setUniform("spotLight[" + std::to_string(i) + "].color", spot->color);
-            shader->setUniform("spotLight[" + std::to_string(i) + "].color", spot->color);
             shader->setUniform("spotLight[" + std::to_string(i) + "].position", spot->position);
             shader->setUniform("spotLight[" + std::to_string(i) + "].direction", spot->direction);
             shader->setUniform("spotLight[" + std::to_string(i) + "].ambient", spot->ambient);
@@ -85,7 +84,7 @@ void Scene::useLights(ppgso::Shader* shader) {
     for (auto& light : pointLights) {
         if (light->enabled) {
             ppgso::light::Point* spot = light.get();
-            shader->setUniform("pointL[" + std::to_string(i) + "].color", spot->position);
+            shader->setUniform("pointL[" + std::to_string(i) + "].color", spot->color);
             shader->setUniform("pointL[" + std::to_string(i) + "].position", spot->position);
             shader->setUniform("pointL[" + std::to_string(i) + "].ambient", spot->ambient);
             shader->setUniform("pointL[" + std::to_string(i) + "].diffuse", spot->diffuse);

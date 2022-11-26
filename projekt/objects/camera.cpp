@@ -8,9 +8,9 @@ Camera::Camera(float fow, float ratio, float near, float far) {
 }
 
 void Camera::update(float time) {
-	rotation = rotate * time;
-	position = position * glm::mat3(glm::rotate(glm::mat4(), rotation.y, glm::vec3(0,1.f,0 )));
-	back = back * glm::mat3(glm::rotate(glm::mat4(), rotation.y, glm::vec3(0, 1.f, 0)));
+	back.y = -sin(pitch);
+	back.x = -cos(yaw) * cos(pitch);
+	back.z = -sin(yaw) * cos(pitch);
 	viewMatrix = lookAt(position,position - back, up);
 }		
 

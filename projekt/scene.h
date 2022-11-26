@@ -53,7 +53,7 @@ public:
         return last;
     }
 
-    int generatePointLight(glm::vec3& position, glm::vec4& color, glm::vec3& phong, glm::vec3& lqc) {
+    int generatePointLight(glm::vec3& position, glm::vec3& color, glm::vec3& phong, glm::vec3& lqc) {
         pointLights.push_back(std::make_unique < ppgso::light::Point>());
         int last = pointLights.size() - 1;
         pointLights[last]->position = position;

@@ -16,17 +16,13 @@ private:
 	int left, right; //index of light
 	float degrees = 0;
 
-	struct Material {
-		float shininess = 32.f;
-		float transparency = 1.0f;
-	} material;
-
 	// Age of the object in seconds
 	float age{ 0.0f };
 
 public:
 	// Speed and rotational momentum
 	float speed=0.0;
+	ppgso::Material material;
 	glm::vec3 rotMomentum = { 0,0,0.1 };
 	glm::vec3 translation = { 0,0,0 };
 	glm::vec3 direction = { 0,0,1 };

@@ -12,6 +12,12 @@ std::unique_ptr<ppgso::Shader> Tree1::shader;
 
 Tree1::Tree1(Scene* scene)
 {
+	material.diffuse = glm::vec3{ 0.1,	0.35,	0.1 };
+	material.ambient = glm::vec3{ 0,	0, 0 };
+	material.specular = glm::vec3{ 0.45,	0.55,	0.45 };;
+	material.shininess = .25;
+	material.transparency = 1;
+
 	if (!shader) shader = std::make_unique<ppgso::Shader>(our_shader_vert_glsl, our_shader_frag_glsl);
 	if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadFI("res/texture_solid.png"));
 	if (!mesh) mesh = std::make_unique<ppgso::Mesh>("res/strom1.obj");
