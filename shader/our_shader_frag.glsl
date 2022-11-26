@@ -121,7 +121,7 @@ vec4 calcDirLight(DirLight light, vec3 normal, vec3 viewDir)
     
     vec3 ambient  =  light.ambient * material.ambient;
     vec3 diffuse  =  light.diffuse * diff*(1.0f - shadow) * material.diffuse;
-    vec3 specular = 0;
+    vec3 specular = vec3(0);
     if(dot(lightDir, normal) > 0){ 
        specular =  light.specular * spec  *(1.0f - shadow) * material.specular;
      }
@@ -142,9 +142,9 @@ vec4 CalcPointLight(PointLight light, vec3 normal, vec3 fragPos, vec3 viewDir)
     // combine results
     vec3 ambient = light.ambient * material.ambient;
     vec3 diffuse = light.diffuse * diff * material.diffuse; 
-    vec3 specular = 0;
+    vec3 specular =vec3(0);
     if(dot(normal, lightDir) > 0){ 
-        specular =  light.specular * spec;//  *(1.0f - shadow) * material.specular;
+        specular =  light.specular * spec  * material.specular;//  *(1.0f - shadow);
     }
     ambient *= attenuation;
     diffuse *= attenuation;
@@ -171,9 +171,9 @@ vec4 CalcSpotLight(SpotLight light, vec3 normal, vec3 fragPos, vec3 viewDir, int
 
     // combine results
 
-    vec3 ambient = light.ambient * mateial.ambient;
+    vec3 ambient = light.ambient * material.ambient;
     vec3 diffuse = light.diffuse *(1.0f - shadow)* diff * material.diffuse;
-    vec3 specular = 0;
+    vec3 specular =vec3(0);
     if(dot(normal, lightDir) > 0){ 
       specular =  light.specular * spec  *(1.0f - shadow) * material.specular;
     }

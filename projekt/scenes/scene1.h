@@ -15,6 +15,8 @@
 #include "../instances/Bird.h"
 #include "../instances/campfire.h"
 
+#include "../objects/generator.h"
+
 std::unique_ptr<Scene> createScene1() {
     auto scene = std::make_unique<Scene>();
     scene->clearObjects();
@@ -97,6 +99,7 @@ std::unique_ptr<Scene> createScene1() {
     grass->scale = { .5,.5,.5 };
     grass->position = { 5,0,-10 };
     scene->m_objects.push_back(move(grass));
+
 
     auto campfire = std::make_unique<Campfire>(scene.get());
 

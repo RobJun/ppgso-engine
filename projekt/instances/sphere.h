@@ -49,4 +49,5 @@ public:
 	void renderMap(Scene& scene, ppgso::Shader* shader) override;
 
 	void renderLights(Scene& scene) override;
+
 };

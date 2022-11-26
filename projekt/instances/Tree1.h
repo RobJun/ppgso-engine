@@ -28,6 +28,7 @@ public:
 
 	ppgso::Material material;
 public:
+	Tree1() {};
 	Tree1(Scene* scene);
 
 	/*!
@@ -47,4 +48,5 @@ public:
 	void renderMap(Scene& scene, ppgso::Shader* shader) override;
 
 	void renderLights(Scene& scene) override;
+
 };
