@@ -22,7 +22,7 @@ std::unique_ptr<Scene> createScene1() {
     auto scene = std::make_unique<Scene>();
     scene->clearObjects();
     scene->m_globalLight.direction = { 0,-1,1 };
-    scene->m_globalLight.ambient = 0.2f;
+    scene->m_globalLight.ambient = 2.f;
     scene->m_globalLight.diffuse = 0.1f;
     scene->m_globalLight.specular = 0.00f;
     scene->m_globalLight.color = { 1,1,1 };
@@ -35,23 +35,23 @@ std::unique_ptr<Scene> createScene1() {
 
     auto car = std::make_unique<Car>(scene.get());
     car->position = { 20,1.45,2 };
-    car->rotation = { 0,0,4.7};
+    car->rotation = { 0,0,4.7 };
     car->rotMomentum = { 0,0,0 };
     car->scale = { 2,2,2 };
 
     auto tent = std::make_unique<Tent>(scene.get());
     tent->scale = { 0.3,0.3,0.3 };
-    tent->position = { 5,0,4};
+    tent->position = { 5,0,4 };
     tent->rotation = { 0,0,3 };
-    
+
     auto lantern = std::make_unique<Lantern>(scene.get());
-    lantern->scale = {.05,.05,.05 };
-    lantern->position = {1,6,5};
+    lantern->scale = { .025,.025,.025 };
+    lantern->position = { 1,7.4,5 };
     lantern->rotation = { 0,0,1 };
 
     auto bird = std::make_unique<Bird>(scene.get());
-    bird->scale = { .22,.22,.22 };
-    bird->position = {1,6,1};
+    bird->scale = { .11,.11,.11 };
+    bird->position = { 1,7.2,1 };
     bird->rotation = { 4.7,0,12 };
 
     auto table = std::make_unique<Table>(scene.get());
@@ -62,56 +62,45 @@ std::unique_ptr<Scene> createScene1() {
     table->children.push_back(move(bird));
 
     auto tree1 = std::make_unique<Tree1>(scene.get());
-    tree1->scale = { .5,.5,.5 };
-    tree1->position = { -5,0,0 };
-
-    auto tree2 = std::make_unique<Tree2>(scene.get());
-    tree2->scale = { .5,.5,.5 };
-    tree2->position = { 12,0,15 };
 
     auto tree3 = std::make_unique<Tree3>(scene.get());
-    tree3->scale = { .5,.5,.5 };
-    tree3->position = { 15,0,12 };
+
+    auto tree2 = std::make_unique<Tree2>(scene.get());
 
     auto bush = std::make_unique<Bush>(scene.get());
-    bush->scale = { .5,.5,.5 };
-    bush->position = { 5,0,12 };
-
-    auto log = std::make_unique<Log>(scene.get());
-    log->scale = { .2,.2,.2 };
-    log->position = { 5,0,15 };
 
     auto flower = std::make_unique<Flower>(scene.get());
-    flower->scale = { .7,.7,.7 };
-    flower->position = { 5,0,10 };
 
     auto grass = std::make_unique<Grass>(scene.get());
-    grass->scale = { .5,.5,.5 };
-    grass->position = { 5,0,-10 };
 
     auto campfire = std::make_unique<Campfire>(scene.get());
-    campfire->scale = { 1,1,1 };
-    campfire->position = { 0,0,0 };
-    //campfire->rotation = {1.4, 0, 0 };
 
     auto plane = std::make_unique<Plane>(scene.get());
-    plane->scale = {30, 30, 30 };
-    
+    plane->scale = { 30, 30, 30 };
+
     plane->children.push_back(move(car));
     plane->children.push_back(move(table));
     plane->children.push_back(move(tent));
     plane->children.push_back(move(campfire));
-    plane->children.push_back(move(log));
-    plane->children.push_back(move(bush));
-    plane->children.push_back(move(flower));
-    plane->children.push_back(move(grass));
 
     scene->m_objects.push_back(move(plane));
 
-    //auto gen = new Generator<Tree1>(scene.get(), 5, CircleGenShape(10));
-    auto gen = std::make_unique<Generator<Tree1,Tree3>>(scene.get(), 80, &RectangelGenShape(60,10));
-    gen->position = { 0,0,17 };
+    auto gen = std::make_unique<Generator<Tree1, Tree3>>(scene.get(), 20, &RectangelGenShape(60, 10), tranformTrees);
+    gen->position = { 0,0,20 };
+    
+    auto trava_kvety = std::make_unique<Generator<Grass, Flower>>(scene.get(), 60, &CircleGenShape(20));
+
+    auto tree_bush = std::make_unique<Generator<Tree2, Bush>>(scene.get(), 10, &RectangelGenShape(60, 10));
+    tree_bush->position = { 0,0,20};
+
+    auto gen2 = std::make_unique<Generator<Tree1, Tree3>>(scene.get(), 20, &RectangelGenShape(10,50),tranformTrees);
+    gen2->position = { -20,0,-5 };
+
+
     scene->m_objects.push_back(move(gen));
+    scene->m_objects.push_back(move(trava_kvety));
+    scene->m_objects.push_back(move(tree_bush));
+    scene->m_objects.push_back(move(gen2));
 
     return scene;
 }

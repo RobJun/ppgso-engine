@@ -12,6 +12,7 @@ std::unique_ptr<ppgso::Shader> Bush::shader;
 
 Bush::Bush(Scene* scene)
 {
+	scale = { 0.4,0.4,0.4 };
 	material.ambient = glm::vec3{ 0,0, 0 };
 	material.diffuse = glm::vec3{ 0.1,0.35,0.1 };
 	material.specular = glm::vec3{ 0.45,0.55,0.45 };;

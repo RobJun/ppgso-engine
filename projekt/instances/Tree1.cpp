@@ -12,6 +12,8 @@ std::unique_ptr<ppgso::Shader> Tree1::shader;
 
 Tree1::Tree1(Scene* scene)
 {
+	scale = { .6,.6,.6 };
+
 	material.diffuse = glm::vec3{ 0.1,	0.35,	0.1 };
 	material.ambient = glm::vec3{ 0,	0, 0 };
 	material.specular = glm::vec3{ 0.45,	0.55,	0.45 };;
