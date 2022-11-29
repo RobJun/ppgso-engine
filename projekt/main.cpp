@@ -33,7 +33,7 @@
 *           Dynamicka scena (1B)- 2 typy objektov ktore vynikaju zanikaju
 *           Proceduralna scena (2B) (done)
 *           Zmeny scen (2B)
-*           Hierarchicka reprezentacia sceny (4B) (half done)
+*           Hierarchicka reprezentacia sceny (4B) (done)
 *           proceduralna animacia (2B)
 *           animacia cez klucove snimky (3B) (half done)
 *           Kolizie (3B) (done)

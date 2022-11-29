@@ -30,6 +30,28 @@ struct CircleGenShape : GeneratorShape {
 	}
 };
 
+struct SphereGenShape : GeneratorShape {
+	float radius;
+
+	SphereGenShape(float radius)
+		: radius(radius) {}
+
+	glm::vec3 getRandomPoint() override {
+		float r = radius * sqrt((rand() % 1000) / 1000.f);
+		int x = ((rand() % 1000)) - 500;
+		int y = ((rand() % 1000)) - 500;
+		int z = ((rand() % 1000)) - 500;
+		float t = 0;
+		if(!(x == 0 && y == 0 && z == 0))
+			float t = 1 / sqrt(x * x + y * y + z * z);
+		x *= t * r;
+		y *= t * r;
+		z *= t * r;
+
+		return { x,y,z };
+	}
+};
+
 struct RectangelGenShape : GeneratorShape {
 	glm::vec3 up = { 0,1,0 };
 	float A;
