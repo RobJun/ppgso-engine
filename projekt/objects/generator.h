@@ -3,11 +3,21 @@
 #include "object.h"
 #include "generatorShapes.h"
 #include "../instances/Tree1.h"
+#include "../instances/Tree3.h"
+
+
+void tranformTrees(Object* obj) {
+	float random_scale = 0.4 + static_cast <float> (rand()) / (static_cast <float> (RAND_MAX / (0.9 - 0.4)));
+	obj->scale = { random_scale, random_scale, random_scale };
+}
+
 template <class T, class U>
 class Generator final : public Object {
 
 public:
-	Generator(Scene* scene, unsigned int n, GeneratorShape* shape);
+
+
+	Generator(Scene* scene, unsigned int n, GeneratorShape* shape, void (*transform)(Object*) = nullptr);
 
 
 	bool update(Scene& scene, float dt, glm::mat4 parentModelMatrix) override;
@@ -21,7 +31,8 @@ public:
 
 
 template <class T,class U>
-Generator<T,U>::Generator(Scene* scene, unsigned int n, GeneratorShape* shape) {
+Generator<T,U>::Generator(Scene* scene, unsigned int n, GeneratorShape* shape, void (*transform)(Object*)) {
+	srand(time(NULL));
 	for (unsigned int i = 0; i < n; i++) {
 		auto position = shape->getRandomPoint();
 		std::unique_ptr<Object> obj;
@@ -29,6 +40,10 @@ Generator<T,U>::Generator(Scene* scene, unsigned int n, GeneratorShape* shape) {
 			obj = std::make_unique<T>(scene);
 		else
 			obj = std::make_unique<U>(scene);
+		
+		if (transform != nullptr)
+			transform(obj.get());
+	
 		obj->position = this->position + position;
 		children.push_back(move(obj));
 	}

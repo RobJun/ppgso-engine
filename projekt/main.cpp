@@ -53,9 +53,6 @@
 #define SIZE  512
 #define DEBUG_SHADOW_MAPS 0
 
-
-std::unique_ptr<Scene> createScene2();
-
 class OurWindow : public ppgso::Window {
 private:
     std::unique_ptr<Scene> m_scene;

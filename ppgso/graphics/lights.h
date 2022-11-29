@@ -22,13 +22,13 @@ namespace ppgso {
 		};
 		struct Directional : public Light {
 			glm::vec3 direction;
-			DepthMap depthMap = { 1048,1048 };
+			DepthMap depthMap = { 2048,2048 };
 			Directional() {};
 			Directional(glm::vec3 direction) : direction(direction) {};
 
 			glm::mat4 calculateShadowMap() override {
-				glm::mat4 lightProjection = glm::ortho(-20.0f, 20.0f, -20.0f, 20.0f, near_plane, far_plane);
-				glm::mat4 lightView = glm::lookAt(10.f*-direction,
+				glm::mat4 lightProjection = glm::ortho(-30.0f, 30.0f, -30.0f, 30.0f, near_plane, far_plane);
+				glm::mat4 lightView = glm::lookAt(30.f*-direction,
 												glm::vec3(0.0f,0.0f,0.0f),
 												  glm::vec3(0.0f, 1.0f, 0.0f));
 				glm::mat4 lightSpaceMatrix = lightProjection * lightView;
