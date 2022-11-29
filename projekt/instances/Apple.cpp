@@ -1,5 +1,5 @@
 #include "Apple.h"
-
+#include "plane.h"
 #include <shaders/our_shader_vert_glsl.h>
 #include <shaders/our_shader_frag_glsl.h>
 
@@ -25,7 +25,33 @@ Apple::Apple(Scene* scene)
 
 bool Apple::update(Scene& scene, float dt, glm::mat4 parentModelMatrix)
 {
+	age += dt;
+	if(!stopMovement)
+		padaj(scene,dt);
 	generateModelMatrix();
+
+	for (auto it = scene.begin(); it != scene.end(); ++it) {
+		if (it.get() == this) continue;
+
+		auto zem = dynamic_cast<Plane*>(it.get());
+
+		if (!zem) continue;
+
+		//std::cout << glm::distance(position, zem->getClosestPoint(position)) << std::endl;
+		if (velocity.y<0 && glm::distance(position, zem->getClosestPoint(position)) < 0.1) {
+			velocity.y *= -0.5;
+			std::cout << "here " <<velocity.y<< " " << std::endl;
+			if (abs(velocity.y) < 0.1) {
+				velocity = { 0,0,0 };
+				stopMovement = true;
+			}
+		}
+
+
+
+
+	}
+
 	modelMatrix = parentModelMatrix * modelMatrix;
 	for (auto& ch : children) {
 		ch->update(scene, dt, modelMatrix);
@@ -65,4 +91,14 @@ void Apple::renderLights(Scene& scene)
 	for (auto& ch : children) {
 		ch->renderLights(scene);
 	}
+}
+
+
+void Apple::padaj(Scene& scene,float dt) {
+	glm::vec3 windV = scene.windOnPosition(position);
+	glm::vec3 gravityAcc = { 0,-scene.g,0 };
+	
+	position += dt * (velocity + dt * gravityAcc / 2.f);
+	velocity += gravityAcc * dt + scene.windOnPosition(position);
+
 }

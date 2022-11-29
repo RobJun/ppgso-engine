@@ -27,6 +27,7 @@ Plane::Plane(Scene* scene) {
 bool Plane::update(Scene& scene, float dt, glm::mat4 parentModelMatrix) {
 	rotation = { glm::radians(270.f),0,0 };
 	generateModelMatrix();
+	normal = glm::normalize(glm::vec3( glm::orientate4(rotation)* glm::vec4(0, 0, 1, 1)));
 	for (auto& ch : children) {
 		ch->update(scene, dt, glm::mat4(1));
 	}
@@ -64,4 +65,13 @@ void Plane::renderLights(Scene& scene)
 	for (auto& ch : children) {
 		ch->renderLights(scene);
 	}
+}
+
+glm::vec3 Plane::getClosestPoint(glm::vec3 point)
+{
+	glm::vec3 side = { 1,0,1 };
+	side = point * side;
+	side.x = side.x > 2*scale.x ? 2 * scale.x : side.x;
+	side.z = side.z > 2*scale.z ? 2 * scale.z : side.z;
+	return side;
 }

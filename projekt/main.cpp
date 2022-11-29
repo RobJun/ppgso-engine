@@ -18,8 +18,6 @@
 #include <shaders/light_frag_glsl.h>
 #include "scenes/scene1.h"
 #include "scenes/scene2.h"
-#include "scenes/scene3.h"
-#include "scenes/scene4.h"
 #include "scenes/scene5.h"
 #include "scenes/scene6.h"
 #include "scenes/scene8.h"
@@ -28,13 +26,29 @@
 
 #include "utils/renderQuad.h"
 
-/*
-* TODO:
-*    movable camera          - 
-*    animation               -
-*    proceduralAnimation with ifs -
+/*     TODO:
+*          Objekty 3D (4B)
+*               - obj subory (done)
+*               - uv textury (done)
+*           Dynamicka scena (1B)- 2 typy objektov ktore vynikaju zanikaju
+*           Proceduralna scena (2B) (done)
+*           Zmeny scen (2B)
+*           Hierarchicka reprezentacia sceny (4B) (half done)
+*           proceduralna animacia (2B)
+*           animacia cez klucove snimky (3B) (half done)
+*           Kolizie (3B) (done)
+*           Simulacia vektorovych sil (2B) (asi)
+*           Kamera perspektiva (1B) (done)
+*               - klucove snimky (2B)
+*               - animacne krivky (2B)
+*           Kazdy zdroj svetla (3B) (done)
+*           Zmena pozicie alebo farby (1B) (done)
+*           Kombinovanie svetla (2B) (done)
+*           Phongov model (2B) (done)
+*           Tiene (3B) (done)
+*           Postprocessing (4B) (done)
+*           
 */
-
 
 #define SIZE  512
 #define DEBUG_SHADOW_MAPS 0
@@ -268,8 +282,8 @@ private:
 
 int main() {
     // Initialize our window
-    OurWindow window = {1200,16/9 };
-    auto scene = createScene1();
+    OurWindow window = {800,16/9 };
+    auto scene = createScene6();
     window.switchScene(move(scene));
 
     // Main execution loop

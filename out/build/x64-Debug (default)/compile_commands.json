@@ -191,11 +191,6 @@
 },
 {
   "directory": "C:/Users/Robert/Desktop/semester 7/ppgso-engine/out/build/x64-Debug (default)",
-  "command": "C:\\PROGRA~2\\MICROS~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1428~1.293\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\cube.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\Robert\\Desktop\\semester 7\\ppgso-engine\\projekt\\instances\\cube.cpp\"",
-  "file": "C:/Users/Robert/Desktop/semester 7/ppgso-engine/projekt/instances/cube.cpp"
-},
-{
-  "directory": "C:/Users/Robert/Desktop/semester 7/ppgso-engine/out/build/x64-Debug (default)",
   "command": "C:\\PROGRA~2\\MICROS~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1428~1.293\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\plane.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\Robert\\Desktop\\semester 7\\ppgso-engine\\projekt\\instances\\plane.cpp\"",
   "file": "C:/Users/Robert/Desktop/semester 7/ppgso-engine/projekt/instances/plane.cpp"
 },
@@ -328,5 +323,15 @@
   "directory": "C:/Users/Robert/Desktop/semester 7/ppgso-engine/out/build/x64-Debug (default)",
   "command": "C:\\PROGRA~2\\MICROS~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1428~1.293\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\sphere.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\Robert\\Desktop\\semester 7\\ppgso-engine\\projekt\\instances\\sphere.cpp\"",
   "file": "C:/Users/Robert/Desktop/semester 7/ppgso-engine/projekt/instances/sphere.cpp"
+},
+{
+  "directory": "C:/Users/Robert/Desktop/semester 7/ppgso-engine/out/build/x64-Debug (default)",
+  "command": "C:\\PROGRA~2\\MICROS~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1428~1.293\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\lake.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\Robert\\Desktop\\semester 7\\ppgso-engine\\projekt\\instances\\lake.cpp\"",
+  "file": "C:/Users/Robert/Desktop/semester 7/ppgso-engine/projekt/instances/lake.cpp"
+},
+{
+  "directory": "C:/Users/Robert/Desktop/semester 7/ppgso-engine/out/build/x64-Debug (default)",
+  "command": "C:\\PROGRA~2\\MICROS~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1428~1.293\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\water.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\Robert\\Desktop\\semester 7\\ppgso-engine\\projekt\\instances\\water.cpp\"",
+  "file": "C:/Users/Robert/Desktop/semester 7/ppgso-engine/projekt/instances/water.cpp"
 }
 ]

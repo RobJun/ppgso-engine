@@ -23,6 +23,8 @@ private:
 	glm::vec3 speed;
 	glm::vec3 rotMomentum = { 0,0,0.1 };
 	glm::vec3 translation = { 0,0,0 };
+
+	glm::vec3 normal = {0,-1,0};
 	
 
 public:
@@ -40,5 +42,8 @@ public:
 	void renderMap(Scene& scene, ppgso::Shader* shader) override;
 
 	void renderLights(Scene& scene) override;
+
+
+	glm::vec3 getClosestPoint(glm::vec3 point);
 
 };

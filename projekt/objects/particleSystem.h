@@ -75,7 +75,7 @@ bool ParticleSystem<T>::update(Scene& scene, float dt, glm::mat4 parentModelMatr
 		auto ch = i->get();
 		ch->age += dt;
 		float step = (ch->age / particleLifeSpan);
-		ch->position += direction * speed * dt;
+		ch->position += direction * speed * dt + scene.windOnPosition(position);
 		ch->update(scene, dt, modelMatrix);
 		if (ch->age >= particleLifeSpan)
 			i = children.erase(i);

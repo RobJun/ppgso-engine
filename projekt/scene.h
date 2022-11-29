@@ -2,6 +2,7 @@
 #include <memory>
 #include <string>
 #include <tuple>
+#include <stack>
 #include <vector>
 #include <glm/glm.hpp>
 #include <ppgso.h>
@@ -25,6 +26,60 @@ public:
 
     ppgso::CubeMap skybox = ppgso::CubeMap("./res/skybox");
     ppgso::Shader shaderSkybox = { skybox_vert_glsl, skybox_frag_glsl };
+
+
+    glm::vec3 smerVetra = {1,0,1};
+    float g = 9.8f;
+
+    struct sceneIterator {
+        std::stack<Object*> stack;
+        Scene* scene;
+        sceneIterator(Scene* scene) :
+            scene(scene) {
+            if (scene == nullptr) {
+                stack.push(nullptr);
+                return;
+            }
+            if (scene->m_objects.size() == 0) {
+                stack.push(nullptr);
+                return;
+            }
+            stack.push(nullptr);
+            for (int i = scene->m_objects.size() - 1; i > -1; i--) {
+                constructStack(scene->m_objects[i].get());
+            }
+
+        };
+        sceneIterator& operator++() {
+            stack.pop();
+            return *this;
+        };
+
+        friend bool operator!=(const sceneIterator& lhs, const sceneIterator& rhs) {
+            return (lhs.stack.top() != rhs.stack.top());
+        }
+
+        Object* get(){
+            return stack.top();
+        }
+
+    private:
+        void constructStack(Object* o) {
+            if (o->children.size() == 0) {
+                stack.push(o);
+                return;
+            }
+            stack.push(o);
+            for (int i = o->children.size() - 1; i > -1; i--) {
+                constructStack(o->children[i].get());
+            }
+        }
+
+        
+    };
+
+    typedef const sceneIterator const_iterator;
+    typedef const_iterator iterator;
 public:
     Scene() {};
     Scene(std::unique_ptr<Camera> camera) : m_camera(move(camera)) {}
@@ -88,5 +143,20 @@ public:
     void useLights(ppgso::Shader* shader);
 
     void clearObjects() { m_objects.clear(); };
+
+    glm::vec3 windOnPosition(glm::vec3 position) {
+        float intenzita = (position.y < 10 ? pow(2, position.y) : pow(2, 10) -1)/500;
+       
+        return intenzita * glm::normalize(smerVetra);
+    }
+
+    sceneIterator begin() {
+        return sceneIterator(this);
+    };
+
+    sceneIterator end() {
+        return sceneIterator(nullptr);
+    };
+
 private:
 };

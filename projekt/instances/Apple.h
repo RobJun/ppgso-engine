@@ -17,7 +17,10 @@ private:
 
 	// Age of the object in seconds
 	float age{ 0.0f };
-
+	float weight = 1000;
+	glm::vec3 velocity = { 0,0,0 };
+	bool bounced = false;
+	bool stopMovement = false;
 public:
 	// Speed and rotational momentum
 	float speed = 0.0;
@@ -45,5 +48,10 @@ public:
 	void renderMap(Scene& scene, ppgso::Shader* shader) override;
 
 	void renderLights(Scene& scene) override;
+
+
+	void padaj(Scene& scene,float dt);
+
+	void collide(Scene& scene);
 
 };

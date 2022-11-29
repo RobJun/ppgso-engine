@@ -26,8 +26,8 @@ std::unique_ptr<Scene> createScene6() {
 
     // Create a camera
     auto camera = std::make_unique<Camera>(60.0f, 1.0f, 0.1f, 100.0f);
-    camera->position.z = -10.f;
-    camera->rotate = { 0,0.8,0 };
+    camera->position = { -20.f,5.f,0.f };
+    camera->back = { 0,0,-1.f };
     scene->m_camera = move(camera);
 
     auto plane = std::make_unique<Plane>(scene.get());
