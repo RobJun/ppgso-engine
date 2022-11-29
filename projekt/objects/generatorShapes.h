@@ -43,7 +43,7 @@ struct SphereGenShape : GeneratorShape {
 		int z = ((rand() % 1000)) - 500;
 		float t = 0;
 		if(!(x == 0 && y == 0 && z == 0))
-			float t = 1 / sqrt(x * x + y * y + z * z);
+			 t = 1 / sqrt(x * x + y * y + z * z);
 		x *= t * r;
 		y *= t * r;
 		z *= t * r;
