@@ -32,6 +32,10 @@ public:
 public:
 	Light(Scene* scene, const std::string  mesh_filepath,LightConfig config);
 	Light(Scene* scene, const std::string  mesh_filepath);
+
+	~Light() {
+		std::cout << "destroyng light" << std::endl;
+	}
 	/*!
  * Update asteroid
  * @param scene Scene to interact with

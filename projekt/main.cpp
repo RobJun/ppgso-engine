@@ -78,8 +78,8 @@ public:
 
 public: 
     void switchScene(std::unique_ptr<Scene> scene) {
-        m_scene.reset();
-        m_scene = move(scene);
+       m_scene.reset();
+       m_scene = move(scene);
     }
 private: 
 
@@ -274,13 +274,22 @@ private:
         if (keys[GLFW_KEY_RIGHT]) {
             m_scene->m_camera->yaw += 0.5 * dt;
         }
+
+        if (keys[GLFW_KEY_1]) {
+            auto nScene = createScene1();
+            switchScene(move(nScene));
+        }
+        if (keys[GLFW_KEY_2]) {
+            auto nScene = createScene2();
+            switchScene(move(nScene));
+        }
     }
 };
 
 int main() {
     // Initialize our window
     OurWindow window = {800,16/9 };
-    auto scene = createScene6();
+    auto scene = createScene1();
     window.switchScene(move(scene));
 
     // Main execution loop

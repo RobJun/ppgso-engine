@@ -86,6 +86,7 @@ namespace ppgso {
 		};
 
         ~CubeMap() {
+            std::cout << "destroying skybox" << std::endl;
             glDeleteVertexArrays(1, &vao);
             glDeleteBuffers(1, &vbo);
         };

@@ -11,7 +11,7 @@ void tranformTrees(Object* obj) {
 	obj->scale = { random_scale, random_scale, random_scale };
 }
 
-template <class T, class U>
+template <class T, class U, class W, class Z>
 class Generator final : public Object {
 
 public:
@@ -30,17 +30,21 @@ public:
 };
 
 
-template <class T,class U>
-Generator<T,U>::Generator(Scene* scene, unsigned int n, GeneratorShape* shape, void (*transform)(Object*)) {
+template <class T,class U, class W, class Z>
+Generator<T,U,W,Z>::Generator(Scene* scene, unsigned int n, GeneratorShape* shape, void (*transform)(Object*)) {
 	srand(time(NULL));
 	for (unsigned int i = 0; i < n; i++) {
 		auto position = shape->getRandomPoint();
 		std::unique_ptr<Object> obj;
-		if(rand() %2 )
+		int choose = rand() % 4;
+		if(choose == 0 )
 			obj = std::make_unique<T>(scene);
-		else
+		else if(choose == 1)
 			obj = std::make_unique<U>(scene);
-		
+		else if(choose == 2)
+			obj = std::make_unique<W>(scene);
+		else
+			obj = std::make_unique<Z>(scene);
 		if (transform != nullptr)
 			transform(obj.get());
 	
@@ -49,8 +53,8 @@ Generator<T,U>::Generator(Scene* scene, unsigned int n, GeneratorShape* shape, v
 	}
 }
 
-template <class T, class U>
-bool Generator<T,U>::update(Scene& scene, float dt, glm::mat4 parentModelMatrix) {
+template <class T, class U,class W, class Z>
+bool Generator<T,U,W,Z>::update(Scene& scene, float dt, glm::mat4 parentModelMatrix) {
 	generateModelMatrix();
 	modelMatrix = parentModelMatrix * modelMatrix;
 	for (auto& ch : children) {
@@ -59,23 +63,23 @@ bool Generator<T,U>::update(Scene& scene, float dt, glm::mat4 parentModelMatrix)
 	return true;
 }
 
-template <class T, class U>
-void  Generator<T,U>::render(Scene& scene) {
+template <class T, class U,class W,class Z>
+void  Generator<T,U,W,Z>::render(Scene& scene) {
 
 	for (auto& ch : children) {
 		ch->render(scene);
 	}
 };
 
-template <class T, class U>
-void  Generator<T,U>::renderMap(Scene& scene, ppgso::Shader* shader) {
+template <class T, class U,class W,class Z>
+void  Generator<T,U,W,Z>::renderMap(Scene& scene, ppgso::Shader* shader) {
 	for (auto& ch : children) {
 		ch->renderMap(scene, shader);
 	}
 };
 
-template <class T, class U>
-void Generator<T,U>::renderLights(Scene& scene) {
+template <class T, class U,class W, class Z>
+void Generator<T,U,W,Z>::renderLights(Scene& scene) {
 	for (auto& ch : children) {
 		ch->renderLights(scene);
 	}

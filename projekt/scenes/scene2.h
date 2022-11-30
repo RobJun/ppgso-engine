@@ -24,7 +24,7 @@ std::unique_ptr<Scene> createScene2() {
 
     // Create a camera
     auto camera = std::make_unique<Camera>(60.0f, 1.0f, 0.1f, 1000.0f);
-    camera->position.z = -40.0f;
+    camera->position.z = -20.0f;
     scene->m_camera = move(camera);
 
     auto lake = std::make_unique<Lake>(scene.get());
