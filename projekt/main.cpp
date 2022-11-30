@@ -18,7 +18,6 @@
 #include <shaders/light_frag_glsl.h>
 #include "scenes/scene1.h"
 #include "scenes/scene2.h"
-#include "scenes/scene5.h"
 #include "scenes/scene6.h"
 #include "scenes/scene8.h"
 #include "scenes/scene9.h"
@@ -50,7 +49,7 @@
 *           
 */
 
-#define SIZE  512
+#define SIZE  1800
 #define DEBUG_SHADOW_MAPS 0
 
 class OurWindow : public ppgso::Window {
@@ -253,15 +252,15 @@ private:
         // Collect key state in a map
         keys[key] = action;
         if (keys[GLFW_KEY_W]) {
-            m_scene->m_camera->position -= 20.f *dt* m_scene->m_camera->back;
+            m_scene->m_camera->position -= 150.f *dt* m_scene->m_camera->back;
         }
         else if (keys[GLFW_KEY_S]) {
-            m_scene->m_camera->position += 20.f *dt* m_scene->m_camera->back;
+            m_scene->m_camera->position += 150.f *dt* m_scene->m_camera->back;
         }
         if (keys[GLFW_KEY_A])
-            m_scene->m_camera->position -= 20.f* dt* glm::normalize(glm::cross(-m_scene->m_camera->back, m_scene->m_camera->up));
+            m_scene->m_camera->position -= 150.f* dt* glm::normalize(glm::cross(-m_scene->m_camera->back, m_scene->m_camera->up));
         else if (keys[GLFW_KEY_D])
-            m_scene->m_camera->position += 20.f * dt * glm::normalize(glm::cross(-m_scene->m_camera->back, m_scene->m_camera->up));
+            m_scene->m_camera->position += 150.f * dt * glm::normalize(glm::cross(-m_scene->m_camera->back, m_scene->m_camera->up));
         if (keys[GLFW_KEY_UP]) {
             m_scene->m_camera->pitch += 0.5 * dt;
         }
@@ -280,7 +279,7 @@ private:
 int main() {
     // Initialize our window
     OurWindow window = {800,16/9 };
-    auto scene = createScene6();
+    auto scene = createScene9();
     window.switchScene(move(scene));
 
     // Main execution loop

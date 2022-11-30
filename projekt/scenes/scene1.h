@@ -83,7 +83,6 @@ std::unique_ptr<Scene> createScene1() {
     plane->children.push_back(move(tent));
     plane->children.push_back(move(campfire));
 
-    scene->m_objects.push_back(move(plane));
 
     auto gen = std::make_unique<Generator<Tree1, Tree3>>(scene.get(), 20, &RectangelGenShape(60, 10), tranformTrees);
     gen->position = { 0,0,20 };
@@ -97,10 +96,13 @@ std::unique_ptr<Scene> createScene1() {
     gen2->position = { -20,0,-5 };
 
 
-    scene->m_objects.push_back(move(gen));
-    scene->m_objects.push_back(move(trava_kvety));
-    scene->m_objects.push_back(move(tree_bush));
-    scene->m_objects.push_back(move(gen2));
+    plane->children.push_back(move(gen));
+    plane->children.push_back(move(trava_kvety));
+    plane->children.push_back(move(tree_bush));
+    plane->children.push_back(move(gen2));
+
+    
+    scene->m_objects.push_back(move(plane));
 
     return scene;
 }

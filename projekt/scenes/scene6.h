@@ -19,7 +19,7 @@ std::unique_ptr<Scene> createScene6() {
     auto scene = std::make_unique<Scene>();
     scene->clearObjects();
     scene->m_globalLight.direction = { 0,-1,1 };
-    scene->m_globalLight.ambient = 0.5f;
+    scene->m_globalLight.ambient = 2.f;
     scene->m_globalLight.diffuse = 0.1f ;
     scene->m_globalLight.specular= 0.00f;
     scene->m_globalLight.color = {1,1,1};
@@ -31,69 +31,57 @@ std::unique_ptr<Scene> createScene6() {
     scene->m_camera = move(camera);
 
     auto plane = std::make_unique<Plane>(scene.get());
-    plane->scale = { 20, 20, 20 };
-    scene->m_objects.push_back(move(plane));
-
-
-    /*auto fox = std::make_unique<Fox>(scene.get());
-    fox->scale = {0.3,0.3,0.3};
-    fox->position = {-8,0,-8};
-    scene->m_objects.push_back(move(fox));
+    plane->scale = {30, 50, 30 };
 
     auto chicken = std::make_unique<Chicken>(scene.get());
-    chicken->scale = {0.2,0.2,0.2};
-    chicken->position = { 2,0,2 };
-    scene->m_objects.push_back(move(chicken));
+    chicken->scale = {0.5,0.5,0.5};
+    chicken->position = { 0,4.5,0 };
 
-    auto mushroom = std::make_unique<Mushroom>(scene.get());
-    mushroom->scale = {1,1,1};
-    mushroom->position = { -8,0,-2 };
-    scene->m_objects.push_back(move(mushroom));
-
+    auto fox = std::make_unique<Fox>(scene.get());
+    fox->scale = {0.2,0.2,0.2};
+    fox->position = {4,0,20};
+    fox->rotation = { 0,0,-2 };
+    fox->children.push_back(move(chicken));
+      
     auto rabbit = std::make_unique<Rabbit>(scene.get());
     rabbit->scale = { .2,.2,.2 };
-    rabbit->position = { -8,0.3,-12 };
-    scene->m_objects.push_back(move(rabbit));
+    rabbit->position = { -4,0.3,20 };
+    rabbit->rotation = {0,0,2};
 
-    auto tree1 = std::make_unique<Tree1>(scene.get());
-    tree1->scale = {.5,.5,.5 };
-    tree1->position = { 1,0,-16 };
-    scene->m_objects.push_back(move(tree1));*/
-
-    auto tree2 = std::make_unique<Tree2>(scene.get());
-    tree2->scale = { .5,.5,.5 };
-    tree2->position = { 0,0,0};
-    scene->m_objects.push_back(move(tree2));
-
-    /*auto tree3 = std::make_unique<Tree3>(scene.get());
-    tree3->scale = { .5,.5,.5 };
-    tree3->position = { 1,0,-12 };
-    scene->m_objects.push_back(move(tree3));
-
-    auto bush = std::make_unique<Bush>(scene.get());
-    bush->scale = { .5,.5,.5 };
-    bush->position = {5,0,-2 };
-    scene->m_objects.push_back(move(bush));
-
-    auto log = std::make_unique<Log>(scene.get());
-    log->scale = { .5,.5,.5 };
-    log->position = { 5,0,-5 };
-    scene->m_objects.push_back(move(log));
-
-    auto flower = std::make_unique<Flower>(scene.get());
-    flower->scale = { .5,.5,.5 };
-    flower->position = { 5,0,-10 };
-    scene->m_objects.push_back(move(flower));
-
-    auto grass = std::make_unique<Grass>(scene.get());
-    grass->scale = { .5,.5,.5 };
-    grass->position = { 5,0,-10 };
-    scene->m_objects.push_back(move(grass));*/
+    auto tree_Apple = std::make_unique<Tree2>(scene.get());
+    tree_Apple->scale = { .5,.5,.5 };
+    tree_Apple->position = {0,0,20};
 
     auto apple = std::make_unique<Apple>(scene.get());
     apple->scale = { .005,.005,.005 };
-    apple->position = {-2.7,2.9,0.8};
-    scene->m_objects.push_back(move(apple));
+    apple->position = {-2.7,2.9,20};
+    tree_Apple->children.push_back(move(apple));
+
+    auto gen = std::make_unique<Generator<Tree1, Tree3>>(scene.get(), 25, &RectangelGenShape(60, 10), tranformTrees);
+    gen->position = {0,0,40};
+
+    auto trava = std::make_unique<Generator<Grass, Grass>>(scene.get(), 200, &RectangelGenShape(60,100));
+    auto mashroom_kvety = std::make_unique<Generator<Flower, Mushroom>>(scene.get(), 60, &RectangelGenShape(60,100));
+
+    auto tree_bush = std::make_unique<Generator<Bush, Bush>>(scene.get(), 10, &RectangelGenShape(60, 10));
+    tree_bush->position = { 0,0,40 };
+
+    auto gen2 = std::make_unique<Generator<Tree1, Tree3>>(scene.get(), 30, &RectangelGenShape(15, 100), tranformTrees);
+    gen2->position = {-20,0,-0 };
+    auto gen3 = std::make_unique<Generator<Tree1, Tree3>>(scene.get(), 30, &RectangelGenShape(15, 100), tranformTrees);
+    gen3->position = { 20,0,-0 };
+
+    plane->children.push_back(move(tree_Apple));
+    plane->children.push_back(move(gen));
+    plane->children.push_back(move(trava));
+    plane->children.push_back(move(mashroom_kvety));
+    plane->children.push_back(move(tree_bush));
+    plane->children.push_back(move(gen2));
+    plane->children.push_back(move(gen3));
+    plane->children.push_back(move(rabbit));
+    plane->children.push_back(move(fox));
+    
+    scene->m_objects.push_back(move(plane));
 
     return scene;
 }

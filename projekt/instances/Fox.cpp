@@ -12,9 +12,9 @@ std::unique_ptr<ppgso::Shader> Fox::shader;
 
 Fox::Fox(Scene* scene)
 {
-	material.ambient = glm::vec3{ 0.0,	0.0, 0.0 };
-	material.diffuse = glm::vec3{ 0.5,0.0,0.0 };
-	material.specular = glm::vec3{ 0.7,	0.6,0.6};;
+	material.ambient = glm::vec3{ 0.2,.2,.2 };
+	material.diffuse = glm::vec3{ 0.2,.2,.2 };
+	material.specular = glm::vec3{ 0.2,.2,.2 };
 	material.shininess = .25;
 	material.transparency = 1;
 

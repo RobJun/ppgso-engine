@@ -12,9 +12,9 @@ std::unique_ptr<ppgso::Shader> Rabbit::shader;
 
 Rabbit::Rabbit(Scene* scene)
 {
-	material.ambient = glm::vec3{ 0.0,	0.0, 0.0 };
-	material.diffuse = glm::vec3{ 0.5,0.0,0.0 };
-	material.specular = glm::vec3{ 0.7,	0.6,0.6 };;
+	material.ambient = glm::vec3{0.5,.5,.5};
+	material.diffuse = glm::vec3{ 0.5,.5,.5 };
+	material.specular = glm::vec3{ 0.5,.5,.5 };
 	material.shininess = .25;
 	material.transparency = 1;
 

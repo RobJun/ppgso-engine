@@ -32,18 +32,9 @@ public:
 public:
 	Light(Scene* scene, const std::string  mesh_filepath,LightConfig config);
 	Light(Scene* scene, const std::string  mesh_filepath);
-	/*!
- * Update asteroid
- * @param scene Scene to interact with
- * @param dt Time delta for animation purposes
- * @return
- */
+
 	bool update(Scene& scene, float dt, glm::mat4 parentModelMatrix) ;
 
-	/*!
-	 * Render asteroid
-	 * @param scene Scene to render in
-	 */
 	void render(Scene& scene) ;
 
 	void renderMap(Scene& scene, ppgso::Shader* shader);

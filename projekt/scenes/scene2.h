@@ -12,12 +12,14 @@
 #include "../instances/Men.h"
 #include "../instances/lake.h"
 #include "../instances/water.h"
+#include "../instances/Fish.h"
+
 
 std::unique_ptr<Scene> createScene2() {
     auto scene = std::make_unique<Scene>();
     scene->clearObjects();
     scene->m_globalLight.direction = { 0,-1,1 };
-    scene->m_globalLight.ambient = 0.5f;
+    scene->m_globalLight.ambient = 2.f;
     scene->m_globalLight.diffuse = 0.1f ;
     scene->m_globalLight.specular= 0.00f;
     scene->m_globalLight.color = {1,1,1};
@@ -26,71 +28,57 @@ std::unique_ptr<Scene> createScene2() {
     auto camera = std::make_unique<Camera>(60.0f, 1.0f, 0.1f, 1000.0f);
     camera->position.z = -40.0f;
     scene->m_camera = move(camera);
-
-    auto lake = std::make_unique<Lake>(scene.get());
-    scene->m_objects.push_back(move(lake));
     
+    auto hat = std::make_unique<Hat>(scene.get());
+    hat->scale = {.8,.8,.8};
+    hat->position = {0,240,0};
+    hat->rotation = { 30,0,10 };
+
+    auto men = std::make_unique<Men>(scene.get());
+    men->scale = {20,20,20 };
+    men->position = {0,133,0};
+    men->rotation = { 0,0,10 };
+
+    auto boat = std::make_unique<Boat>(scene.get());
+    boat->scale = {0.015,.015,.015 };
+    boat->position = {-30,-.5,15 };
+    boat->children.push_back(move(men));
+    boat->children.push_back(move(hat));
+
     auto water = std::make_unique<Water>(scene.get());
     water->scale = { 100,100,100 };
     water->material.transparency = 0.7f;
 
-    auto seagull = std::make_unique<Seagull>(scene.get());
-    seagull->scale = {2,2,2 };
-    seagull->position = { 3,8,13 };
-    scene->m_objects.push_back(move(seagull));
+    auto fish = std::make_unique<Fish>(scene.get());
+    fish->scale = {.3,.3,.3 };
+    fish->position = { 0,-1,0 };
 
-    auto boat = std::make_unique<Boat>(scene.get());
-    boat->scale = {0.02,.02,.02 };
-    boat->position = {17,-2,15 };
-    scene->m_objects.push_back(move(boat));
+    auto obloha = std::make_unique<Generator<Seagull, Seagull>>(scene.get(), 9, &SphereGenShape(5), tranformTrees);
+    obloha->position = {-20,20,25};
+    obloha->rotation = { 0,0,2 };
 
     auto tree1 = std::make_unique<Tree1>(scene.get());
-    tree1->scale = {.5,.5,.5 };
-    tree1->position = { 1,0,-16 };
-    scene->m_objects.push_back(move(tree1));
-
-    auto tree2 = std::make_unique<Tree2>(scene.get());
-    tree2->scale = { .5,.5,.5 };
-    tree2->position = { 1,0,-14 };
-    scene->m_objects.push_back(move(tree2));
-
     auto tree3 = std::make_unique<Tree3>(scene.get());
-    tree3->scale = { .5,.5,.5 };
-    tree3->position = { 1,0,-12 };
-    scene->m_objects.push_back(move(tree3));
+    auto gen = std::make_unique<Generator<Tree1, Tree3>>(scene.get(), 200, &RectangelGenShape(200, 40), tranformTrees);
+    gen->position = {0,0,100 };
+    auto gen2 = std::make_unique<Generator<Tree1, Tree3>>(scene.get(), 100, &RectangelGenShape(30, 200), tranformTrees);
+    gen2->position = {-100,0,0 };
+    auto gen3 = std::make_unique<Generator<Tree1, Tree3>>(scene.get(), 60, &RectangelGenShape(10, 200), tranformTrees);
+    gen3->position = { 130,0,0 };
+    
 
-    auto bush = std::make_unique<Bush>(scene.get());
-    bush->scale = { .5,.5,.5 };
-    bush->position = {5,0,-2 };
-    scene->m_objects.push_back(move(bush));
+    auto lake = std::make_unique<Lake>(scene.get());
 
-    auto log = std::make_unique<Log>(scene.get());
-    log->scale = { .5,.5,.5 };
-    log->position = { 5,0,-5 };
-    scene->m_objects.push_back(move(log));
+    water->children.push_back(move(boat));
+    water->children.push_back(move(fish));
 
-    auto flower = std::make_unique<Flower>(scene.get());
-    flower->scale = { .5,.5,.5 };
-    flower->position = { 5,0,-10 };
-    scene->m_objects.push_back(move(flower));
+    lake->children.push_back(move(gen));
+    lake->children.push_back(move(gen2));
+    lake->children.push_back(move(gen3));
+    lake->children.push_back(move(water));
 
-    auto grass = std::make_unique<Grass>(scene.get());
-    grass->scale = { .5,.5,.5 };
-    grass->position = { 5,0,-10 };
-    scene->m_objects.push_back(move(grass));
-
-    auto hat = std::make_unique<Hat>(scene.get());
-    hat->scale = { .01,.01,.01 };
-    hat->position = { 15,0,10 };
-    scene->m_objects.push_back(move(hat));
-
-    auto men = std::make_unique<Men>(scene.get());
-    men->scale = {.51,.51,.51 };
-    men->position = { 15,1.5,15 };
-    scene->m_objects.push_back(move(men));
-
-
-    scene->m_objects.push_back(move(water));
+    scene->m_objects.push_back(move(obloha));
+    scene->m_objects.push_back(move(lake));
 
     return scene;
 }

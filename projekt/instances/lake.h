@@ -28,18 +28,8 @@ public:
 public:
 	Lake(Scene* scene);
 
-	/*!
-	 * Update asteroid
-	 * @param scene Scene to interact with
-	 * @param dt Time delta for animation purposes
-	 * @return
-	 */
 	bool update(Scene& scene, float dt, glm::mat4 parentModelMatrix) override;
 
-	/*!
-	 * Render asteroid
-	 * @param scene Scene to render in
-	 */
 	void render(Scene& scene) override;
 
 	void renderMap(Scene& scene, ppgso::Shader* shader) override;

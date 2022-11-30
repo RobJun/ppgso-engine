@@ -9,6 +9,8 @@
 #include "../instances/Flower.h"
 #include "../instances/Grass.h"
 #include "../instances/Mushroom.h"
+#include "../instances/Brana.h"
+#include "../instances/Sphere.h"
 
 //!!!CHYBA JASKYNA
 
@@ -16,62 +18,62 @@ std::unique_ptr<Scene> createScene7() {
     auto scene = std::make_unique<Scene>();
     scene->clearObjects();
     scene->m_globalLight.direction = { 0,-1,1 };
-    scene->m_globalLight.ambient = 0.5f;
+    scene->m_globalLight.ambient = 2.f;
     scene->m_globalLight.diffuse = 0.1f;
     scene->m_globalLight.specular = 0.00f;
     scene->m_globalLight.color = { 1,1,1 };
 
     // Create a camera
     auto camera = std::make_unique<Camera>(60.0f, 1.0f, 0.1f, 100.0f);
-    camera->position.z = -40.0f;
+    camera->position = { -20.f,5.f,0.f };
+    camera->back = { 0,0,-1.f };
     scene->m_camera = move(camera);
 
-    auto car = std::make_unique<Car>(scene.get());
-    car->position = { 0,0,-10 };
-    car->rotMomentum = { 0,0,0 };
-    scene->m_objects.push_back(move(car));
+    auto plane = std::make_unique<Plane>(scene.get());
+    plane->scale = { 30, 50, 30 };
 
-    scene->m_objects.push_back(std::make_unique<Plane>(scene.get()));
+    auto gen = std::make_unique<Generator<Tree1, Tree3>>(scene.get(), 25, &RectangelGenShape(60, 10), tranformTrees);
+    gen->position = { 0,0,40 };
 
-    auto tree1 = std::make_unique<Tree1>(scene.get());
-    tree1->scale = { .5,.5,.5 };
-    tree1->position = { 1,0,-16 };
-    scene->m_objects.push_back(move(tree1));
+    auto trava = std::make_unique<Generator<Grass, Grass>>(scene.get(), 200, &RectangelGenShape(60, 100));
+    auto mashroom_kvety = std::make_unique<Generator<Flower, Mushroom>>(scene.get(), 60, &RectangelGenShape(60, 100));
 
-    auto tree2 = std::make_unique<Tree2>(scene.get());
-    tree2->scale = { .5,.5,.5 };
-    tree2->position = { 1,0,-14 };
-    scene->m_objects.push_back(move(tree2));
+    auto tree_bush = std::make_unique<Generator<Bush, Bush>>(scene.get(), 10, &RectangelGenShape(60, 10));
+    tree_bush->position = { 0,0,40 };
 
-    auto tree3 = std::make_unique<Tree3>(scene.get());
-    tree3->scale = { .5,.5,.5 };
-    tree3->position = { 1,0,-12 };
-    scene->m_objects.push_back(move(tree3));
+    auto gen2 = std::make_unique<Generator<Tree1, Tree3>>(scene.get(), 30, &RectangelGenShape(15, 100), tranformTrees);
+    gen2->position = { -20,0,-0 };
+    auto gen3 = std::make_unique<Generator<Tree1, Tree3>>(scene.get(), 30, &RectangelGenShape(15, 100), tranformTrees);
+    gen3->position = { 20,0,-0 };
 
-    auto bush = std::make_unique<Bush>(scene.get());
-    bush->scale = { .5,.5,.5 };
-    bush->position = { 5,0,-2 };
-    scene->m_objects.push_back(move(bush));
+    auto brana = std::make_unique<Brana>(scene.get());
+    brana->position = {0,5,20};
+    auto brana2 = std::make_unique<Brana>(scene.get());
+    brana2->position = { 0,5,21 };
+    brana2->scale = {0.12,.12,.12};
+    auto brana3 = std::make_unique<Brana>(scene.get());
+    brana3->position = { 0,5,22 };
+    brana3->scale = { .14,.14,.14 };
+    auto jaskyna = std::make_unique<Sphere>(scene.get());
+    jaskyna->position = { 0,-1,22 };
+    jaskyna->scale = {15,22,1};
+    jaskyna->material.ambient = glm::vec3{ 0.0,	0.0, 0.0 };
+    jaskyna->material.diffuse = glm::vec3{ 0.5,	0.5,0.0 };
+    jaskyna->material.specular = glm::vec3{ 0.6,0.6,0.5 };;
 
-    auto log = std::make_unique<Log>(scene.get());
-    log->scale = { .5,.5,.5 };
-    log->position = { 5,0,-5 };
-    scene->m_objects.push_back(move(log));
 
-    auto flower = std::make_unique<Flower>(scene.get());
-    flower->scale = { .5,.5,.5 };
-    flower->position = { 5,0,-10 };
-    scene->m_objects.push_back(move(flower));
+    plane->children.push_back(move(jaskyna));
+    plane->children.push_back(move(brana));
+    plane->children.push_back(move(brana3));
+    plane->children.push_back(move(brana2));
+    plane->children.push_back(move(gen));
+    plane->children.push_back(move(trava));
+    plane->children.push_back(move(mashroom_kvety));
+    plane->children.push_back(move(tree_bush));
+    plane->children.push_back(move(gen2));
+    plane->children.push_back(move(gen3));
 
-    auto grass = std::make_unique<Grass>(scene.get());
-    grass->scale = { .5,.5,.5 };
-    grass->position = { 5,0,-10 };
-    scene->m_objects.push_back(move(grass));
-
-    auto mushroom = std::make_unique<Mushroom>(scene.get());
-    mushroom->scale = { 1,1,1 };
-    mushroom->position = { -8,0,-2 };
-    scene->m_objects.push_back(move(mushroom));
+    scene->m_objects.push_back(move(plane));
 
     return scene;
 }

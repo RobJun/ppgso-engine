@@ -13,9 +13,9 @@ std::unique_ptr<ppgso::Shader> Flower::shader;
 Flower::Flower(Scene* scene)
 {
 	scale = { 0.8,0.8,0.8 };
-	material.diffuse = glm::vec3{ 0.1,	0.35,	0.1 };
-	material.ambient = glm::vec3{ 0,	0, 0 };
-	material.specular = glm::vec3{ 0.45,	0.55,	0.45 };;
+	material.ambient = glm::vec3{ 0.2,.2,.2 };
+	material.diffuse = glm::vec3{ 0.2,.2,.2 };
+	material.specular = glm::vec3{ 0.2,.2,.2 };
 	material.shininess = .25;
 	material.transparency = 1;
 

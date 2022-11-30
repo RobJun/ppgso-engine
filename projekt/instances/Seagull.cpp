@@ -12,6 +12,8 @@ std::unique_ptr<ppgso::Shader> Seagull::shader;
 
 Seagull::Seagull(Scene* scene)
 {
+	scale = {3,3,3};
+
 	material.diffuse = glm::vec3{ 0.5,0.0,0.0 };
 	material.ambient = glm::vec3{ 0.55,0.55,	0.55 };
 	material.specular = glm::vec3{ 0.7,	0.7,0. };;
@@ -19,7 +21,7 @@ Seagull::Seagull(Scene* scene)
 	material.transparency = 1;
 
 	if (!shader) shader = std::make_unique<ppgso::Shader>(our_shader_vert_glsl, our_shader_frag_glsl);
-	if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadFI("res/uvseagull.jpg"));
+	if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadFI("res/uvseagull.png"));
 	if (!mesh) mesh = std::make_unique<ppgso::Mesh>("res/seagull.obj");
 }
 
