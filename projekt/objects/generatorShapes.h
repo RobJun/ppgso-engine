@@ -1,9 +1,11 @@
 #include <glm/glm.hpp>
 #include <time.h>
+#include <vector>
 
 
 struct GeneratorShape {
-
+	std::vector<glm::vec3> usedPoints;
+	float distance = 1.5;
 
 	virtual glm::vec3 getRandomPoint() {
 		return glm::vec3(0);
@@ -19,11 +21,25 @@ struct CircleGenShape : GeneratorShape {
 		: radius(radius) {};
 
 	glm::vec3 getRandomPoint() override {
-		float r = radius * sqrt((rand() % 1000) / 1000.f);
-		float t = ((rand() % 1000) / 1000.f) * 2 * 3.14;
-		float x = r * cos(t);
-		float z = r * sin(t);
+		float x, z;
+		bool existsClose = false;
+		do {
+			float r = radius * sqrt((rand() % 1000) / 1000.f);
+			float t = ((rand() % 1000) / 1000.f) * 2 * 3.14;
+			 x = r * cos(t);
+			 z = r * sin(t);
+			existsClose = false;
+			for (auto& p : usedPoints) {
+				if (glm::distance(p, { x,0,z }) < distance) {
+					existsClose = true;
+					break;
+				}
+			}
 
+		} while (existsClose);
+
+
+		usedPoints.push_back({ x,0,z });
 		if (up.y > 0) {
 			return {x,0,z };
 		}
@@ -37,17 +53,32 @@ struct SphereGenShape : GeneratorShape {
 		: radius(radius) {}
 
 	glm::vec3 getRandomPoint() override {
-		float r = radius * sqrt((rand() % 1000) / 1000.f);
-		int x = ((rand() % 1000)) - 500;
-		int y = ((rand() % 1000)) - 500;
-		int z = ((rand() % 1000)) - 500;
-		float t = 0;
-		if(!(x == 0 && y == 0 && z == 0))
-			 t = 1 / sqrt(x * x + y * y + z * z);
-		x *= t * r;
-		y *= t * r;
-		z *= t * r;
+		float x,y, z;
+		bool existsClose = false;
+		do {
+			float r = radius * sqrt((rand() % 1000) / 1000.f);
+			x = ((rand() % 1000)) - 500;
+			y = ((rand() % 1000)) - 500;
+			z = ((rand() % 1000)) - 500;
+			float t = 0;
+			if (!(x == 0 && y == 0 && z == 0))
+				t = 1 / sqrt(x * x + y * y + z * z);
+			x *= t * r;
+			y *= t * r;
+			z *= t * r;
 
+			existsClose = false;
+			for (auto& p : usedPoints) {
+				if (glm::distance(p, { x,y,z }) < distance) {
+					existsClose = true;
+					break;
+				}
+			}
+
+
+		} while (existsClose);
+
+		usedPoints.push_back({ x,y,z });
 		return { x,y,z };
 	}
 };
@@ -61,11 +92,26 @@ struct RectangelGenShape : GeneratorShape {
 		:  A(A), B(B) {};
 
 	glm::vec3 getRandomPoint() override {
-		float A_t = A * (rand() % 1000 / 1000.f);
-		float B_t = B * (rand() % 1000 / 1000.f);
-		float x = A_t - A / 2;
-		float z = B_t - B / 2;
+		float x, y, z;
+		bool existsClose = false;
+		do {
+			float A_t = A * (rand() % 1000 / 1000.f);
+			float B_t = B * (rand() % 1000 / 1000.f);
+			x = A_t - A / 2;
+			z = B_t - B / 2;
 
+			existsClose = false;
+			for (auto& p : usedPoints) {
+				if (glm::distance(p, { x,0,z }) < distance) {
+					existsClose = true;
+					break;
+				}
+			}
+		} while (existsClose);
+
+
+
+		usedPoints.push_back({ x,0,z });
 		if (up.y > 0) {
 			return { x, 0, z };
 		}
