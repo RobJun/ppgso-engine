@@ -13,7 +13,7 @@ std::unique_ptr<ppgso::Shader> Bat::shader;
 Bat::Bat(Scene* scene)
 {
 	material.diffuse = glm::vec3{ 0.50754,	0.50754,	0.50754 };
-	material.ambient = glm::vec3{ 0.19225,	0.19225,	0.19225 };
+	material.ambient = glm::vec3{ 0.3,	0.3,	0.3 };
 	material.specular = glm::vec3{ 0.508273, 0.508273, 0.508273 };;
 	material.shininess = .4;
 	material.transparency = 1;
@@ -25,6 +25,10 @@ Bat::Bat(Scene* scene)
 
 bool Bat::update(Scene& scene, float dt, glm::mat4 parentModelMatrix)
 {
+	age += dt;
+	if (age > 1)
+		return false;
+	position += translation * dt;
 	generateModelMatrix();
 	modelMatrix = parentModelMatrix * modelMatrix;
 	for (auto& ch : children) {
@@ -36,7 +40,7 @@ bool Bat::update(Scene& scene, float dt, glm::mat4 parentModelMatrix)
 void Bat::render(Scene& scene)
 {
 	shader->use();
-	scene.useGlobalLights(shader.get());
+	//scene.useGlobalLights(shader.get());
 	scene.useCamera(shader.get());
 	scene.useLights(shader.get());
 

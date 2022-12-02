@@ -93,7 +93,7 @@ std::unique_ptr<Scene> createScene1() {
     auto gen2 = std::make_unique<Generator<Tree1, Tree3,Bush,Tree2>>(scene.get(), 20, &RectangelGenShape(10,40),tranformTrees);
     gen2->position = { -20,0,-5 };
 
-
+    scene->m_objects.push_back(move(plane));
     scene->m_objects.push_back(move(gen));
     scene->m_objects.push_back(move(trava_kvety));
     scene->m_objects.push_back(move(gen2));

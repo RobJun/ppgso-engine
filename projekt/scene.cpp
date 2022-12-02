@@ -5,7 +5,7 @@
 void Scene::update(float time) {
 	m_camera->update(time);
     if (m_camera->lightIndex != -1) {
-        if (m_camera->name == ppgso::light::SPOT) {
+        if (m_camera->name == ppgso::light::LightName::SPOT) {
             spotLights[m_camera->lightIndex]->position = m_camera->position;
             spotLights[m_camera->lightIndex]->direction = -m_camera->back;
         }

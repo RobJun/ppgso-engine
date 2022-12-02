@@ -14,7 +14,7 @@ Jaskyna1::Jaskyna1(Scene* scene)
 {
 	scale = { .07,.07,.07 };
 
-	material.ambient = glm::vec3{ 0.0,	0.0, 0.0 };
+	material.ambient = glm::vec3{ 0.1,	0.1, 0.1 };
 	material.diffuse = glm::vec3{ 0.5,	0.5,	0.0 };
 	material.specular = glm::vec3{ 0.6,	0.6,0.5 };;
 	material.shininess = .25;
@@ -38,7 +38,7 @@ bool Jaskyna1::update(Scene& scene, float dt, glm::mat4 parentModelMatrix)
 void Jaskyna1::render(Scene& scene)
 {
 	shader->use();
-	scene.useGlobalLights(shader.get());
+	//scene.useGlobalLights(shader.get());
 	scene.useCamera(shader.get());
 	scene.useLights(shader.get());
 

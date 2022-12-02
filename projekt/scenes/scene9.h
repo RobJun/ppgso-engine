@@ -15,20 +15,21 @@ std::unique_ptr<Scene> createScene9() {
     auto scene = std::make_unique<Scene>();
     scene->clearObjects();
     scene->m_globalLight.direction = { 0,-1,1 };
-    scene->m_globalLight.ambient = 0.5f;
-    scene->m_globalLight.diffuse = 0.1f;
-    scene->m_globalLight.specular = 0.00f;
+    scene->m_globalLight.ambient = 0.3f;
+    scene->m_globalLight.diffuse = 1.f;
+    scene->m_globalLight.specular = 0.7f;
     scene->m_globalLight.color = { 1,1,1 };
 
-    int l = scene->generateSpotLight(glm::vec3(0, 4, 3),glm::vec3(0, 4, 3), glm::vec3{ 1,0.8,0.3 }, glm::vec3{ 0.8f,0.9f,1.0f }, glm::vec3{ 0.22,0.0019,1.f }, glm::vec2{ glm::radians(12.5f) ,glm::radians(17.0f) });
-    scene->enableLight_spot(l);
-    // Create a camera
-    auto camera = std::make_unique<KeyframeCamera>(60.0f, 1.0f, 0.1f, 100.0f);
-    camera->position = { 0,3,-40 };
+    int l = scene->generateSpotLight(glm::vec3(0, 4, 3), glm::vec3(0, 4, 3),
+        glm::vec3{ 1,1,0.3 }, glm::vec3{ 0.8f,0.6f,0.1f },
+        glm::vec3{ 0.22,0.0019,1.f }, glm::vec2{ glm::radians(12.5f) ,glm::radians(17.0f) });
+    // Create a camera*/
+    auto camera = std::make_unique<KeyframeCamera>(60.0f, 1.0f, 0.1f, 1000.0f);
+    camera->position = {0,3,-80};
     camera->back = { 0,0,-1 };
     camera->up = { 0,1,0 };
     camera->lightIndex = l;
-    camera->name = ppgso::light::SPOT;
+    camera->name = ppgso::light::LightName::SPOT;
     camera->addInitialKeyframes();
     //camera->addInitialKeyframes();
     ppgso::KeyFrame<glm::vec3> finalPosition;
@@ -36,31 +37,31 @@ std::unique_ptr<Scene> createScene9() {
     finalPosition.time = 20;
     finalPosition.addInterState({ 0,4,0.6}, 5.3);
     finalPosition.addInterState({ 0,4,17 }, 16.3);
-    finalPosition.interpolation = ppgso::POLYNOMIC;
+    finalPosition.interpolation = ppgso::BEZIER;
     camera->k_position.addFrame(finalPosition);
 
     scene->m_camera = move(camera);
 
     auto zem = std::make_unique<Plane>(scene.get());
-    zem->scale = { 15, 40, 15 };
+    zem->scale = { 90, 90, 90 };
     zem->material.ambient = glm::vec3{ 0.0,0.0, 0.0 };
     zem->material.diffuse = glm::vec3{ 0.5,0.5,0.0 };
     zem->material.specular = glm::vec3{ 0.6,0.6,0.5 };;
 
-    /*auto bat = std::make_unique<Bat>(scene.get());
-    bat->scale = { 5,5,5 };
-    bat->position = { 8,5,5 };
-    scene->m_objects.push_back(move(bat));
 
     auto men = std::make_unique<Men>(scene.get());
-    men->scale = { .51,.51,.51 };
-    men->position = { 15,1.5,15 };
+    men->scale = { 0.8,0.8,0.8 };
+    men->position = { -2,0,20 };
+    men->rotation = { 3.14 / 2,0,3.14 / 2 };
     scene->m_objects.push_back(move(men));
 
     auto bear = std::make_unique<Bear>(scene.get());
     bear->scale = { .2,.2,.2 };
-    bear->position = { 0,0,0 };
-    scene->m_objects.push_back(move(bear));*/
+    bear->position = { 0,0,20 };
+    scene->m_objects.push_back(move(bear));
+
+    auto bat = std::make_unique<Bat>(scene.get());
+    bat.reset();
 
 
     for (int i = -40; i < 40; i++) {
@@ -83,10 +84,19 @@ std::unique_ptr<Scene> createScene9() {
     auto stalagnity2 = std::make_unique<Generator<Jaskyna1, Jaskyna2>>(scene.get(), 20, &RectangelGenShape(5, 80));
     stalagnity2->position = { -8,1,0 };
 
+
+    auto lesnaLavo = std::make_unique<Generator<Tree1, Tree3>>(scene.get(), 80, &RectangelGenShape(40, 80), tranformTrees);
+    lesnaLavo->position = { -40 ,0,-40 };
+
+    auto lesnaPravo = std::make_unique<Generator<Tree1, Tree3>>(scene.get(), 80, &RectangelGenShape(40, 80),tranformTrees);
+    lesnaPravo->position = { 40 ,0,-40 };
+
     zem->children.push_back(move(jaskyna));
     zem->children.push_back(move(stalagnity));
     zem->children.push_back(move(stalagnity2));
     scene->m_objects.push_back(move(zem));
+    scene->m_objects.push_back(move(lesnaLavo));
+    scene->m_objects.push_back(move(lesnaPravo));
 
     return scene;
 }

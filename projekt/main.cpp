@@ -24,6 +24,7 @@
 #include "scenes/scene7.h"
 
 #include "utils/renderQuad.h"
+#include "./instances/Bat.h"
 
 /*     TODO:
 *          Objekty 3D (4B)
@@ -281,6 +282,31 @@ private:
         if (keys[GLFW_KEY_2]) {
             auto nScene = createScene2();
             switchScene(move(nScene));
+        }
+
+        if (keys[GLFW_KEY_F]) {
+            if (m_scene->m_camera->lightIndex != -1) {
+                if (m_scene->m_camera->name == ppgso::light::LightName::SPOT) {
+                    if (m_scene->spotLights[m_scene->m_camera->lightIndex]->enabled == false) {
+                        m_scene->enableLight_spot(m_scene->m_camera->lightIndex);
+                        auto bat = std::make_unique<Bat>(m_scene.get());
+                        bat->scale = { 5,5,5 };
+                        bat->position = m_scene->m_camera->position - 5.f * m_scene->m_camera->back - glm::vec3{0.6,-0.6,0};
+                        bat->rotation = { -1,-1,3.14 };
+                        bat->translation = { 0.3,-1,-1 };
+                        m_scene->m_objects.push_back(move(bat));
+
+                        bat = std::make_unique<Bat>(m_scene.get());
+                        bat->scale = { 5,5,5 };
+                        bat->position = m_scene->m_camera->position - 5.f*m_scene->m_camera->back + glm::vec3{ 0.6,0.6,0 };
+                        bat->rotation = { -1,1,3.14 };
+                        bat->translation = { -0.3,-1,-1 };
+                        m_scene->m_objects.push_back(move(bat));
+                    }
+                    else
+                        m_scene->disableLight_spot(m_scene->m_camera->lightIndex);
+                }
+            }
         }
     }
 };

@@ -253,4 +253,5 @@ add_custom_command(TARGET projekt POST_BUILD COMMAND  ${CMAKE_COMMAND} -E copy_d
 #
 
 file(COPY "data/" DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY "dependencies/lib/vc2019/FreeImage.dll"  DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 install(DIRECTORY data/ DESTINATION .)

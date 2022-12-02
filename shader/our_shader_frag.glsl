@@ -202,4 +202,4 @@ void main() {
 
   FragmentColor = result * vec4(texture(Texture, vec2(texCoord.x, 1.0 - texCoord.y) + TextureOffset)); 
   FragmentColor.a = material.transparency;
-}
+  }
