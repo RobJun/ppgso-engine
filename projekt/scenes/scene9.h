@@ -9,6 +9,8 @@
 #include "../instances/Jaskyna3.h"
 #include "../instances/Sphere.h"
 
+#include "../objects/keyframeCamera.h"
+
 std::unique_ptr<Scene> createScene9() {
     auto scene = std::make_unique<Scene>();
     scene->clearObjects();
@@ -18,9 +20,25 @@ std::unique_ptr<Scene> createScene9() {
     scene->m_globalLight.specular = 0.00f;
     scene->m_globalLight.color = { 1,1,1 };
 
+    int l = scene->generateSpotLight(glm::vec3(0, 4, 3),glm::vec3(0, 4, 3), glm::vec3{ 1,0.8,0.3 }, glm::vec3{ 0.8f,0.9f,1.0f }, glm::vec3{ 0.22,0.0019,1.f }, glm::vec2{ glm::radians(12.5f) ,glm::radians(17.0f) });
+    scene->enableLight_spot(l);
     // Create a camera
-    auto camera = std::make_unique<Camera>(60.0f, 1.0f, 0.1f, 100.0f);
-    camera->position = { 0,0,0 };
+    auto camera = std::make_unique<KeyframeCamera>(60.0f, 1.0f, 0.1f, 100.0f);
+    camera->position = { 0,3,-40 };
+    camera->back = { 0,0,-1 };
+    camera->up = { 0,1,0 };
+    camera->lightIndex = l;
+    camera->name = ppgso::light::SPOT;
+    camera->addInitialKeyframes();
+    //camera->addInitialKeyframes();
+    ppgso::KeyFrame<glm::vec3> finalPosition;
+    finalPosition.transformTo = {0,4,10};
+    finalPosition.time = 20;
+    finalPosition.addInterState({ 0,4,0.6}, 5.3);
+    finalPosition.addInterState({ 0,4,17 }, 16.3);
+    finalPosition.interpolation = ppgso::POLYNOMIC;
+    camera->k_position.addFrame(finalPosition);
+
     scene->m_camera = move(camera);
 
     auto zem = std::make_unique<Plane>(scene.get());

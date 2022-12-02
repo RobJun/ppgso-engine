@@ -91,7 +91,7 @@ public:
     void useGlobalLights(ppgso::Shader* shader);
     void useCamera(ppgso::Shader* shader);
 
-    int generateSpotLight(glm::vec3& position, glm::vec3& direction, glm::vec4& color, glm::vec3& phong, glm::vec3& lqc, glm::vec2& cuttoffs) {
+    int generateSpotLight(glm::vec3& position, glm::vec3& direction, glm::vec3& color, glm::vec3& phong, glm::vec3& lqc, glm::vec2& cuttoffs) {
         spotLights.push_back(std::make_unique < ppgso::light::Spot>());
         int last = spotLights.size() - 1;
         spotLights[last]->position = position;

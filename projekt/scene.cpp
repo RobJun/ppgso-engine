@@ -4,6 +4,12 @@
 
 void Scene::update(float time) {
 	m_camera->update(time);
+    if (m_camera->lightIndex != -1) {
+        if (m_camera->name == ppgso::light::SPOT) {
+            spotLights[m_camera->lightIndex]->position = m_camera->position;
+            spotLights[m_camera->lightIndex]->direction = -m_camera->back;
+        }
+    }
 
 	for (auto i = m_objects.begin(); i != m_objects.end();) {
 		auto obj = i->get();

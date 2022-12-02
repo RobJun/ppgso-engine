@@ -333,5 +333,30 @@
   "directory": "C:/Users/Robert/Desktop/semester 7/ppgso-engine/out/build/x64-Debug (default)",
   "command": "C:\\PROGRA~2\\MICROS~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1428~1.293\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\water.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\Robert\\Desktop\\semester 7\\ppgso-engine\\projekt\\instances\\water.cpp\"",
   "file": "C:/Users/Robert/Desktop/semester 7/ppgso-engine/projekt/instances/water.cpp"
+},
+{
+  "directory": "C:/Users/Robert/Desktop/semester 7/ppgso-engine/out/build/x64-Debug (default)",
+  "command": "C:\\PROGRA~2\\MICROS~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1428~1.293\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Brana.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\Robert\\Desktop\\semester 7\\ppgso-engine\\projekt\\instances\\Brana.cpp\"",
+  "file": "C:/Users/Robert/Desktop/semester 7/ppgso-engine/projekt/instances/Brana.cpp"
+},
+{
+  "directory": "C:/Users/Robert/Desktop/semester 7/ppgso-engine/out/build/x64-Debug (default)",
+  "command": "C:\\PROGRA~2\\MICROS~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1428~1.293\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Jaskyna1.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\Robert\\Desktop\\semester 7\\ppgso-engine\\projekt\\instances\\Jaskyna1.cpp\"",
+  "file": "C:/Users/Robert/Desktop/semester 7/ppgso-engine/projekt/instances/Jaskyna1.cpp"
+},
+{
+  "directory": "C:/Users/Robert/Desktop/semester 7/ppgso-engine/out/build/x64-Debug (default)",
+  "command": "C:\\PROGRA~2\\MICROS~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1428~1.293\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Jaskyna2.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\Robert\\Desktop\\semester 7\\ppgso-engine\\projekt\\instances\\Jaskyna2.cpp\"",
+  "file": "C:/Users/Robert/Desktop/semester 7/ppgso-engine/projekt/instances/Jaskyna2.cpp"
+},
+{
+  "directory": "C:/Users/Robert/Desktop/semester 7/ppgso-engine/out/build/x64-Debug (default)",
+  "command": "C:\\PROGRA~2\\MICROS~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1428~1.293\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Jaskyna3.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\Robert\\Desktop\\semester 7\\ppgso-engine\\projekt\\instances\\Jaskyna3.cpp\"",
+  "file": "C:/Users/Robert/Desktop/semester 7/ppgso-engine/projekt/instances/Jaskyna3.cpp"
+},
+{
+  "directory": "C:/Users/Robert/Desktop/semester 7/ppgso-engine/out/build/x64-Debug (default)",
+  "command": "C:\\PROGRA~2\\MICROS~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1428~1.293\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\objects\\keyframeCamera.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\Robert\\Desktop\\semester 7\\ppgso-engine\\projekt\\objects\\keyframeCamera.cpp\"",
+  "file": "C:/Users/Robert/Desktop/semester 7/ppgso-engine/projekt/objects/keyframeCamera.cpp"
 }
 ]

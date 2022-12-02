@@ -38,12 +38,12 @@ Campfire::Campfire(Scene* scene)
 	auto particles = std::make_unique<ParticleSystem<Sphere>>(scene);
 	particles->position = { 0,0.7,0 };
 
-	ppgso::KeyFrame init;
+	ppgso::KeyFrame<glm::vec3> init;
 	init.transformTo = { 0.2,0.2,0.2 };
 	init.time = 0;
 	init.interpolation = ppgso::CONSTANT;
 	particles->sizeFrames.addFrame(init);
-	ppgso::KeyFrame end;
+	ppgso::KeyFrame<glm::vec3> end;
 	end.transformTo ={ 0,0,0 };
 	end.time = 10;
 	end.addInterState({ 0.7,0.7,0.7 },0.8);

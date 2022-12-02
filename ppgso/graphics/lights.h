@@ -6,6 +6,12 @@
 
 namespace ppgso {
 	namespace light {
+		enum LightName {
+			DIRECT,
+			POINT,
+			SPOT
+		};
+
 		struct Light {
 			float ambient;
 			float near_plane = 0.1f, far_plane = 100.f;

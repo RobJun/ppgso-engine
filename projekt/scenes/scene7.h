@@ -32,18 +32,18 @@ std::unique_ptr<Scene> createScene7() {
     auto plane = std::make_unique<Plane>(scene.get());
     plane->scale = { 30, 50, 30 };
 
-    auto gen = std::make_unique<Generator<Tree1, Tree3>>(scene.get(), 25, &RectangelGenShape(60, 10), tranformTrees);
+    auto gen = std::make_unique<Generator<Tree1, Tree3,Tree2,Bush>>(scene.get(), 25, &RectangelGenShape(60, 10), tranformTrees);
     gen->position = { 0,0,40 };
 
-    auto trava = std::make_unique<Generator<Grass, Grass>>(scene.get(), 200, &RectangelGenShape(60, 100));
-    auto mashroom_kvety = std::make_unique<Generator<Flower, Mushroom>>(scene.get(), 60, &RectangelGenShape(60, 100));
+    auto trava = std::make_unique<Generator<Grass, Grass,Grass,Grass>>(scene.get(), 200, &RectangelGenShape(60, 100));
+    auto mashroom_kvety = std::make_unique<Generator<Flower, Mushroom,Flower, Mushroom>>(scene.get(), 60, &RectangelGenShape(60, 100));
 
-    auto tree_bush = std::make_unique<Generator<Bush, Bush>>(scene.get(), 10, &RectangelGenShape(60, 10));
+    auto tree_bush = std::make_unique<Generator<Bush, Bush,Bush,Bush>>(scene.get(), 10, &RectangelGenShape(60, 10));
     tree_bush->position = { 0,0,40 };
 
-    auto gen2 = std::make_unique<Generator<Tree1, Tree3>>(scene.get(), 30, &RectangelGenShape(15, 100), tranformTrees);
+    auto gen2 = std::make_unique<Generator<Tree1, Tree3,Tree2,Bush>>(scene.get(), 30, &RectangelGenShape(15, 100), tranformTrees);
     gen2->position = { -20,0,-0 };
-    auto gen3 = std::make_unique<Generator<Tree1, Tree3>>(scene.get(), 30, &RectangelGenShape(15, 100), tranformTrees);
+    auto gen3 = std::make_unique<Generator<Tree1, Tree3,Tree1,Tree3>>(scene.get(), 30, &RectangelGenShape(15, 100), tranformTrees);
     gen3->position = { 20,0,-0 };
 
     auto brana = std::make_unique<Brana>(scene.get());

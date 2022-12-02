@@ -6,37 +6,37 @@
 #include <vector>
 
 namespace ppgso {
-
+	template<class T>
 	struct KeyFrame {
-		glm::vec3 transformTo;
+		T transformTo;
 		float time;
-		Method interpolation;
+		Method interpolation = Method::CONSTANT;
 		struct InterState {
-			glm::vec3 transformTo;
+			T transformTo;
 			float time;
 		};
 		std::vector<InterState> interStates;
 
-		void addInterState(glm::vec3 transform,float time) {
+		void addInterState(T transform,float time) {
 			if (this->time < time) throw "InterState must happen before thisState";
 			interStates.push_back({ transform,time });
 		}
 	};
 
-
+	template<class T>
 	struct KeyFrames {
 	private:
-		std::vector<KeyFrame> _transformations;
+		std::vector<KeyFrame<T>> _transformations;
 		bool canEdit = true;
 	public:
-		std::vector<KeyFrame> transformations;
+		std::vector<KeyFrame<T>> transformations;
 
 		bool isEmpty() {
 			return transformations.empty();
 		}
 		
 
-		void addFrame(KeyFrame frame) {
+		void addFrame(KeyFrame<T> frame) {
 			if (!canEdit) throw "Can't edit frames during runtime";
 			transformations.push_back(frame);
 		}
@@ -46,18 +46,21 @@ namespace ppgso {
 				_transformations = transformations;
 				canEdit = false;
 			}
+			if (_transformations.size() == 1)
+				return _transformations[0].transformTo;
+
 			if (time >= _transformations[1].time)
 				_transformations.erase(_transformations.begin());
 
 			if (_transformations.size() == 1)
 				return _transformations[0].transformTo;
 
-			KeyFrame current = _transformations[0];
-			KeyFrame next = _transformations[1];
+			KeyFrame<T> current = _transformations[0];
+			KeyFrame<T> next = _transformations[1];
 			
 			if (next.interpolation == LINEAR || next.interpolation == BEZIER) {
 				float normalizedTime = (time - current.time) / (next.time - current.time);
-				std::vector<glm::vec3> states = { current.transformTo };
+				std::vector<T> states = { current.transformTo };
 				for (auto& istate : next.interStates) {
 					states.push_back(istate.transformTo);
 				}
@@ -65,7 +68,7 @@ namespace ppgso {
 				return bezierInter(states, normalizedTime);
 			}
 			if (next.interpolation == POLYNOMIC) {
-				std::vector<glm::vec3> states = { current.transformTo };
+				std::vector<T> states = { current.transformTo };
 				std::vector<float> times = { current.time };
 				for (auto& istate : next.interStates) {
 					states.push_back(istate.transformTo);

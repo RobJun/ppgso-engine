@@ -14,6 +14,8 @@
 #include "../instances/water.h"
 #include "../instances/Fish.h"
 
+#include "../objects/keyframeCamera.h"
+
 
 std::unique_ptr<Scene> createScene2() {
     auto scene = std::make_unique<Scene>();
@@ -25,8 +27,9 @@ std::unique_ptr<Scene> createScene2() {
     scene->m_globalLight.color = {1,1,1};
 
     // Create a camera
-    auto camera = std::make_unique<Camera>(60.0f, 1.0f, 0.1f, 1000.0f);
+    auto camera = std::make_unique<KeyframeCamera>(60.0f, 1.0f, 0.1f, 1000.0f);
     camera->position.z = -20.0f;
+    camera->addInitialKeyframes();
     scene->m_camera = move(camera);
     
     auto hat = std::make_unique<Hat>(scene.get());
@@ -53,17 +56,17 @@ std::unique_ptr<Scene> createScene2() {
     fish->scale = {.3,.3,.3 };
     fish->position = { 0,-1,0 };
 
-    auto obloha = std::make_unique<Generator<Seagull, Seagull>>(scene.get(), 9, &SphereGenShape(5), tranformTrees);
+    auto obloha = std::make_unique<Generator<Seagull, Seagull,Seagull,Seagull>>(scene.get(), 9, &SphereGenShape(5), tranformTrees);
     obloha->position = {-20,20,25};
     obloha->rotation = { 0,0,2 };
 
     auto tree1 = std::make_unique<Tree1>(scene.get());
     auto tree3 = std::make_unique<Tree3>(scene.get());
-    auto gen = std::make_unique<Generator<Tree1, Tree3>>(scene.get(), 200, &RectangelGenShape(200, 40), tranformTrees);
+    auto gen = std::make_unique<Generator<Tree1, Tree3,Bush,Tree2>>(scene.get(), 200, &RectangelGenShape(200, 40), tranformTrees);
     gen->position = {0,0,100 };
-    auto gen2 = std::make_unique<Generator<Tree1, Tree3>>(scene.get(), 100, &RectangelGenShape(30, 200), tranformTrees);
+    auto gen2 = std::make_unique<Generator<Tree1, Tree3,Bush,Tree2>>(scene.get(), 100, &RectangelGenShape(30, 200), tranformTrees);
     gen2->position = {-100,0,0 };
-    auto gen3 = std::make_unique<Generator<Tree1, Tree3>>(scene.get(), 60, &RectangelGenShape(10, 200), tranformTrees);
+    auto gen3 = std::make_unique<Generator<Tree1, Tree3,Bush,Tree3>>(scene.get(), 60, &RectangelGenShape(10, 200), tranformTrees);
     gen3->position = { 130,0,0 };
     
 

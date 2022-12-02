@@ -11,7 +11,7 @@ void tranformTrees(Object* obj) {
 	obj->scale = { random_scale, random_scale, random_scale };
 }
 
-template <class T, class U, class W, class Z>
+template <class T, class U = T, class W = T, class Z = U>
 class Generator final : public Object {
 
 public:
@@ -29,8 +29,7 @@ public:
 
 };
 
-
-template <class T,class U, class W, class Z>
+template <class T, class U = T, class W = T, class Z = U>
 Generator<T,U,W,Z>::Generator(Scene* scene, unsigned int n, GeneratorShape* shape, void (*transform)(Object*)) {
 	srand(time(NULL));
 	for (unsigned int i = 0; i < n; i++) {
@@ -53,7 +52,7 @@ Generator<T,U,W,Z>::Generator(Scene* scene, unsigned int n, GeneratorShape* shap
 	}
 }
 
-template <class T, class U,class W, class Z>
+template <class T, class U = T, class W = T, class Z = U>
 bool Generator<T,U,W,Z>::update(Scene& scene, float dt, glm::mat4 parentModelMatrix) {
 	generateModelMatrix();
 	modelMatrix = parentModelMatrix * modelMatrix;
@@ -63,7 +62,7 @@ bool Generator<T,U,W,Z>::update(Scene& scene, float dt, glm::mat4 parentModelMat
 	return true;
 }
 
-template <class T, class U,class W,class Z>
+template <class T, class U = T, class W = T, class Z = U>
 void  Generator<T,U,W,Z>::render(Scene& scene) {
 
 	for (auto& ch : children) {
@@ -71,14 +70,14 @@ void  Generator<T,U,W,Z>::render(Scene& scene) {
 	}
 };
 
-template <class T, class U,class W,class Z>
+template <class T, class U = T, class W = T, class Z = U>
 void  Generator<T,U,W,Z>::renderMap(Scene& scene, ppgso::Shader* shader) {
 	for (auto& ch : children) {
 		ch->renderMap(scene, shader);
 	}
 };
 
-template <class T, class U,class W, class Z>
+template <class T, class U = T, class W = T, class Z = U>
 void Generator<T,U,W,Z>::renderLights(Scene& scene) {
 	for (auto& ch : children) {
 		ch->renderLights(scene);

@@ -21,9 +21,9 @@ public:
 	std::vector<std::unique_ptr<Object>> children;
 	float age{ 0.0f };
 
-	ppgso::KeyFrames sizeFrames;
-	ppgso::KeyFrames translateFrames;
-	ppgso::KeyFrames rotationFrames;
+	ppgso::KeyFrames<glm::vec3> sizeFrames;
+	ppgso::KeyFrames<glm::vec3> translateFrames;
+	ppgso::KeyFrames<glm::vec3> rotationFrames;
 
 public:
 	Object() {};
