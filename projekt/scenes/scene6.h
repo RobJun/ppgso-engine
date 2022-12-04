@@ -44,11 +44,8 @@ std::unique_ptr<Scene> createScene6() {
     fox->position = {4,0,20};
     fox->rotation = { 0,0,-2 };
     fox->children.push_back(move(chicken));
-      
+
     auto rabbit = std::make_unique<Rabbit>(scene.get());
-    rabbit->scale = { .2,.2,.2 };
-    rabbit->position = { -4,0.3,20 };
-    rabbit->rotation = {0,0,2};
 
     auto tree_Apple = std::make_unique<Tree2>(scene.get());
     tree_Apple->scale = { .5,.5,.5 };
@@ -80,8 +77,8 @@ std::unique_ptr<Scene> createScene6() {
     plane->children.push_back(move(tree_bush));
     plane->children.push_back(move(gen2));
     plane->children.push_back(move(gen3));
-    plane->children.push_back(move(rabbit));
-    plane->children.push_back(move(fox));
+    //plane->children.push_back(move(rabbit));
+    //plane->children.push_back(move(fox));
     
     scene->m_objects.push_back(move(plane));
 

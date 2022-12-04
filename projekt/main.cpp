@@ -241,7 +241,7 @@ private:
         shaderBloomFinal.use();
         shaderBloomFinal.setUniformBuffer("scene", colorBuffers[0],0);
         shaderBloomFinal.setUniformBuffer("bloomBlur", pingpongColorbuffers[!horizontal], 1);
-        shaderBloomFinal.setUniform("bloom", true);
+        shaderBloomFinal.setUniform("bloom", false);
 
         shaderBloomFinal.setUniform("exposure", 0.9f);
 

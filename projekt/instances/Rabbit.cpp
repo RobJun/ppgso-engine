@@ -1,4 +1,6 @@
 #include "Rabbit.h"
+#include "Chicken.h"
+#include "fox.h"
 
 #include <shaders/our_shader_vert_glsl.h>
 #include <shaders/our_shader_frag_glsl.h>
@@ -25,8 +27,68 @@ Rabbit::Rabbit(Scene* scene)
 
 bool Rabbit::update(Scene& scene, float dt, glm::mat4 parentModelMatrix)
 {
+	age += dt;
+	if (age > 31)
+		return false;
+	if (!sizeFrames.isEmpty()) {
+		scale = sizeFrames.update(age);
+	}
+	else {
+		///nieco ine
+	}
+	if (!translateFrames.isEmpty()) {
+		position = translateFrames.update(age);
+	}
+	else {
+		///nieco ine
+	}
+
+	if (!rotationFrames.isEmpty()) {
+		rotation = rotationFrames.update(age);
+	}
+	else {
+		///nieco ine
+	}
+
+
+	if (translateFrames.size() - translateFrames.sizeOfAnimations() == 1 && !spawnedFox) {
+		spawnedFox = true;
+		auto chicken = std::make_unique<Chicken>(&scene);
+		chicken->scale = { 0.5,0.5,0.5 };
+		chicken->position = { 0,4.5,0 };
+
+		auto fox = std::make_unique<Fox>(&scene);
+		fox->scale = { 0.2,0.2,0.2 };
+		fox->position = { 10,0,15 };
+		fox->rotation = { 0,0,-3.14/2+0.5 };
+		fox->children.push_back(move(chicken));
+
+		ppgso::KeyFrame<glm::vec3> firstPosition;
+		firstPosition.transformTo = { 10,0,15 };
+		firstPosition.time = 0;
+		fox->translateFrames.addFrame(firstPosition);
+
+		ppgso::KeyFrame<glm::vec3> finalPosition;
+		finalPosition.transformTo = position + glm::vec3{ 3,0,-3 };
+		finalPosition.time = 10;
+		finalPosition.interpolation = ppgso::LINEAR;
+		fox->translateFrames.addFrame(finalPosition);
+
+		finalPosition.transformTo = position + glm::vec3{ 3,0,-3 };
+		finalPosition.time = 15;
+		finalPosition.interpolation = ppgso::LINEAR;
+		fox->translateFrames.addFrame(finalPosition);
+
+		finalPosition.transformTo = { -20,0.3,25 };
+		finalPosition.time = 20;
+		finalPosition.interpolation = ppgso::LINEAR;
+		fox->translateFrames.addFrame(finalPosition);
+
+		children.push_back(move(fox));
+	}
+
 	generateModelMatrix();
-	modelMatrix = parentModelMatrix * modelMatrix;
+	//modelMatrix = parentModelMatrix * modelMatrix;
 	for (auto& ch : children) {
 		ch->update(scene,dt,modelMatrix);
 	}

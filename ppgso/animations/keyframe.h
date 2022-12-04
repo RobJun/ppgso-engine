@@ -34,6 +34,15 @@ namespace ppgso {
 		bool isEmpty() {
 			return transformations.empty();
 		}
+
+		unsigned int sizeOfAnimations() {
+			return _transformations.size();
+		}
+
+
+		unsigned int size() {
+			return transformations.size();
+		}
 		
 
 		void addFrame(KeyFrame<T> frame) {

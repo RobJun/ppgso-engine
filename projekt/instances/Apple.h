@@ -21,6 +21,8 @@ private:
 	glm::vec3 velocity = { 0,0,0 };
 	bool bounced = false;
 	bool stopMovement = false;
+	bool release = false;
+	bool spawnedRabbit = false;
 public:
 	// Speed and rotational momentum
 	float speed = 0.0;

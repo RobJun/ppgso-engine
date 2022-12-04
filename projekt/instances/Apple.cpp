@@ -1,5 +1,6 @@
 #include "Apple.h"
 #include "plane.h"
+#include "Rabbit.h"
 #include <shaders/our_shader_vert_glsl.h>
 #include <shaders/our_shader_frag_glsl.h>
 
@@ -26,7 +27,9 @@ Apple::Apple(Scene* scene)
 bool Apple::update(Scene& scene, float dt, glm::mat4 parentModelMatrix)
 {
 	age += dt;
-	if(!stopMovement)
+	if (age > 5)
+		release = true;
+	if(release && !stopMovement)
 		padaj(scene,dt);
 	generateModelMatrix();
 
@@ -37,22 +40,15 @@ bool Apple::update(Scene& scene, float dt, glm::mat4 parentModelMatrix)
 
 		if (!zem) continue;
 
-		if (velocity.y < 0 && velocity.y > -0.1) {
-			std::cout << "hereeeee " << velocity.y << " " << std::endl;
-			velocity = { 0,0,0 };
-			stopMovement = true;
-		}
 
-		//std::cout << glm::distance(position, zem->getClosestPoint(position)) << std::endl;
-		if (velocity.y < 0 && position.y < 0) {
-			bounced = true;
-			velocity.y *= -0.5;
-			std::cout << "here " <<velocity.y<< " " << std::endl;
-			/*if (abs(velocity.y) < 0.1) {
-				std::cout << "hereeeee " << velocity.y << " " << std::endl;
-				velocity = { 0,0,0 };
+
+		if (!stopMovement && velocity.y < 0
+			&& glm::distance(zem->getClosestPoint(position),position) < 0.2 && position.y > 0) {
+			velocity.y *= -0.7;
+			std::cout << velocity.y << " " << position.y << std::endl;
+			if (velocity.y < 0.1) {
 				stopMovement = true;
-			}*/
+			}
 		}
 
 
@@ -60,9 +56,63 @@ bool Apple::update(Scene& scene, float dt, glm::mat4 parentModelMatrix)
 
 	}
 
+	if (stopMovement && !spawnedRabbit) {
+		spawnedRabbit = true;
+		auto rabbit = std::make_unique<Rabbit>(&scene);
+		rabbit->scale = { 0.2,0.2,0.2 };
+		rabbit->position = { -10,0.3,25 };
+		rabbit->rotation = { 0,0,2 };
+
+
+		//rabbit translation
+		ppgso::KeyFrame<glm::vec3> firstPosition;
+		firstPosition.transformTo = { -10,0.3,25 };
+		firstPosition.time = 0;
+		rabbit->translateFrames.addFrame(firstPosition);
+
+		ppgso::KeyFrame<glm::vec3> finalPosition;
+		finalPosition.transformTo = position + glm::vec3{-1,0,1};
+		finalPosition.time = 5;
+		finalPosition.interpolation = ppgso::LINEAR;
+		rabbit->translateFrames.addFrame(finalPosition);
+
+		finalPosition.transformTo = position + glm::vec3{ -1,0,1 };
+		finalPosition.time = 20;
+		finalPosition.interpolation = ppgso::LINEAR;
+		rabbit->translateFrames.addFrame(finalPosition);
+
+		finalPosition.transformTo = { -20,0.3,25 };
+		finalPosition.time = 23;
+		finalPosition.interpolation = ppgso::LINEAR;
+		rabbit->translateFrames.addFrame(finalPosition);
+
+		//rabbit rotation
+
+		finalPosition.transformTo = glm::vec3{ 0,0,2 };
+		finalPosition.time = 17;
+		finalPosition.interpolation = ppgso::CONSTANT;
+		rabbit->rotationFrames.addFrame(finalPosition);
+
+		finalPosition.transformTo = { 0,00,2+3.14 };
+		finalPosition.time = 20;
+		finalPosition.interpolation = ppgso::LINEAR;
+		rabbit->rotationFrames.addFrame(finalPosition);
+
+
+		children.push_back(move(rabbit));
+
+
+
+	}
+
 	modelMatrix = parentModelMatrix * modelMatrix;
-	for (auto& ch : children) {
-		ch->update(scene, dt, modelMatrix);
+
+	for (auto i = children.begin(); i != children.end();) {
+		auto obj = i->get();
+		if (!obj->update(scene, dt, modelMatrix))
+			i = children.erase(i); // NOTE: no need to call destructors as we store shared pointers in the scene
+		else
+			++i;
 	}
 	return true;
 }
@@ -107,6 +157,6 @@ void Apple::padaj(Scene& scene,float dt) {
 	glm::vec3 gravityAcc = { 0,-scene.g,0 };
 	
 	position += dt * (velocity + dt * gravityAcc / 2.f);
-	velocity += gravityAcc * dt + scene.windOnPosition(position);
+	velocity += gravityAcc * dt; + scene.windOnPosition(position);
 
 }

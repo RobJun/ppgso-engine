@@ -1,8 +1,8 @@
-C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug/CMakeFiles/shaders.dir
-C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug/CMakeFiles/install/local.dir
-C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug/CMakeFiles/install.dir
-C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug/CMakeFiles/edit_cache.dir
-C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug/CMakeFiles/ppgso.dir
-C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug/CMakeFiles/list_install_components.dir
-C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug/CMakeFiles/projekt.dir
-C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
+Z:/Skola/ppgso/out/build/x64-Debug/CMakeFiles/shaders.dir
+Z:/Skola/ppgso/out/build/x64-Debug/CMakeFiles/install/local.dir
+Z:/Skola/ppgso/out/build/x64-Debug/CMakeFiles/install.dir
+Z:/Skola/ppgso/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+Z:/Skola/ppgso/out/build/x64-Debug/CMakeFiles/ppgso.dir
+Z:/Skola/ppgso/out/build/x64-Debug/CMakeFiles/list_install_components.dir
+Z:/Skola/ppgso/out/build/x64-Debug/CMakeFiles/projekt.dir
+Z:/Skola/ppgso/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
