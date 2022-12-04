@@ -123,6 +123,5 @@ std::unique_ptr<Scene> createScene1() {
     scene->m_objects.push_back(move(gen));
     scene->m_objects.push_back(move(trava_kvety));
     scene->m_objects.push_back(move(gen2));
-
     return scene;
 }

@@ -23,6 +23,7 @@ private:
 	bool stopMovement = false;
 	bool release = false;
 	bool spawnedRabbit = false;
+	int bounceCounter = 0;
 public:
 	// Speed and rotational momentum
 	float speed = 0.0;

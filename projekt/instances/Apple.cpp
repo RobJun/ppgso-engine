@@ -44,8 +44,9 @@ bool Apple::update(Scene& scene, float dt, glm::mat4 parentModelMatrix)
 			if (velocity.y < 0
 				&& glm::distance(zem->getClosestPoint(position), position) < 0.2 && position.y > 0) {
 				velocity.y *= -0.7;
+				bounceCounter++;
 				std::cout << velocity.y << " " << position.y << std::endl;
-				if (velocity.y < 0.1) {
+				if (velocity.y < 0.1 || bounceCounter == 5) {
 					stopMovement = true;
 				}
 			}

@@ -323,11 +323,17 @@ private:
 int main() {
     // Initialize our window
     OurWindow window = {800,16/9 };
+    std::cout << "Loading Scene 1" << std::endl;
     window.preloadedScenes.push_back(move(createScene1()));
+    std::cout << "Loading Scene 2" << std::endl;
     window.preloadedScenes.push_back(move(createScene2()));
+    std::cout << "Loading Scene 3" << std::endl;
     window.preloadedScenes.push_back(move(createScene6()));
+    std::cout << "Loading Scene 4" << std::endl;
     window.preloadedScenes.push_back(move(createScene7()));
+    std::cout << "Loading Scene 5" << std::endl;
     window.preloadedScenes.push_back(move(createScene9()));
+    std::cout << "loaded All" << std::endl;
     // Main execution loop
     while (window.pollEvents()) {}
 
