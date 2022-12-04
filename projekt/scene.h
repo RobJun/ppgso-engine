@@ -145,7 +145,7 @@ public:
     void clearObjects() { m_objects.clear(); };
 
     glm::vec3 windOnPosition(glm::vec3 position) {
-        float intenzita = (position.y < 10 ? pow(2, position.y) : pow(2, 10) -1)/500;
+        float intenzita = (position.y < 10 ? pow(2, position.y) : pow(2, 10) -1)/50;
        
         return intenzita * glm::normalize(smerVetra);
     }

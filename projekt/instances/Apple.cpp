@@ -29,8 +29,10 @@ bool Apple::update(Scene& scene, float dt, glm::mat4 parentModelMatrix)
 	age += dt;
 	if (age > 25)
 		release = true;
-	if(release && !stopMovement)
-		padaj(scene,dt);
+	if (release && !stopMovement) {
+		padaj(scene, dt);
+		rotation += rotMomentum;
+	}
 	generateModelMatrix();
 
 	for (auto it = scene.begin(); it != scene.end(); ++it) {
@@ -43,7 +45,7 @@ bool Apple::update(Scene& scene, float dt, glm::mat4 parentModelMatrix)
 		if (!stopMovement){
 			if (velocity.y < 0
 				&& glm::distance(zem->getClosestPoint(position), position) < 0.2 && position.y > 0) {
-				velocity.y *= -0.7;
+				velocity = reflect(velocity);
 				bounceCounter++;
 				std::cout << velocity.y << " " << position.y << std::endl;
 				if (velocity.y < 0.1 || bounceCounter == 5) {
@@ -165,5 +167,20 @@ void Apple::padaj(Scene& scene,float dt) {
 	
 	position += dt * (velocity + dt * gravityAcc / 2.f);
 	velocity += gravityAcc * dt; + scene.windOnPosition(position);
+	rotMomentum.y += 0.01 * dt;
+
+}
+
+glm::vec3 Apple::reflect(glm::vec3 velocity) {
+	auto vel = velocity;
+	float u = 0.05;
+	float e = 0.1;
+	float radius = scale.x / 2;
+	float i = 2;
+	vel.y *= -0.7;
+	vel.x = (velocity.x - u * (1 + e) * velocity.y);
+	vel.z = (velocity.z + u * (1 + e) * velocity.y);
+	rotMomentum.y -= u * (1 + e) * velocity.y*(radius/i);
+	return vel;
 
 }

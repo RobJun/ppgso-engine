@@ -44,7 +44,6 @@ public:
 
 
 	void padaj(Scene& scene,float dt);
-
-	void collide(Scene& scene);
+	glm::vec3 reflect(glm::vec3 velocity);
 
 };

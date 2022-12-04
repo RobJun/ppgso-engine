@@ -79,7 +79,7 @@ bool Rabbit::update(Scene& scene, float dt, glm::mat4 parentModelMatrix)
 		finalPosition.interpolation = ppgso::LINEAR;
 		fox->translateFrames.addFrame(finalPosition);
 
-		finalPosition.transformTo = { -20,0.3,25 };
+		finalPosition.transformTo = { -20,0,25 };
 		finalPosition.time = 20;
 		finalPosition.interpolation = ppgso::LINEAR;
 		fox->translateFrames.addFrame(finalPosition);
