@@ -23,6 +23,7 @@ std::unique_ptr<Scene> createScene9() {
     int l = scene->generateSpotLight(glm::vec3(0, 4, 3), glm::vec3(0, 4, 3),
         glm::vec3{ 1,1,0.3 }, glm::vec3{ 0.8f,0.6f,0.1f },
         glm::vec3{ 0.22,0.0019,1.f }, glm::vec2{ glm::radians(12.5f) ,glm::radians(17.0f) });
+    
     // Create a camera*/
     auto camera = std::make_unique<KeyframeCamera>(60.0f, 1.0f, 0.1f, 1000.0f);
     camera->position = {0,3,-80};
@@ -78,7 +79,7 @@ std::unique_ptr<Scene> createScene9() {
     jaskyna->material.diffuse = glm::vec3{ 0.5,	0.5,0.0 };
     jaskyna->material.specular = glm::vec3{ 0.6,0.6,0.5 };
 
-    auto stalagnity = std::make_unique<Generator<Jaskyna1, Jaskyna2>>(scene.get(), 20, &RectangelGenShape(2, 80));
+    auto stalagnity = std::make_unique<Generator<Jaskyna1, Jaskyna2>>(scene.get(), 20, &RectangelGenShape(5, 80));
     stalagnity->position = {8,1,0};
 
     auto stalagnity2 = std::make_unique<Generator<Jaskyna1, Jaskyna2>>(scene.get(), 20, &RectangelGenShape(5, 80));

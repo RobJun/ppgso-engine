@@ -19,14 +19,16 @@ std::unique_ptr<Scene> createScene6() {
     auto scene = std::make_unique<Scene>();
     scene->clearObjects();
     scene->m_globalLight.direction = { 0,-1,1 };
-    scene->m_globalLight.ambient = 2.f;
-    scene->m_globalLight.diffuse = 0.1f ;
-    scene->m_globalLight.specular= 0.00f;
-    scene->m_globalLight.color = {1,1,1};
+    scene->m_globalLight.ambient = 1.f;
+    scene->m_globalLight.diffuse = 0.5f;
+    scene->m_globalLight.specular = 0.05f;
+    scene->m_globalLight.color = { 1,1,1 };
 
     // Create a camera
     auto camera = std::make_unique<Camera>(60.0f, 1.0f, 0.1f, 100.0f);
-    camera->position = { -20.f,5.f,0.f };
+    camera->position = { -.54,4.2,7.29 };
+    camera->yaw = 1.537;
+    camera->pitch = -0.136;
     camera->back = { 0,0,-1.f };
     scene->m_camera = move(camera);
 

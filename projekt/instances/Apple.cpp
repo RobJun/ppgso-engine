@@ -37,14 +37,22 @@ bool Apple::update(Scene& scene, float dt, glm::mat4 parentModelMatrix)
 
 		if (!zem) continue;
 
+		if (velocity.y < 0 && velocity.y > -0.1) {
+			std::cout << "hereeeee " << velocity.y << " " << std::endl;
+			velocity = { 0,0,0 };
+			stopMovement = true;
+		}
+
 		//std::cout << glm::distance(position, zem->getClosestPoint(position)) << std::endl;
-		if (velocity.y<0 && glm::distance(position, zem->getClosestPoint(position)) < 0.1) {
+		if (velocity.y < 0 && position.y < 0) {
+			bounced = true;
 			velocity.y *= -0.5;
 			std::cout << "here " <<velocity.y<< " " << std::endl;
-			if (abs(velocity.y) < 0.1) {
+			/*if (abs(velocity.y) < 0.1) {
+				std::cout << "hereeeee " << velocity.y << " " << std::endl;
 				velocity = { 0,0,0 };
 				stopMovement = true;
-			}
+			}*/
 		}
 
 

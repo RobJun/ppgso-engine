@@ -35,6 +35,16 @@ bool Bear::update(Scene& scene, float dt, glm::mat4 parentModelMatrix)
 		otocSaNaKameru(scene, dt);
 	}
 	//generateModelMatrix();
+	modelMatrix =
+		glm::translate(glm::mat4(1.0f), position)
+		* glm::orientate4(rotMomentum)
+		* glm::translate(glm::mat4(1.0f), actPos)
+		* glm::orientate4(glm::vec3{ 0,0,3.14 / 2 })
+		* glm::scale(glm::mat4(1.0f), scale);
+
+
+	actDir = glm::normalize(glm::orientate4(rotMomentum) * glm::orientate4(rotation) * glm::vec4(direction, 1));
+
 	modelMatrix = parentModelMatrix * modelMatrix;
 
 	for (auto& ch : children) {
@@ -82,15 +92,6 @@ void Bear::otacajSa(Scene& s,float dt) {
 	float radius = 3;
 	float speed = 3;
 	rotMomentum += speed * dt* glm::vec3{ 0,0,1 };
-	modelMatrix =
-		glm::translate(glm::mat4(1.0f), position)
-		* glm::orientate4(rotMomentum)
-		* glm::translate(glm::mat4(1.0f), actPos)
-		* glm::orientate4(glm::vec3{0,0,3.14/2})
-		* glm::scale(glm::mat4(1.0f), scale);
-
-
-	actDir = glm::normalize(glm::orientate4(rotMomentum)* glm::orientate4(rotation) * glm::vec4(direction, 1));
 }
 
 
@@ -113,13 +114,4 @@ void Bear::otocSaNaKameru(Scene& s, float dt) {
 		else 
 			rotation.z += dt;
 	}
-
-	modelMatrix =
-		glm::translate(glm::mat4(1.0f), position)
-		* glm::orientate4(rotMomentum)
-		* glm::translate(glm::mat4(1.0f), actPos)
-		* glm::orientate4(rotation)
-		* glm::scale(glm::mat4(1.0f), scale);
-
-	actDir = glm::normalize(glm::orientate4(rotMomentum) * glm::orientate4(rotation) * glm::vec4(direction, 1));
 }

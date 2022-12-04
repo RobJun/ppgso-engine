@@ -253,15 +253,15 @@ private:
         // Collect key state in a map
         keys[key] = action;
         if (keys[GLFW_KEY_W]) {
-            m_scene->m_camera->position -= 150.f *dt* m_scene->m_camera->back;
+            m_scene->m_camera->position -= 30.f *dt* m_scene->m_camera->back;
         }
         else if (keys[GLFW_KEY_S]) {
-            m_scene->m_camera->position += 150.f *dt* m_scene->m_camera->back;
+            m_scene->m_camera->position += 30.f *dt* m_scene->m_camera->back;
         }
         if (keys[GLFW_KEY_A])
-            m_scene->m_camera->position -= 150.f* dt* glm::normalize(glm::cross(-m_scene->m_camera->back, m_scene->m_camera->up));
+            m_scene->m_camera->position -= 30.f* dt* glm::normalize(glm::cross(-m_scene->m_camera->back, m_scene->m_camera->up));
         else if (keys[GLFW_KEY_D])
-            m_scene->m_camera->position += 150.f * dt * glm::normalize(glm::cross(-m_scene->m_camera->back, m_scene->m_camera->up));
+            m_scene->m_camera->position += 30.f * dt * glm::normalize(glm::cross(-m_scene->m_camera->back, m_scene->m_camera->up));
         if (keys[GLFW_KEY_UP]) {
             m_scene->m_camera->pitch += 0.5 * dt;
         }
@@ -314,7 +314,7 @@ private:
 int main() {
     // Initialize our window
     OurWindow window = {800,16/9 };
-    auto scene = createScene9();
+    auto scene = createScene6();
     window.switchScene(move(scene));
 
     // Main execution loop

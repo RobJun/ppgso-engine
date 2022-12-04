@@ -49,6 +49,9 @@ namespace ppgso {
 			if (_transformations.size() == 1)
 				return _transformations[0].transformTo;
 
+			if (time < _transformations[0].time)
+				return _transformations[0].transformTo;
+
 			if (time >= _transformations[1].time)
 				_transformations.erase(_transformations.begin());
 

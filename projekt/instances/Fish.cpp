@@ -12,10 +12,13 @@ std::unique_ptr<ppgso::Shader> Fish::shader;
 
 Fish::Fish(Scene* scene)
 {
-	material.diffuse = glm::vec3{ 0.0,	0.50980392,	0.50980392 };
-	material.ambient = glm::vec3{ 0.0,	0.1, 0.06 };
-	material.specular = glm::vec3{ 0.50196078,	0.50196078,	0.50196078 };;
-	material.shininess = .25;
+	rotation = {0,0,0};
+	scale = {.3,.3,.3 };
+
+	material.diffuse = glm::vec3{ 0.4,	0.5,	0.4 };
+	material.ambient = glm::vec3{0.5,.5,.5};
+	material.specular = glm::vec3{1,1,1};;
+	material.shininess = .1;
 	material.transparency = 1;
 
 	if (!shader) shader = std::make_unique<ppgso::Shader>(our_shader_vert_glsl, our_shader_frag_glsl);
@@ -25,7 +28,15 @@ Fish::Fish(Scene* scene)
 
 bool Fish::update(Scene& scene, float dt, glm::mat4 parentModelMatrix)
 {
-	generateModelMatrix();
+	vyskakuj(scene, dt);
+	
+	modelMatrix =
+		glm::translate(glm::mat4(1.0f), position)
+		* glm::orientate4(rotMomentum)
+		* glm::translate(glm::mat4(1.0f), { 0,3,0 })
+		* glm::orientate4(rotation)
+		* glm::scale(glm::mat4(1.0f), scale);
+
 	modelMatrix = parentModelMatrix * modelMatrix;
 	for (auto& ch : children) {
 		ch->update(scene, dt, modelMatrix);
@@ -65,4 +76,9 @@ void Fish::renderLights(Scene& scene)
 	for (auto& ch : children) {
 		ch->renderLights(scene);
 	}
+}
+
+void Fish::vyskakuj(Scene& s, float dt) {
+	float speed = 3;
+	rotMomentum += speed * dt * glm::vec3{ 0,1,0 };
 }

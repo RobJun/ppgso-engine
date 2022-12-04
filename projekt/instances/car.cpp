@@ -57,6 +57,27 @@ Car::Car(Scene* scene) {
 
 
 bool Car::update(Scene& scene, float dt, glm::mat4 parentModelMatrix) {
+	age += dt;
+	if (!sizeFrames.isEmpty()) {
+		scale = sizeFrames.update(age);
+	}
+	else {
+		///nieco ine
+	}
+	if (!translateFrames.isEmpty()) {
+		position = translateFrames.update(age);
+	}
+	else {
+		///nieco ine
+	}
+
+	if (!rotationFrames.isEmpty()) {
+		rotation = rotationFrames.update(age);
+	}
+	else {
+		///nieco ine
+	}
+
 	//rotation -= rotMomentum * dt*10.f;
 	//position = { position.x,,positio;
 	generateModelMatrix();

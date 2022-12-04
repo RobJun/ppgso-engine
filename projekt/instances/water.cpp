@@ -34,6 +34,10 @@ bool Water::update(Scene& scene, float dt, glm::mat4 parentModelMatrix) {
 }
 
 void Water::render(Scene& scene) {
+	for (auto& ch : children) {
+		ch->render(scene);
+	}
+
 	shader->use();
 	scene.useGlobalLights(shader.get());
 	scene.useCamera(shader.get());
@@ -44,9 +48,6 @@ void Water::render(Scene& scene) {
 	shader->setUniform("Texture", *texture);
 	mesh->render();
 
-	for (auto& ch : children) {
-		ch->render(scene);
-	}
 }
 
 
