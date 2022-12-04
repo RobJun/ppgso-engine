@@ -15,7 +15,7 @@ Boat::Boat(Scene* scene)
 	material.diffuse = glm::vec3{ 0.0,	0.50980392,	0.50980392 };
 	material.ambient = glm::vec3{ 0.0,	0.1, 0.06 };
 	material.specular = glm::vec3{ 0.50196078,	0.50196078,	0.50196078 };;
-	material.shininess = .25;
+	material.shininess = .01;
 	material.transparency = 1;
 
 	if (!shader) shader = std::make_unique<ppgso::Shader>(our_shader_vert_glsl, our_shader_frag_glsl);
@@ -25,6 +25,7 @@ Boat::Boat(Scene* scene)
 
 bool Boat::update(Scene& scene, float dt, glm::mat4 parentModelMatrix)
 {
+	position += dt * translation;
 	generateModelMatrix();
 	modelMatrix = parentModelMatrix * modelMatrix;
 	for (auto& ch : children) {

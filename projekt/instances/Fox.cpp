@@ -25,8 +25,31 @@ Fox::Fox(Scene* scene)
 
 bool Fox::update(Scene& scene, float dt, glm::mat4 parentModelMatrix)
 {
+	age += dt;
+	if (age > 23)
+		return false;
+	if (!sizeFrames.isEmpty()) {
+		scale = sizeFrames.update(age);
+	}
+	else {
+		///nieco ine
+	}
+	if (!translateFrames.isEmpty()) {
+		position = translateFrames.update(age);
+	}
+	else {
+		///nieco ine
+	}
+
+	if (!rotationFrames.isEmpty()) {
+		rotation = rotationFrames.update(age);
+	}
+	else {
+		///nieco ine
+	}
+
 	generateModelMatrix();
-	modelMatrix = parentModelMatrix * modelMatrix;
+	//modelMatrix = parentModelMatrix * modelMatrix;
 	for (auto& ch : children) {
 		ch->update(scene, dt, modelMatrix);
 	}

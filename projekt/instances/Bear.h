@@ -25,6 +25,11 @@ public:
 	glm::vec3 rotMomentum = { 0,0,0.1 };
 	glm::vec3 translation = { 0,0,0 };
 	glm::vec3 direction = { 0,0,1 };
+
+	glm::vec3 actPos = { 0,0,3 };
+	glm::vec3 acccPos = { 0,0,3 };
+	glm::vec3 actDir = { 0,0,0 };
+	int rotationDir = 0;
 public:
 	Bear(Scene* scene);
 
@@ -35,5 +40,9 @@ public:
 	void renderMap(Scene& scene, ppgso::Shader* shader) override;
 
 	void renderLights(Scene& scene) override;
+
+	void otacajSa(Scene& s, float dt);
+
+	void otocSaNaKameru(Scene& s, float dt);
 
 };

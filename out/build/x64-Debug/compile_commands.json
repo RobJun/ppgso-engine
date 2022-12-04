@@ -1,357 +1,367 @@
 [
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\color_vert_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\color_vert_glsl.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\color_vert_glsl.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\color_vert_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\color_vert_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/color_vert_glsl.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\color_frag_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\color_frag_glsl.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\color_frag_glsl.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\color_frag_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\color_frag_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/color_frag_glsl.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\convolution_vert_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\convolution_vert_glsl.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\convolution_vert_glsl.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\convolution_vert_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\convolution_vert_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/convolution_vert_glsl.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\convolution_frag_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\convolution_frag_glsl.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\convolution_frag_glsl.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\convolution_frag_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\convolution_frag_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/convolution_frag_glsl.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\diffuse_vert_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\diffuse_vert_glsl.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\diffuse_vert_glsl.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\diffuse_vert_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\diffuse_vert_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/diffuse_vert_glsl.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\diffuse_frag_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\diffuse_frag_glsl.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\diffuse_frag_glsl.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\diffuse_frag_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\diffuse_frag_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/diffuse_frag_glsl.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\texture_vert_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\texture_vert_glsl.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\texture_vert_glsl.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\texture_vert_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\texture_vert_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/texture_vert_glsl.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\texture_frag_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\texture_frag_glsl.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\texture_frag_glsl.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\texture_frag_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\texture_frag_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/texture_frag_glsl.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\our_shader_vert_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\our_shader_vert_glsl.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\our_shader_vert_glsl.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\our_shader_vert_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\our_shader_vert_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/our_shader_vert_glsl.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\our_shader_frag_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\our_shader_frag_glsl.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\our_shader_frag_glsl.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\our_shader_frag_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\our_shader_frag_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/our_shader_frag_glsl.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\renderdepthmap_vert_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\renderdepthmap_vert_glsl.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\renderdepthmap_vert_glsl.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\renderdepthmap_vert_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\renderdepthmap_vert_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/renderdepthmap_vert_glsl.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\renderdepthmap_frag_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\renderdepthmap_frag_glsl.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\renderdepthmap_frag_glsl.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\renderdepthmap_frag_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\renderdepthmap_frag_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/renderdepthmap_frag_glsl.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\deb_vert_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\deb_vert_glsl.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\deb_vert_glsl.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\deb_vert_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\deb_vert_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/deb_vert_glsl.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\deb_frag_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\deb_frag_glsl.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\deb_frag_glsl.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\deb_frag_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\deb_frag_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/deb_frag_glsl.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\bloomf_vert_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\bloomf_vert_glsl.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\bloomf_vert_glsl.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\bloomf_vert_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\bloomf_vert_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/bloomf_vert_glsl.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\bloomf_frag_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\bloomf_frag_glsl.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\bloomf_frag_glsl.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\bloomf_frag_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\bloomf_frag_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/bloomf_frag_glsl.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\blur_vert_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\blur_vert_glsl.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\blur_vert_glsl.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\blur_vert_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\blur_vert_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/blur_vert_glsl.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\blur_frag_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\blur_frag_glsl.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\blur_frag_glsl.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\blur_frag_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\blur_frag_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/blur_frag_glsl.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\light_vert_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\light_vert_glsl.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\light_vert_glsl.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\light_vert_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\light_vert_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/light_vert_glsl.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\light_frag_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\light_frag_glsl.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\light_frag_glsl.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\light_frag_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\light_frag_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/light_frag_glsl.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\skybox_vert_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\skybox_vert_glsl.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\skybox_vert_glsl.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\skybox_vert_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\skybox_vert_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/skybox_vert_glsl.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\skybox_frag_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\skybox_frag_glsl.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\\shaders\\skybox_frag_glsl.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\shaders.dir\\shaders\\skybox_frag_glsl.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\out\\build\\x64-Debug\\shaders\\skybox_frag_glsl.cpp",
+  "file": "Z:/Skola/ppgso/out/build/x64-Debug/shaders/skybox_frag_glsl.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\ppgso.dir\\ppgso\\graphics\\mesh.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\\graphics\\mesh.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\\graphics\\mesh.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\ppgso.dir\\ppgso\\graphics\\mesh.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\ppgso\\graphics\\mesh.cpp",
+  "file": "Z:/Skola/ppgso/ppgso/graphics/mesh.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\ppgso.dir\\ppgso\\loaders\\tiny_obj_loader.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\\loaders\\tiny_obj_loader.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\\loaders\\tiny_obj_loader.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\ppgso.dir\\ppgso\\loaders\\tiny_obj_loader.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\ppgso\\loaders\\tiny_obj_loader.cpp",
+  "file": "Z:/Skola/ppgso/ppgso/loaders/tiny_obj_loader.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\ppgso.dir\\ppgso\\graphics\\shader.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\\graphics\\shader.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\\graphics\\shader.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\ppgso.dir\\ppgso\\graphics\\shader.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\ppgso\\graphics\\shader.cpp",
+  "file": "Z:/Skola/ppgso/ppgso/graphics/shader.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\ppgso.dir\\ppgso\\loaders\\image.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\\loaders\\image.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\\loaders\\image.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\ppgso.dir\\ppgso\\loaders\\image.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\ppgso\\loaders\\image.cpp",
+  "file": "Z:/Skola/ppgso/ppgso/loaders/image.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\ppgso.dir\\ppgso\\loaders\\image_bmp.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\\loaders\\image_bmp.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\\loaders\\image_bmp.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\ppgso.dir\\ppgso\\loaders\\image_bmp.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\ppgso\\loaders\\image_bmp.cpp",
+  "file": "Z:/Skola/ppgso/ppgso/loaders/image_bmp.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\ppgso.dir\\ppgso\\loaders\\image_raw.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\\loaders\\image_raw.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\\loaders\\image_raw.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\ppgso.dir\\ppgso\\loaders\\image_raw.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\ppgso\\loaders\\image_raw.cpp",
+  "file": "Z:/Skola/ppgso/ppgso/loaders/image_raw.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\ppgso.dir\\ppgso\\graphics\\texture.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\\graphics\\texture.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\\graphics\\texture.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\ppgso.dir\\ppgso\\graphics\\texture.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\ppgso\\graphics\\texture.cpp",
+  "file": "Z:/Skola/ppgso/ppgso/graphics/texture.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\ppgso.dir\\ppgso\\graphics\\window.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\\graphics\\window.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\\graphics\\window.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\ppgso.dir\\ppgso\\graphics\\window.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\ppgso\\graphics\\window.cpp",
+  "file": "Z:/Skola/ppgso/ppgso/graphics/window.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\ppgso.dir\\ppgso\\loaders\\image_FreeImage.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\\loaders\\image_FreeImage.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\\loaders\\image_FreeImage.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\ppgso.dir\\ppgso\\loaders\\image_FreeImage.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\ppgso\\loaders\\image_FreeImage.cpp",
+  "file": "Z:/Skola/ppgso/ppgso/loaders/image_FreeImage.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\ppgso.dir\\ppgso\\graphics\\material.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\\graphics\\material.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\\graphics\\material.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\ppgso.dir\\ppgso\\graphics\\material.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\ppgso\\graphics\\material.cpp",
+  "file": "Z:/Skola/ppgso/ppgso/graphics/material.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\ppgso.dir\\ppgso\\animations\\interpolations.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\\animations\\interpolations.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\\animations\\interpolations.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\ppgso.dir\\ppgso\\animations\\interpolations.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\ppgso\\animations\\interpolations.cpp",
+  "file": "Z:/Skola/ppgso/ppgso/animations/interpolations.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\main.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\main.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\main.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\main.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\main.cpp",
+  "file": "Z:/Skola/ppgso/projekt/main.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\scene.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\scene.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\scene.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\scene.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\scene.cpp",
+  "file": "Z:/Skola/ppgso/projekt/scene.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\objects\\object.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\objects\\object.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\objects\\object.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\objects\\object.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\objects\\object.cpp",
+  "file": "Z:/Skola/ppgso/projekt/objects/object.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\objects\\camera.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\objects\\camera.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\objects\\camera.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\objects\\camera.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\objects\\camera.cpp",
+  "file": "Z:/Skola/ppgso/projekt/objects/camera.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\car.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\car.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\car.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\car.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\car.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/car.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\plane.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\plane.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\plane.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\plane.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\plane.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/plane.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Light.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Light.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Light.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Light.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\Light.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/Light.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Tent.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Tent.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Tent.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Tent.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\Tent.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/Tent.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\lantern.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\lantern.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\lantern.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\lantern.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\lantern.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/lantern.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Bear.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Bear.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Bear.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Bear.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\Bear.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/Bear.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Bat.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Bat.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Bat.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Bat.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\Bat.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/Bat.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Fox.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Fox.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Fox.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Fox.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\Fox.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/Fox.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Chicken.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Chicken.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Chicken.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Chicken.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\Chicken.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/Chicken.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Mushroom.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Mushroom.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Mushroom.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Mushroom.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\Mushroom.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/Mushroom.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Rabbit.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Rabbit.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Rabbit.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Rabbit.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\Rabbit.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/Rabbit.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Tree1.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Tree1.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Tree1.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Tree1.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\Tree1.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/Tree1.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Tree2.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Tree2.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Tree2.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Tree2.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\Tree2.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/Tree2.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Tree3.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Tree3.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Tree3.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Tree3.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\Tree3.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/Tree3.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Table.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Table.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Table.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Table.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\Table.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/Table.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Seagull.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Seagull.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Seagull.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Seagull.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\Seagull.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/Seagull.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Boat.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Boat.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Boat.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Boat.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\Boat.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/Boat.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Bush.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Bush.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Bush.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Bush.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\Bush.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/Bush.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Log.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Log.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Log.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Log.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\Log.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/Log.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Grass.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Grass.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Grass.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Grass.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\Grass.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/Grass.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Flower.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Flower.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Flower.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Flower.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\Flower.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/Flower.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Bird.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Bird.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Bird.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Bird.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\Bird.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/Bird.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Apple.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Apple.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Apple.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Apple.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\Apple.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/Apple.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Fish.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Fish.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Fish.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Fish.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\Fish.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/Fish.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Men.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Men.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Men.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Men.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\Men.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/Men.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Hat.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Hat.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Hat.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Hat.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\Hat.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/Hat.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\campfire.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\campfire.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\campfire.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\campfire.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\campfire.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/campfire.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\sphere.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\sphere.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\sphere.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\sphere.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\sphere.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/sphere.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\lake.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\lake.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\lake.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\lake.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\lake.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/lake.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\water.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\water.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\water.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\water.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\water.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/water.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Brana.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Brana.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Brana.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Brana.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\Brana.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/Brana.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Jaskyna1.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Jaskyna1.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Jaskyna1.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Jaskyna1.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\Jaskyna1.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/Jaskyna1.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Jaskyna2.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Jaskyna2.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Jaskyna2.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Jaskyna2.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\Jaskyna2.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/Jaskyna2.cpp"
 },
 {
-  "directory": "C:/Users/dana/Desktop/skola/7. semester/ppgso/projekt/ppgso-engine/out/build/x64-Debug",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1430~1.307\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\ppgso\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\dependencies\\include\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\" -I\"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\out\\build\\x64-Debug\" /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Jaskyna3.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Jaskyna3.cpp\"",
-  "file": "C:\\Users\\dana\\Desktop\\skola\\7. semester\\ppgso\\projekt\\ppgso-engine\\projekt\\instances\\Jaskyna3.cpp"
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\instances\\Jaskyna3.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\instances\\Jaskyna3.cpp",
+  "file": "Z:/Skola/ppgso/projekt/instances/Jaskyna3.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\objects\\keyframeCamera.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\objects\\keyframeCamera.cpp",
+  "file": "Z:/Skola/ppgso/projekt/objects/keyframeCamera.cpp"
+},
+{
+  "directory": "Z:/Skola/ppgso/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DGLEW_STATIC -DGLM_FORCE_RADIANS -I..\\..\\..\\ppgso -I..\\..\\..\\dependencies\\include -I..\\..\\..\\ -I. /DWIN32 /D_WINDOWS /W3 /GR /EHsc;-openmp /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 /FoCMakeFiles\\projekt.dir\\projekt\\objects\\Group.cpp.obj /FdTARGET_COMPILE_PDB /FS -c Z:\\Skola\\ppgso\\projekt\\objects\\Group.cpp",
+  "file": "Z:/Skola/ppgso/projekt/objects/Group.cpp"
 }
 ]

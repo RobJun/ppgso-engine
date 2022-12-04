@@ -24,6 +24,7 @@
 #include "scenes/scene7.h"
 
 #include "utils/renderQuad.h"
+#include "./instances/Bat.h"
 
 /*     TODO:
 *          Objekty 3D (4B)
@@ -240,7 +241,7 @@ private:
         shaderBloomFinal.use();
         shaderBloomFinal.setUniformBuffer("scene", colorBuffers[0],0);
         shaderBloomFinal.setUniformBuffer("bloomBlur", pingpongColorbuffers[!horizontal], 1);
-        shaderBloomFinal.setUniform("bloom", true);
+        shaderBloomFinal.setUniform("bloom", false);
 
         shaderBloomFinal.setUniform("exposure", 0.9f);
 
@@ -252,15 +253,15 @@ private:
         // Collect key state in a map
         keys[key] = action;
         if (keys[GLFW_KEY_W]) {
-            m_scene->m_camera->position -= 150.f *dt* m_scene->m_camera->back;
+            m_scene->m_camera->position -= 30.f *dt* m_scene->m_camera->back;
         }
         else if (keys[GLFW_KEY_S]) {
-            m_scene->m_camera->position += 150.f *dt* m_scene->m_camera->back;
+            m_scene->m_camera->position += 30.f *dt* m_scene->m_camera->back;
         }
         if (keys[GLFW_KEY_A])
-            m_scene->m_camera->position -= 150.f* dt* glm::normalize(glm::cross(-m_scene->m_camera->back, m_scene->m_camera->up));
+            m_scene->m_camera->position -= 30.f* dt* glm::normalize(glm::cross(-m_scene->m_camera->back, m_scene->m_camera->up));
         else if (keys[GLFW_KEY_D])
-            m_scene->m_camera->position += 150.f * dt * glm::normalize(glm::cross(-m_scene->m_camera->back, m_scene->m_camera->up));
+            m_scene->m_camera->position += 30.f * dt * glm::normalize(glm::cross(-m_scene->m_camera->back, m_scene->m_camera->up));
         if (keys[GLFW_KEY_UP]) {
             m_scene->m_camera->pitch += 0.5 * dt;
         }
@@ -282,13 +283,38 @@ private:
             auto nScene = createScene2();
             switchScene(move(nScene));
         }
+
+        if (keys[GLFW_KEY_F]) {
+            if (m_scene->m_camera->lightIndex != -1) {
+                if (m_scene->m_camera->name == ppgso::light::LightName::SPOT) {
+                    if (m_scene->spotLights[m_scene->m_camera->lightIndex]->enabled == false) {
+                        m_scene->enableLight_spot(m_scene->m_camera->lightIndex);
+                        auto bat = std::make_unique<Bat>(m_scene.get());
+                        bat->scale = { 5,5,5 };
+                        bat->position = m_scene->m_camera->position - 5.f * m_scene->m_camera->back - glm::vec3{0.6,-0.6,0};
+                        bat->rotation = { -1,-1,3.14 };
+                        bat->translation = { 0.3,-1,-1 };
+                        m_scene->m_objects.push_back(move(bat));
+
+                        bat = std::make_unique<Bat>(m_scene.get());
+                        bat->scale = { 5,5,5 };
+                        bat->position = m_scene->m_camera->position - 5.f*m_scene->m_camera->back + glm::vec3{ 0.6,0.6,0 };
+                        bat->rotation = { -1,1,3.14 };
+                        bat->translation = { -0.3,-1,-1 };
+                        m_scene->m_objects.push_back(move(bat));
+                    }
+                    else
+                        m_scene->disableLight_spot(m_scene->m_camera->lightIndex);
+                }
+            }
+        }
     }
 };
 
 int main() {
     // Initialize our window
     OurWindow window = {800,16/9 };
-    auto scene = createScene1();
+    auto scene = createScene6();
     window.switchScene(move(scene));
 
     // Main execution loop

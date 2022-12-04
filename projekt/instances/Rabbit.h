@@ -18,6 +18,8 @@ private:
 	// Age of the object in seconds
 	float age{ 0.0f };
 
+	bool spawnedFox = false;
+
 public:
 	// Speed and rotational momentum
 	float speed = 0.0;

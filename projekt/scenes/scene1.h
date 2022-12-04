@@ -13,6 +13,7 @@
 #include "../instances/Flower.h"
 #include "../instances/Grass.h"
 #include "../instances/Bird.h"
+#include "../instances/Mushroom.h"
 #include "../instances/campfire.h"
 #include "../objects/particleSystem.h"
 
@@ -23,21 +24,46 @@ std::unique_ptr<Scene> createScene1() {
     scene->clearObjects();
     scene->m_globalLight.direction = { 0,-1,1 };
     scene->m_globalLight.ambient = 1.f;
-    scene->m_globalLight.diffuse = 0.1f;
-    scene->m_globalLight.specular = 0.00f;
+    scene->m_globalLight.diffuse = 0.5f;
+    scene->m_globalLight.specular = 0.05f;
     scene->m_globalLight.color = { 1,1,1 };
 
     // Create a camera
     auto camera = std::make_unique<Camera>(60.0f, 1.0f, 0.1f, 100.0f);
-    camera->position.z = 0;
-    //camera->rotate = { 0,0.3,0 };
+    camera->position = { 28.21,4,-33.6228 };
+    camera->yaw = 2.0656;
     scene->m_camera = move(camera);
 
     auto car = std::make_unique<Car>(scene.get());
-    car->position = { 20,1.45,2 };
     car->rotation = { 0,0,4.7 };
     car->rotMomentum = { 0,0,0 };
     car->scale = { 2,2,2 };
+
+    ppgso::KeyFrame<glm::vec3> firstPosition;
+    firstPosition.transformTo = {40,1.45,-20};
+    firstPosition.time = 0;
+    firstPosition.interpolation = ppgso::CONSTANT;
+    car->translateFrames.addFrame(firstPosition);
+   
+    ppgso::KeyFrame<glm::vec3> finalPosition;
+    finalPosition.transformTo = { 20,1.45,2 };
+    finalPosition.time = 10;
+    finalPosition.addInterState({ 30,1.45,-10 }, 5.3);
+    finalPosition.addInterState({ 25,1.45,0 }, 8.3);
+    finalPosition.interpolation = ppgso::POLYNOMIC;
+    car->translateFrames.addFrame(finalPosition);
+
+    ppgso::KeyFrame<glm::vec3> firstRotation;
+    firstRotation.transformTo = { 0,0,0 };
+    firstRotation.time = 7;
+    firstRotation.interpolation = ppgso::CONSTANT;
+    car->rotationFrames.addFrame(firstRotation);
+
+    ppgso::KeyFrame<glm::vec3> finalRotation;
+    finalRotation.transformTo = { 0,0,4.7-2*3.14 };
+    finalRotation.time = 10;
+    finalRotation.interpolation = ppgso::LINEAR;
+    car->rotationFrames.addFrame(finalRotation);
 
     auto tent = std::make_unique<Tent>(scene.get());
     tent->scale = { 0.3,0.3,0.3 };
@@ -87,13 +113,13 @@ std::unique_ptr<Scene> createScene1() {
     auto gen = std::make_unique<Generator<Tree1, Tree3,Tree2,Bush>>(scene.get(), 40, &RectangelGenShape(60, 10), tranformTrees);
     gen->position = { 0,0,20 };
     
-    auto trava_kvety = std::make_unique<Generator<Grass, Flower,Grass,Flower>>(scene.get(), 60, &CircleGenShape(20));
+    auto trava_kvety = std::make_unique<Generator<Grass, Flower, Mushroom>>(scene.get(), 90, &RectangelGenShape(60,60));
 
 
     auto gen2 = std::make_unique<Generator<Tree1, Tree3,Bush,Tree2>>(scene.get(), 20, &RectangelGenShape(10,40),tranformTrees);
     gen2->position = { -20,0,-5 };
 
-
+    scene->m_objects.push_back(move(plane));
     scene->m_objects.push_back(move(gen));
     scene->m_objects.push_back(move(trava_kvety));
     scene->m_objects.push_back(move(gen2));
