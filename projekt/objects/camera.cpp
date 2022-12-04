@@ -8,9 +8,8 @@ Camera::Camera(float fow, float ratio, float near, float far) {
 }
 
 void Camera::update(float time) {
-	/*back.y += -sin(pitch);
+	back.y += -sin(pitch);
 	back.x += -cos(yaw) * cos(pitch);
 	back.z += -sin(yaw) * cos(pitch);
-	*/
 	viewMatrix = lookAt(position,position - back, up);
 }		

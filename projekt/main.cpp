@@ -288,7 +288,7 @@ private:
 int main() {
     // Initialize our window
     OurWindow window = {800,16/9 };
-    auto scene = createScene9();
+    auto scene = createScene1();
     window.switchScene(move(scene));
 
     // Main execution loop
