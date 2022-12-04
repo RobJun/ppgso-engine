@@ -11,7 +11,7 @@ public:
 
 	ppgso::KeyFrames<glm::vec3> k_position;
 	ppgso::KeyFrames<glm::vec3> k_back;
-	ppgso::KeyFrames<glm::vec3> k_up;
+	ppgso::KeyFrames<float> k_roll;
 
 	float age = 0;
 

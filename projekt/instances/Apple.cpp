@@ -27,7 +27,7 @@ Apple::Apple(Scene* scene)
 bool Apple::update(Scene& scene, float dt, glm::mat4 parentModelMatrix)
 {
 	age += dt;
-	if (age > 5)
+	if (age > 25)
 		release = true;
 	if(release && !stopMovement)
 		padaj(scene,dt);
@@ -40,14 +40,20 @@ bool Apple::update(Scene& scene, float dt, glm::mat4 parentModelMatrix)
 
 		if (!zem) continue;
 
-
-
-		if (!stopMovement && velocity.y < 0
-			&& glm::distance(zem->getClosestPoint(position),position) < 0.2 && position.y > 0) {
-			velocity.y *= -0.7;
-			std::cout << velocity.y << " " << position.y << std::endl;
-			if (velocity.y < 0.1) {
-				stopMovement = true;
+		if (!stopMovement){
+			if (velocity.y < 0
+				&& glm::distance(zem->getClosestPoint(position), position) < 0.2 && position.y > 0) {
+				velocity.y *= -0.7;
+				std::cout << velocity.y << " " << position.y << std::endl;
+				if (velocity.y < 0.1) {
+					stopMovement = true;
+				}
+			}
+			if (position.y < zem->position.y) {
+				velocity.y *=-0.5 ;
+				if (velocity.y < 0.1) {
+					stopMovement = true;
+				}
 			}
 		}
 
@@ -60,7 +66,7 @@ bool Apple::update(Scene& scene, float dt, glm::mat4 parentModelMatrix)
 		spawnedRabbit = true;
 		auto rabbit = std::make_unique<Rabbit>(&scene);
 		rabbit->scale = { 0.2,0.2,0.2 };
-		rabbit->position = { -10,0.3,25 };
+		rabbit->position = { -10,0.5,25 };
 		rabbit->rotation = { 0,0,2 };
 
 
@@ -71,12 +77,12 @@ bool Apple::update(Scene& scene, float dt, glm::mat4 parentModelMatrix)
 		rabbit->translateFrames.addFrame(firstPosition);
 
 		ppgso::KeyFrame<glm::vec3> finalPosition;
-		finalPosition.transformTo = position + glm::vec3{-1,0,1};
+		finalPosition.transformTo = position + glm::vec3{-1,0.3,1};
 		finalPosition.time = 5;
 		finalPosition.interpolation = ppgso::LINEAR;
 		rabbit->translateFrames.addFrame(finalPosition);
 
-		finalPosition.transformTo = position + glm::vec3{ -1,0,1 };
+		finalPosition.transformTo = position + glm::vec3{ -1,0.3,1 };
 		finalPosition.time = 20;
 		finalPosition.interpolation = ppgso::LINEAR;
 		rabbit->translateFrames.addFrame(finalPosition);

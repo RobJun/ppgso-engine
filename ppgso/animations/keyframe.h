@@ -28,8 +28,15 @@ namespace ppgso {
 	private:
 		std::vector<KeyFrame<T>> _transformations;
 		bool canEdit = true;
+		bool resetable = false;
+		float resetTimer = 0;
 	public:
 		std::vector<KeyFrame<T>> transformations;
+
+
+		void setResetable(bool value) {
+			resetable = value;
+		}
 
 		bool isEmpty() {
 			return transformations.empty();
@@ -37,6 +44,10 @@ namespace ppgso {
 
 		unsigned int sizeOfAnimations() {
 			return _transformations.size();
+		}
+
+		bool isOnLastFrame() {
+			return _transformations.size() == 1;
 		}
 
 
@@ -50,11 +61,17 @@ namespace ppgso {
 			transformations.push_back(frame);
 		}
 
-		glm::vec3 update(float time) {
+		T update(float time) {
 			if (_transformations.size() == 0) {
 				_transformations = transformations;
 				canEdit = false;
 			}
+			if (resetable && transformations.size() != 1 
+				&& _transformations.size() == 1 && time-resetTimer >= _transformations[0].time ){
+				resetTimer += _transformations[0].time;
+				_transformations = transformations;
+			}
+			time -= resetTimer;
 			if (_transformations.size() == 1)
 				return _transformations[0].transformTo;
 

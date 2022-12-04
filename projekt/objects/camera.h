@@ -9,6 +9,7 @@ public:
 	glm::vec3 up{ 0,1 ,0 };
 	glm::vec3 position{ 0,0,-10 };
 	glm::vec3 back{ 0,0,-1 };
+	glm::vec3 right{ 1,0,0 };
 
 	glm::vec3 rotate = { 0,0,0 };			//zapinanie, vypinanie rotovania kamery
 	glm::vec3 rotation = { 0,0,0 };
@@ -18,6 +19,7 @@ public:
 
 	float yaw = 0;
 	float pitch = 0;
+	float roll = 0;
 
 
 	int lightIndex = -1;

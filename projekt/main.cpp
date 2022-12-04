@@ -30,16 +30,16 @@
 *          Objekty 3D (4B)
 *               - obj subory (done)
 *               - uv textury (done)
-*           Dynamicka scena (1B)- 2 typy objektov ktore vynikaju zanikaju
+*           Dynamicka scena (1B)- 2 typy objektov ktore vynikaju zanikaju (done)
 *           Proceduralna scena (2B) (done)
 *           Zmeny scen (2B)
 *           Hierarchicka reprezentacia sceny (4B) (done)
-*           proceduralna animacia (2B)
-*           animacia cez klucove snimky (3B) (half done)
+*           proceduralna animacia (2B) (done)
+*           animacia cez klucove snimky (3B) (done)
 *           Kolizie (3B) (done)
 *           Simulacia vektorovych sil (2B) (asi)
 *           Kamera perspektiva (1B) (done)
-*               - klucove snimky (2B)
+*               - klucove snimky (2B) (done)
 *               - animacne krivky (2B)
 *           Kazdy zdroj svetla (3B) (done)
 *           Zmena pozicie alebo farby (1B) (done)
@@ -54,8 +54,11 @@
 #define DEBUG_SHADOW_MAPS 0
 
 class OurWindow : public ppgso::Window {
+public:
+    std::vector<std::unique_ptr<Scene>> preloadedScenes;
 private:
-    std::unique_ptr<Scene> m_scene;
+    unsigned int currentScene = 0;
+
     ppgso::Shader shader = { renderdepthmap_vert_glsl , renderdepthmap_frag_glsl };
     ppgso::Shader shaderBloomFinal = { bloomf_vert_glsl,bloomf_frag_glsl };
     ppgso::Shader shaderBlur = { blur_vert_glsl,blur_frag_glsl };
@@ -75,12 +78,6 @@ private:
 public:
     OurWindow() : Window{ "projekt", SIZE, SIZE } { initWindow(); };
     OurWindow(const int& size, const double& const aspectRatio) : Window{ "projekt", size, (int)(size * aspectRatio) } { initWindow(); };
-
-public: 
-    void switchScene(std::unique_ptr<Scene> scene) {
-       m_scene.reset();
-       m_scene = move(scene);
-    }
 private: 
 
     //returns scene for deletion
@@ -172,22 +169,22 @@ private:
             switchScene(move(sc));
             activeScene = 2;
         }*/
-        m_scene->update(dt);
+        preloadedScenes[currentScene]->update(dt);
 
         //generate shadowMap for direct light
         glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-        glm::mat4 lightSpaceMatrix = m_scene->m_globalLight.calculateShadowMap();
+        glm::mat4 lightSpaceMatrix = preloadedScenes[currentScene]->m_globalLight.calculateShadowMap();
         shader.use();
         shader.setUniform("lightSpaceMatrix", lightSpaceMatrix);
 
-        glViewport(0, 0, m_scene->m_globalLight.depthMap.getWidth(), m_scene->m_globalLight.depthMap.getHeight());
-        m_scene->m_globalLight.depthMap.bind();
-        m_scene->renderMap(&shader);
-        m_scene->m_globalLight.depthMap.unbind();
+        glViewport(0, 0, preloadedScenes[currentScene]->m_globalLight.depthMap.getWidth(), preloadedScenes[currentScene]->m_globalLight.depthMap.getHeight());
+        preloadedScenes[currentScene]->m_globalLight.depthMap.bind();
+        preloadedScenes[currentScene]->renderMap(&shader);
+        preloadedScenes[currentScene]->m_globalLight.depthMap.unbind();
 
         //generate shadowMap for spot lights
-        for (auto& light : m_scene->spotLights) {
+        for (auto& light : preloadedScenes[currentScene]->spotLights) {
             if (light->enabled) {
                 glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
                 glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -196,17 +193,17 @@ private:
                 shader.setUniform("lightSpaceMatrix", lightSpaceMatrix);
                 glViewport(0, 0, light->depthMap.getWidth(), light->depthMap.getHeight());
                 light->depthMap.bind();
-                m_scene->renderMap(&shader);
+                preloadedScenes[currentScene]->renderMap(&shader);
                 light->depthMap.unbind(); 
             }
         }
 #if DEBUG_SHADOW_MAPS
         shader_debug.use();
-        shader_debug.setUniform("near_plane", m_scene->spotLights[0]->near_plane);
-        shader_debug.setUniform("far_plane", m_scene->spotLights[0]->far_plane);
+        shader_debug.setUniform("near_plane", preloadedScenes[currentScene]->spotLights[0]->near_plane);
+        shader_debug.setUniform("far_plane", preloadedScenes[currentScene]->spotLights[0]->far_plane);
         glActiveTexture(GL_TEXTURE0);
-        //glBindTexture(GL_TEXTURE_2D, m_scene->m_globalLight.depthMap.getTexture());
-        glBindTexture(GL_TEXTURE_2D, m_scene->spotLights[1]->depthMap.getTexture());
+        //glBindTexture(GL_TEXTURE_2D, preloadedScenes[currentScene]->m_globalLight.depthMap.getTexture());
+        glBindTexture(GL_TEXTURE_2D, preloadedScenes[currentScene]->spotLights[1]->depthMap.getTexture());
         renderQuad();
 #else    
         glViewport(0, 0, width, height);
@@ -214,7 +211,7 @@ private:
         // Clear depth and color buffers
         glBindFramebuffer(GL_FRAMEBUFFER, hdrFBO);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-        m_scene->render(); 
+        preloadedScenes[currentScene]->render(); 
 
 
        glBindFramebuffer(GL_FRAMEBUFFER, 0);
@@ -241,7 +238,7 @@ private:
         shaderBloomFinal.use();
         shaderBloomFinal.setUniformBuffer("scene", colorBuffers[0],0);
         shaderBloomFinal.setUniformBuffer("bloomBlur", pingpongColorbuffers[!horizontal], 1);
-        shaderBloomFinal.setUniform("bloom", false);
+        shaderBloomFinal.setUniform("bloom", true);
 
         shaderBloomFinal.setUniform("exposure", 0.9f);
 
@@ -253,58 +250,70 @@ private:
         // Collect key state in a map
         keys[key] = action;
         if (keys[GLFW_KEY_W]) {
-            m_scene->m_camera->position -= 30.f *dt* m_scene->m_camera->back;
+            preloadedScenes[currentScene]->m_camera->position -= 30.f *dt* preloadedScenes[currentScene]->m_camera->back;
         }
         else if (keys[GLFW_KEY_S]) {
-            m_scene->m_camera->position += 30.f *dt* m_scene->m_camera->back;
+            preloadedScenes[currentScene]->m_camera->position += 30.f *dt* preloadedScenes[currentScene]->m_camera->back;
         }
         if (keys[GLFW_KEY_A])
-            m_scene->m_camera->position -= 30.f* dt* glm::normalize(glm::cross(-m_scene->m_camera->back, m_scene->m_camera->up));
+            preloadedScenes[currentScene]->m_camera->position -= 30.f* dt* glm::normalize(glm::cross(-preloadedScenes[currentScene]->m_camera->back, preloadedScenes[currentScene]->m_camera->up));
         else if (keys[GLFW_KEY_D])
-            m_scene->m_camera->position += 30.f * dt * glm::normalize(glm::cross(-m_scene->m_camera->back, m_scene->m_camera->up));
+            preloadedScenes[currentScene]->m_camera->position += 30.f * dt * glm::normalize(glm::cross(-preloadedScenes[currentScene]->m_camera->back, preloadedScenes[currentScene]->m_camera->up));
         if (keys[GLFW_KEY_UP]) {
-            m_scene->m_camera->pitch += 0.5 * dt;
+            preloadedScenes[currentScene]->m_camera->pitch += 0.5 * dt;
         }
         if (keys[GLFW_KEY_DOWN]) {
-            m_scene->m_camera->pitch -= 0.5 * dt;
+            preloadedScenes[currentScene]->m_camera->pitch -= 0.5 * dt;
         }
         if (keys[GLFW_KEY_LEFT]) {
-            m_scene->m_camera->yaw -= 0.5 * dt;
+            preloadedScenes[currentScene]->m_camera->yaw -= 0.5 * dt;
         }
         if (keys[GLFW_KEY_RIGHT]) {
-            m_scene->m_camera->yaw += 0.5 * dt;
+            preloadedScenes[currentScene]->m_camera->yaw += 0.5 * dt;
+        }
+        if (keys[GLFW_KEY_P]) {
+            preloadedScenes[currentScene]->m_camera->roll += 0.5 * dt;
         }
 
+
+
         if (keys[GLFW_KEY_1]) {
-            auto nScene = createScene1();
-            switchScene(move(nScene));
+            currentScene = 0;
         }
         if (keys[GLFW_KEY_2]) {
-            auto nScene = createScene2();
-            switchScene(move(nScene));
+            currentScene = 1;
+        }
+        if (keys[GLFW_KEY_3]) {
+            currentScene = 2;
+        }
+        if (keys[GLFW_KEY_4]) {
+            currentScene = 3;
+        }
+        if (keys[GLFW_KEY_5]) {
+            currentScene = 4;
         }
 
         if (keys[GLFW_KEY_F]) {
-            if (m_scene->m_camera->lightIndex != -1) {
-                if (m_scene->m_camera->name == ppgso::light::LightName::SPOT) {
-                    if (m_scene->spotLights[m_scene->m_camera->lightIndex]->enabled == false) {
-                        m_scene->enableLight_spot(m_scene->m_camera->lightIndex);
-                        auto bat = std::make_unique<Bat>(m_scene.get());
+            if (preloadedScenes[currentScene]->m_camera->lightIndex != -1) {
+                if (preloadedScenes[currentScene]->m_camera->name == ppgso::light::LightName::SPOT) {
+                    if (preloadedScenes[currentScene]->spotLights[preloadedScenes[currentScene]->m_camera->lightIndex]->enabled == false) {
+                        preloadedScenes[currentScene]->enableLight_spot(preloadedScenes[currentScene]->m_camera->lightIndex);
+                        auto bat = std::make_unique<Bat>(preloadedScenes[currentScene].get());
                         bat->scale = { 5,5,5 };
-                        bat->position = m_scene->m_camera->position - 5.f * m_scene->m_camera->back - glm::vec3{0.6,-0.6,0};
+                        bat->position = preloadedScenes[currentScene]->m_camera->position - 5.f * preloadedScenes[currentScene]->m_camera->back - glm::vec3{0.6,-0.6,0};
                         bat->rotation = { -1,-1,3.14 };
                         bat->translation = { 0.3,-1,-1 };
-                        m_scene->m_objects.push_back(move(bat));
+                        preloadedScenes[currentScene]->m_objects.push_back(move(bat));
 
-                        bat = std::make_unique<Bat>(m_scene.get());
+                        bat = std::make_unique<Bat>(preloadedScenes[currentScene].get());
                         bat->scale = { 5,5,5 };
-                        bat->position = m_scene->m_camera->position - 5.f*m_scene->m_camera->back + glm::vec3{ 0.6,0.6,0 };
+                        bat->position = preloadedScenes[currentScene]->m_camera->position - 5.f*preloadedScenes[currentScene]->m_camera->back + glm::vec3{ 0.6,0.6,0 };
                         bat->rotation = { -1,1,3.14 };
                         bat->translation = { -0.3,-1,-1 };
-                        m_scene->m_objects.push_back(move(bat));
+                        preloadedScenes[currentScene]->m_objects.push_back(move(bat));
                     }
                     else
-                        m_scene->disableLight_spot(m_scene->m_camera->lightIndex);
+                        preloadedScenes[currentScene]->disableLight_spot(preloadedScenes[currentScene]->m_camera->lightIndex);
                 }
             }
         }
@@ -314,9 +323,11 @@ private:
 int main() {
     // Initialize our window
     OurWindow window = {800,16/9 };
-    auto scene = createScene6();
-    window.switchScene(move(scene));
-
+    window.preloadedScenes.push_back(move(createScene1()));
+    window.preloadedScenes.push_back(move(createScene2()));
+    window.preloadedScenes.push_back(move(createScene6()));
+    window.preloadedScenes.push_back(move(createScene7()));
+    window.preloadedScenes.push_back(move(createScene9()));
     // Main execution loop
     while (window.pollEvents()) {}
 

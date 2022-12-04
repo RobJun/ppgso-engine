@@ -28,7 +28,7 @@ namespace ppgso {
 		};
 		struct Directional : public Light {
 			glm::vec3 direction;
-			DepthMap depthMap = { 2048,2048 };
+			DepthMap depthMap = { 10000,10000 };
 			Directional() {};
 			Directional(glm::vec3 direction) : direction(direction) {};
 

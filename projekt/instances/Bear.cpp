@@ -39,7 +39,7 @@ bool Bear::update(Scene& scene, float dt, glm::mat4 parentModelMatrix)
 		glm::translate(glm::mat4(1.0f), position)
 		* glm::orientate4(rotMomentum)
 		* glm::translate(glm::mat4(1.0f), actPos)
-		* glm::orientate4(glm::vec3{ 0,0,3.14 / 2 })
+		* glm::orientate4(rotation)
 		* glm::scale(glm::mat4(1.0f), scale);
 
 

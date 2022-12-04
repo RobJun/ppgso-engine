@@ -13,9 +13,15 @@ void KeyframeCamera::update(float time) {
 	age += time;
 	position = k_position.update(age);
 	back = k_back.update(age);
-	up = k_up.update(age);
 
-	viewMatrix = lookAt(position, position - back, up);
+	if (!k_position.isOnLastFrame())
+		roll = k_roll.update(age);
+	else
+		roll = 0;
+	glm::mat4 roll_mat = glm::rotate(glm::mat4(1.0f), roll, -back);
+	glm::vec3 temp_up = roll_mat * glm::vec4(up, 0);
+
+	viewMatrix = lookAt(position, position - back, temp_up);
 }
 
 void KeyframeCamera::addInitialKeyframes() {
@@ -29,9 +35,9 @@ void KeyframeCamera::addInitialKeyframes() {
 	initialBack.time = 0;
 	k_back.addFrame(initialBack);
 
-	ppgso::KeyFrame<glm::vec3> initialUp;
-	initialUp.transformTo = up;
+	ppgso::KeyFrame<float> initialUp;
+	initialUp.transformTo = roll;
 	initialUp.time = 0;
 
-	k_up.addFrame(initialUp);
+	k_roll.addFrame(initialUp);
 }

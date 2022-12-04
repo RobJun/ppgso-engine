@@ -41,6 +41,16 @@ std::unique_ptr<Scene> createScene9() {
     finalPosition.interpolation = ppgso::BEZIER;
     camera->k_position.addFrame(finalPosition);
 
+    ppgso::KeyFrame<float> finalRoll;
+    finalRoll.transformTo = 0;
+    finalRoll.time = 2;
+    finalRoll.interpolation = ppgso::POLYNOMIC;
+    finalRoll.addInterState(0.05, 0.5);
+    finalRoll.addInterState(0, 1);
+    camera->k_roll.setResetable(true);
+    camera->k_roll.addFrame(finalRoll);
+
+
     scene->m_camera = move(camera);
 
     auto zem = std::make_unique<Plane>(scene.get());
