@@ -60,7 +60,7 @@ std::unique_ptr<Scene> createScene6() {
 
     auto apple = std::make_unique<Apple>(scene.get());
     apple->scale = { .005,.005,.005 };
-    apple->position = {-2.7,2.9,20};
+    apple->position = {-2.7,3,20};
     tree_Apple->children.push_back(move(apple));
 
     auto gen = std::make_unique<Generator<Tree1, Tree3>>(scene.get(), 25, &RectangelGenShape(60, 10), tranformTrees);
@@ -75,7 +75,7 @@ std::unique_ptr<Scene> createScene6() {
     auto gen2 = std::make_unique<Generator<Tree1, Tree3>>(scene.get(), 30, &RectangelGenShape(15, 100), tranformTrees);
     gen2->position = {-20,0,-0 };
     auto gen3 = std::make_unique<Generator<Tree1, Tree3>>(scene.get(), 30, &RectangelGenShape(15, 100), tranformTrees);
-    gen3->position = { 20,0,-0 };
+    gen3->position = { 30,0,-0 };
 
     plane->children.push_back(move(tree_Apple));
     plane->children.push_back(move(gen));
@@ -84,8 +84,6 @@ std::unique_ptr<Scene> createScene6() {
     plane->children.push_back(move(tree_bush));
     plane->children.push_back(move(gen2));
     plane->children.push_back(move(gen3));
-    //plane->children.push_back(move(rabbit));
-    //plane->children.push_back(move(fox));
     
     scene->m_objects.push_back(move(plane));
 

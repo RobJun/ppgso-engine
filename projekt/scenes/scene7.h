@@ -50,7 +50,7 @@ std::unique_ptr<Scene> createScene7() {
     tree_bush->position = { 0,0,40 };
 
     auto gen2 = std::make_unique<Generator<Tree1, Tree3,Tree2,Bush>>(scene.get(), 60, &RectangelGenShape(15, 100), tranformTrees);
-    gen2->position = { -20,0,-0 };
+    gen2->position = { -30,0,-0 };
     auto gen3 = std::make_unique<Generator<Tree1, Tree3,Tree1,Tree3>>(scene.get(), 60, &RectangelGenShape(15, 100), tranformTrees);
     gen3->position = { 20,0,-0 };
 

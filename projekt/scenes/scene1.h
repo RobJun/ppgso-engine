@@ -18,6 +18,7 @@
 #include "../objects/particleSystem.h"
 
 #include "../objects/generator.h"
+#include "../objects/curveCamera.h"
 
 std::unique_ptr<Scene> createScene1() {
     auto scene = std::make_unique<Scene>();
@@ -29,10 +30,33 @@ std::unique_ptr<Scene> createScene1() {
     scene->m_globalLight.color = { 1,1,1 };
 
     // Create a camera
-    auto camera = std::make_unique<Camera>(60.0f, 1.0f, 0.1f, 100.0f);
-    camera->position = { 28.21,4,-33.6228 };
-    camera->yaw = 2.0656;
+    auto camera = std::make_unique<CurveCamera>(60.0f, 1.0f, 0.1f, 1000.0f);
+    //camera->position = { -9.4878 ,8.4576,-123.774 };
+    std::vector<glm::vec3> controlPoints = {
+        { 28.21,4,-33.6228 },
+        { 40.7,4,-14.7},
+        { 25.77,4,-8.93},
+        { 20.4119,4, -6.8427 }
+    };
+    camera->controlPoints.push_back(controlPoints);
+    camera->maxTime.push_back(20);
+
+    controlPoints = {
+        { 20.4119,4, -6.8427 },
+        { 15.0538,4,-4.7554 },
+        { -18,3,-8},
+        { -8.75,3,-2.0214},
+    };
+    camera->controlPoints.push_back(controlPoints);
+    camera->maxTime.push_back(20);
+
+
     scene->m_camera = move(camera);
+
+
+    /*auto camera = std::make_unique<Camera>(60.0f, 1.0f, 0.1f, 1000.0f);
+    camera->position = { 28.21,4,-33.6228 };
+    scene->m_camera = move(camera);*/
 
     auto car = std::make_unique<Car>(scene.get());
     car->rotation = { 0,0,4.7 };
@@ -102,7 +126,7 @@ std::unique_ptr<Scene> createScene1() {
     auto campfire = std::make_unique<Campfire>(scene.get());
 
     auto plane = std::make_unique<Plane>(scene.get());
-    plane->scale = { 30, 30, 30 };
+    plane->scale = { 60, 60, 60 };
 
     plane->children.push_back(move(car));
     plane->children.push_back(move(table));
@@ -110,18 +134,22 @@ std::unique_ptr<Scene> createScene1() {
     plane->children.push_back(move(campfire));
 
 
-    auto gen = std::make_unique<Generator<Tree1, Tree3,Tree2,Bush>>(scene.get(), 40, &RectangelGenShape(60, 10), tranformTrees);
-    gen->position = { 0,0,20 };
+    auto gen = std::make_unique<Generator<Tree1, Tree3,Tree2,Bush>>(scene.get(), 65, &RectangelGenShape(100, 40), tranformTrees);
+    gen->position = { 0,0,40 };
     
-    auto trava_kvety = std::make_unique<Generator<Grass, Flower, Mushroom>>(scene.get(), 90, &RectangelGenShape(60,60));
+    auto trava_kvety = std::make_unique<Generator<Grass, Flower, Mushroom>>(scene.get(), 60, &RectangelGenShape(60,60));
 
 
-    auto gen2 = std::make_unique<Generator<Tree1, Tree3,Bush,Tree2>>(scene.get(), 20, &RectangelGenShape(10,40),tranformTrees);
-    gen2->position = { -20,0,-5 };
+    auto gen2 = std::make_unique<Generator<Tree1, Tree3,Bush,Tree2>>(scene.get(), 60, &RectangelGenShape(40,100),tranformTrees);
+    gen2->position = { -40,0,-5 };
 
+    auto gen3 = std::make_unique<Generator<Tree1, Tree3, Bush, Tree2>>(scene.get(), 30, &RectangelGenShape(10, 100), tranformTrees);
+    gen3->position = { 50,0,-5 };
+
+    plane->children.push_back(move(gen3));
+    plane->children.push_back(move(gen));
+    plane->children.push_back(move(trava_kvety));
+    plane->children.push_back(move(gen2));
     scene->m_objects.push_back(move(plane));
-    scene->m_objects.push_back(move(gen));
-    scene->m_objects.push_back(move(trava_kvety));
-    scene->m_objects.push_back(move(gen2));
     return scene;
 }
