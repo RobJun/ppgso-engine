@@ -39,16 +39,16 @@ std::unique_ptr<Scene> createScene1() {
         { 20.4119,4, -6.8427 }
     };
     camera->controlPoints.push_back(controlPoints);
-    camera->maxTime.push_back(30);
+    camera->maxTime.push_back(20);
 
     controlPoints = {
         { 20.4119,4, -6.8427 },
         { 15.0538,4,-4.7554 },
-        { -4.32,4,-8.4},
-        { -9.033,4,-0.6528},
+        { -18,3,-8},
+        { -8.75,3,-2.0214},
     };
     camera->controlPoints.push_back(controlPoints);
-    camera->maxTime.push_back(30);
+    camera->maxTime.push_back(20);
 
 
     scene->m_camera = move(camera);
@@ -134,17 +134,17 @@ std::unique_ptr<Scene> createScene1() {
     plane->children.push_back(move(campfire));
 
 
-    auto gen = std::make_unique<Generator<Tree1, Tree3,Tree2,Bush>>(scene.get(), 40, &RectangelGenShape(120, 10), tranformTrees);
-    gen->position = { 0,0,20 };
+    auto gen = std::make_unique<Generator<Tree1, Tree3,Tree2,Bush>>(scene.get(), 65, &RectangelGenShape(100, 40), tranformTrees);
+    gen->position = { 0,0,40 };
     
-    auto trava_kvety = std::make_unique<Generator<Grass, Flower, Mushroom>>(scene.get(), 90, &RectangelGenShape(60,60));
+    auto trava_kvety = std::make_unique<Generator<Grass, Flower, Mushroom>>(scene.get(), 60, &RectangelGenShape(60,60));
 
 
-    auto gen2 = std::make_unique<Generator<Tree1, Tree3,Bush,Tree2>>(scene.get(), 30, &RectangelGenShape(30,40),tranformTrees);
+    auto gen2 = std::make_unique<Generator<Tree1, Tree3,Bush,Tree2>>(scene.get(), 60, &RectangelGenShape(40,100),tranformTrees);
     gen2->position = { -40,0,-5 };
 
-    auto gen3 = std::make_unique<Generator<Tree1, Tree3, Bush, Tree2>>(scene.get(), 20, &RectangelGenShape(10, 40), tranformTrees);
-    gen3->position = { 45,0,-5 };
+    auto gen3 = std::make_unique<Generator<Tree1, Tree3, Bush, Tree2>>(scene.get(), 30, &RectangelGenShape(10, 100), tranformTrees);
+    gen3->position = { 50,0,-5 };
 
     plane->children.push_back(move(gen3));
     plane->children.push_back(move(gen));
