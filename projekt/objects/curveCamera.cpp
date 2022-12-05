@@ -7,7 +7,7 @@ CurveCamera::CurveCamera(float fow, float ratio, float near, float far) {
 }
 
 void CurveCamera::update(float time) {
-	if(age+time < maxTime[currentCurve])
+	if(age+time-startTime < maxTime[currentCurve])
 		age += time;
 	if (interpolation == ppgso::BEZIER) {
 		position = ppgso::bezierInter(controlPoints[currentCurve], ((age-startTime) / maxTime[currentCurve]));
@@ -18,7 +18,10 @@ void CurveCamera::update(float time) {
 }
 
 void CurveCamera::onKey(unsigned int key) {
-	if (currentCurve + 1 == controlPoints.size()) return;
+	if (currentCurve + 1 == controlPoints.size()) {
+		currentCurve = 0;
+		return;
+	}
 	currentCurve += 1;
 	startTime = age;
 }

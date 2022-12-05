@@ -22,6 +22,7 @@
 std::unique_ptr<Scene> createScene2() {
     auto scene = std::make_unique<Scene>();
     scene->clearObjects();
+    scene->m_globalLight.size = { 200,200 };
     scene->m_globalLight.direction = { 0,-1,1 };
     scene->m_globalLight.ambient = 1.f;
     scene->m_globalLight.diffuse = 0.7f;
@@ -32,13 +33,35 @@ std::unique_ptr<Scene> createScene2() {
     auto camera = std::make_unique<CurveCamera>(60.0f, 1.0f, 0.1f, 1000.0f);
     //camera->position = { -9.4878 ,8.4576,-123.774 };
     std::vector<glm::vec3> controlPoints = {
-        { -2.3369 ,8.4576,-119.809 },
-        { -60.8,6.2,-72.6 },
-        { -16,4.2,-56.7 },
+    { 40.3 ,8.4576,-119.809 },
+    { -12,7.5,-96 },
+    { 22.8,6.5,-88.8 },
+    { 18.60, 5.18, -57.57 }
+    };
+    camera->controlPoints.push_back(controlPoints);
+    camera->maxTime.push_back(10);
+
+    controlPoints = {
+        { 18.60, 5.18, -57.57 },
+        { 13.4,5,-22},
+        { -2.,3.,-20 },
         { -1.23, 2.607, -8.4987 }
     };
     camera->controlPoints.push_back(controlPoints);
+    camera->maxTime.push_back(10);
+
+    controlPoints = {
+    {  -1.23, 2.607, -8.4987 },
+    { -2.88,2.214,14.4},
+    { 123,4.2,31 },
+    { 123,4.2,27 },
+    { -69.8, 2.607, 27 }
+    };
+    camera->controlPoints.push_back(controlPoints);
     camera->maxTime.push_back(30);
+    
+
+
     scene->m_camera = move(camera);
     
     auto hat = std::make_unique<Hat>(scene.get());
