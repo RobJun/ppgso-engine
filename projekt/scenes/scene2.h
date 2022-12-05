@@ -43,7 +43,7 @@ std::unique_ptr<Scene> createScene2() {
 
     controlPoints = {
         { 18.60, 5.18, -57.57 },
-        { 13.4,5,-22},
+        { 14.4,3.86,-26.34},
         { -2.,3.,-20 },
         { -1.23, 2.607, -8.4987 }
     };
@@ -52,10 +52,10 @@ std::unique_ptr<Scene> createScene2() {
 
     controlPoints = {
     {  -1.23, 2.607, -8.4987 },
-    { -2.88,2.214,14.4},
-    { 123,4.2,31 },
-    { 123,4.2,27 },
-    { -69.8, 2.607, 27 }
+    { -0.46,2.214,3.0026},
+    { 123,4.2,7 },
+    { 123,4.2,9 },
+    { -80, 6, 10 }
     };
     camera->controlPoints.push_back(controlPoints);
     camera->maxTime.push_back(30);

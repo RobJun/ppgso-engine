@@ -27,6 +27,9 @@ Seagull::Seagull(Scene* scene)
 
 bool Seagull::update(Scene& scene, float dt, glm::mat4 parentModelMatrix)
 {
+	age += dt;
+	if (age > 60)
+		return false;
 	generateModelMatrix();
 	modelMatrix = parentModelMatrix * modelMatrix;
 	for (auto& ch : children) {
