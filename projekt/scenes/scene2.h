@@ -23,7 +23,7 @@ std::unique_ptr<Scene> createScene2() {
     scene->clearObjects();
     scene->m_globalLight.direction = { 0,-1,1 };
     scene->m_globalLight.ambient = 1.f;
-    scene->m_globalLight.diffuse = 0.5f;
+    scene->m_globalLight.diffuse = 0.7f;
     scene->m_globalLight.specular = 0.05f;
     scene->m_globalLight.color = { 1,1,1 };
 

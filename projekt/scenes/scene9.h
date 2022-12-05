@@ -15,13 +15,13 @@ std::unique_ptr<Scene> createScene9() {
     auto scene = std::make_unique<Scene>();
     scene->clearObjects();
     scene->m_globalLight.direction = { 0,-1,1 };
-    scene->m_globalLight.ambient = 0.3f;
-    scene->m_globalLight.diffuse = 1.f;
-    scene->m_globalLight.specular = 0.7f;
+    scene->m_globalLight.ambient = 1.f;
+    scene->m_globalLight.diffuse = 0.7f;
+    scene->m_globalLight.specular = 0.05f;
     scene->m_globalLight.color = { 1,1,1 };
 
     int l = scene->generateSpotLight(glm::vec3(0, 4, 3), glm::vec3(0, 4, 3),
-        glm::vec3{ 1,1,0.3 }, glm::vec3{ 0.8f,0.6f,0.1f },
+        glm::vec3{ 1,1,0.3 }, glm::vec3{ 1.f,0.6f,0.1f },
         glm::vec3{ 0.22,0.0019,1.f }, glm::vec2{ glm::radians(12.5f) ,glm::radians(17.0f) });
     
     // Create a camera*/
@@ -55,9 +55,6 @@ std::unique_ptr<Scene> createScene9() {
 
     auto zem = std::make_unique<Plane>(scene.get());
     zem->scale = { 90, 90, 90 };
-    zem->material.ambient = glm::vec3{ 0.0,0.0, 0.0 };
-    zem->material.diffuse = glm::vec3{ 0.5,0.5,0.0 };
-    zem->material.specular = glm::vec3{ 0.6,0.6,0.5 };;
 
 
     auto men = std::make_unique<Men>(scene.get());
@@ -85,9 +82,6 @@ std::unique_ptr<Scene> createScene9() {
     auto jaskyna = std::make_unique<Sphere>(scene.get());
     jaskyna->position = { 0,0,38 };
     jaskyna->scale = {30,30,1 };
-    jaskyna->material.ambient = glm::vec3{ 0.0,	0.0, 0.0 };
-    jaskyna->material.diffuse = glm::vec3{ 0.5,	0.5,0.0 };
-    jaskyna->material.specular = glm::vec3{ 0.6,0.6,0.5 };
 
     auto stalagnity = std::make_unique<Generator<Jaskyna1, Jaskyna2>>(scene.get(), 20, &RectangelGenShape(5, 80));
     stalagnity->position = {8,1,0};

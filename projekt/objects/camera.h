@@ -29,5 +29,8 @@ public:
 
 	glm::vec3 getPosition() { return position; };
 
+
+	virtual void onKey(unsigned int key) {};
+
 	virtual void update(float time);
 };

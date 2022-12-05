@@ -22,22 +22,21 @@ std::unique_ptr<Scene> createScene6() {
     scene->clearObjects();
     scene->m_globalLight.direction = { 0,-1,1 };
     scene->m_globalLight.ambient = 1.f;
-    scene->m_globalLight.diffuse = 0.5f;
+    scene->m_globalLight.diffuse = 0.7f;
     scene->m_globalLight.specular = 0.05f;
     scene->m_globalLight.color = { 1,1,1 };
 
     // Create a camera
     auto camera = std::make_unique<CurveCamera>(60.0f, 1.0f, 0.1f, 100.0f);
     camera->position = { -.54,4.2,7.29 };
-    //camera->yaw = 1.537;
-    //camera->pitch = -0.136;
-    //camera->back = { 0,0,-1.f };
-
-
-    camera->controlPoints.push_back({ 20 ,4.2,-30 });
-    camera->controlPoints.push_back({ -3.6,4.2,0 });
-    camera->controlPoints.push_back({ -1,4.2,3.1 });
-    camera->controlPoints.push_back({ -.54, 4.2, 7.29 });
+    std::vector<glm::vec3> controlPoints = {
+    { 20 ,4.2,-30 },
+    { -3.6,4.2,0 },
+   { -1,4.2,3.1 },
+   { -.54, 4.2, 7.29 }
+    };
+    camera->controlPoints.push_back(controlPoints);
+    camera->maxTime.push_back(20);
     scene->m_camera = move(camera);
 
     auto plane = std::make_unique<Plane>(scene.get());

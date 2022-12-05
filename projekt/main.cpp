@@ -275,6 +275,10 @@ private:
             preloadedScenes[currentScene]->m_camera->roll += 0.5 * dt;
         }
 
+        if (keys[GLFW_KEY_Q]) {
+            preloadedScenes[currentScene]->m_camera->onKey(GLFW_KEY_Q);
+        }
+
 
 
         if (keys[GLFW_KEY_1]) {
