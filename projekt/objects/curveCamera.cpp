@@ -18,6 +18,7 @@ void CurveCamera::update(float time) {
 }
 
 void CurveCamera::onKey(unsigned int key) {
+	if (currentCurve + 1 == controlPoints.size()) return;
 	currentCurve += 1;
 	startTime = age;
 }
