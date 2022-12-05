@@ -12,7 +12,7 @@
 #include "../instances/Brana.h"
 #include "../instances/Sphere.h"
 
-//!!!CHYBA JASKYNA
+#include "../objects/curveCamera.h"
 
 std::unique_ptr<Scene> createScene7() {
     auto scene = std::make_unique<Scene>();

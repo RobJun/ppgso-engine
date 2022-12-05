@@ -12,7 +12,7 @@ std::unique_ptr<ppgso::Shader> Seagull::shader;
 
 Seagull::Seagull(Scene* scene)
 {
-	scale = {3,3,3};
+	scale = {6,6,6};
 
 	material.diffuse = glm::vec3{ 0.5,0.0,0.0 };
 	material.ambient = glm::vec3{ 0.55,0.55,	0.55 };

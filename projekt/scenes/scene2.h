@@ -16,6 +16,7 @@
 #include "../objects/Group.h"
 
 #include "../objects/keyframeCamera.h"
+#include "../objects/curveCamera.h"
 
 
 std::unique_ptr<Scene> createScene2() {
@@ -28,8 +29,16 @@ std::unique_ptr<Scene> createScene2() {
     scene->m_globalLight.color = { 1,1,1 };
 
     // Create a camera
-    auto camera = std::make_unique<Camera>(60.0f, 1.0f, 0.1f, 1000.0f);
-    camera->position.z = -20.0f;
+    auto camera = std::make_unique<CurveCamera>(60.0f, 1.0f, 0.1f, 1000.0f);
+    //camera->position = { -9.4878 ,8.4576,-123.774 };
+    std::vector<glm::vec3> controlPoints = {
+        { -2.3369 ,8.4576,-119.809 },
+        { -60.8,6.2,-72.6 },
+        { -16,4.2,-56.7 },
+        { -1.23, 2.607, -8.4987 }
+    };
+    camera->controlPoints.push_back(controlPoints);
+    camera->maxTime.push_back(30);
     scene->m_camera = move(camera);
     
     auto hat = std::make_unique<Hat>(scene.get());
@@ -65,12 +74,12 @@ std::unique_ptr<Scene> createScene2() {
     obloha->rotation = { 0,0,2 };
     obloha->children.push_back(move(vtaky));
 
-    auto gen = std::make_unique<Generator<Tree1, Tree3,Bush,Tree2>>(scene.get(), 200, &RectangelGenShape(200, 40), tranformTrees);
-    gen->position = {0,0,100 };
+    auto gen = std::make_unique<Generator<Tree1, Tree3,Bush,Tree2>>(scene.get(), 200, &RectangelGenShape(250, 40), tranformTrees);
+    gen->position = {0,3,100 };
     auto gen2 = std::make_unique<Generator<Tree1, Tree3,Bush,Tree2>>(scene.get(), 100, &RectangelGenShape(30, 200), tranformTrees);
-    gen2->position = {-100,0,0 };
-    auto gen3 = std::make_unique<Generator<Tree1, Tree3,Bush,Tree3>>(scene.get(), 60, &RectangelGenShape(10, 200), tranformTrees);
-    gen3->position = { 130,0,0 }; 
+    gen2->position = {-100,3,0 };
+    auto gen3 = std::make_unique<Generator<Tree1, Tree3,Bush,Tree3>>(scene.get(), 100, &RectangelGenShape(10, 200), tranformTrees);
+    gen3->position = { 130,3,0 }; 
 
     auto lake = std::make_unique<Lake>(scene.get());
 
