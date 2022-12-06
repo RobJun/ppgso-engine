@@ -27,7 +27,7 @@ Apple::Apple(Scene* scene)
 bool Apple::update(Scene& scene, float dt, glm::mat4 parentModelMatrix)
 {
 	age += dt;
-	if (age > 25)
+	if (age > 20)
 		release = true;
 	if (release && !stopMovement) {
 		padaj(scene, dt);
@@ -53,7 +53,7 @@ bool Apple::update(Scene& scene, float dt, glm::mat4 parentModelMatrix)
 				}
 			}
 			if (position.y < zem->position.y) {
-				velocity.y *=-0.5 ;
+				velocity = reflect(velocity);
 				if (velocity.y < 0.1) {
 					stopMovement = true;
 				}

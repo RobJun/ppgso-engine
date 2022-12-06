@@ -35,7 +35,7 @@ std::unique_ptr<Scene> createScene7() {
         { 0., 4, 0 }
     };
     camera->controlPoints.push_back(controlPoints);
-    camera->maxTime.push_back(30);
+    camera->maxTime.push_back(15);
     scene->m_camera = move(camera);
 
     auto plane = std::make_unique<Plane>(scene.get());
@@ -53,7 +53,7 @@ std::unique_ptr<Scene> createScene7() {
     auto gen2 = std::make_unique<Generator<Tree1, Tree3,Tree2,Bush>>(scene.get(), 60, &RectangelGenShape(15, 100), tranformTrees);
     gen2->position = { -30,0,-0 };
     auto gen3 = std::make_unique<Generator<Tree1, Tree3,Tree1,Tree3>>(scene.get(), 60, &RectangelGenShape(15, 100), tranformTrees);
-    gen3->position = { 20,0,-0 };
+    gen3->position = { 30,0,-0 };
 
     auto brana = std::make_unique<Brana>(scene.get());
     brana->position = {0,5,20};

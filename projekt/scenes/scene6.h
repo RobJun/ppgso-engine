@@ -37,7 +37,7 @@ std::unique_ptr<Scene> createScene6() {
    { -.54, 4.2, 7.29 }
     };
     camera->controlPoints.push_back(controlPoints);
-    camera->maxTime.push_back(20);
+    camera->maxTime.push_back(15);
     scene->m_camera = move(camera);
 
     auto plane = std::make_unique<Plane>(scene.get());

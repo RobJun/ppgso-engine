@@ -40,7 +40,7 @@ std::unique_ptr<Scene> createScene1() {
         { 20.4119,4, -6.8427 }
     };
     camera->controlPoints.push_back(controlPoints);
-    camera->maxTime.push_back(20);
+    camera->maxTime.push_back(15);
 
     controlPoints = {
         { 20.4119,4, -6.8427 },
@@ -49,7 +49,7 @@ std::unique_ptr<Scene> createScene1() {
         { -8.75,3,-2.0214},
     };
     camera->controlPoints.push_back(controlPoints);
-    camera->maxTime.push_back(20);
+    camera->maxTime.push_back(15);
 
 
     scene->m_camera = move(camera);
