@@ -87,6 +87,10 @@ bool Car::update(Scene& scene, float dt, glm::mat4 parentModelMatrix) {
 	scene.spotLights[right]->position = modelMatrix * glm::translate(glm::mat4(), { -0.8,-00.35,2.1 }) * glm::vec4(0, 0, 0, 1);
 	scene.spotLights[left]->direction = d_direction;
 	scene.spotLights[right]->direction = d_direction;
+
+	scene.spotLights[right]->color.b += 0.01;
+	scene.spotLights[left]->color.b += 0.01;
+
 	//std::get<1>(scene.pointLights[left])->position =  glm::vec4(scene.m_camera->position,1) ;
 	//std::get<1>(scene.pointLights[left])->direction = glm::vec4(0,0,1,0);
 	for (auto& ch : children) {

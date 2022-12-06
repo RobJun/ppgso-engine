@@ -73,18 +73,17 @@ std::unique_ptr<Scene> createScene2() {
     men->scale = {20,20,20 };
     men->position = {0,133,0};
     men->rotation = { 0,0,10 };
+    men->children.push_back(move(hat));
 
     auto boat = std::make_unique<Boat>(scene.get());
     boat->scale = {0.015,.015,.015 };
     boat->rotation = { 0,0,3.14 };
     boat->position = {-30,-.5,15 };
     boat->children.push_back(move(men));
-    boat->children.push_back(move(hat));
     boat->translation = { 1,0,0 };
 
     auto fish = std::make_unique<Fish>(scene.get());
     fish->position = { 0,-.5,0 };
-
 
     auto water = std::make_unique<Water>(scene.get());
     water->scale = { 100,100,100 };
