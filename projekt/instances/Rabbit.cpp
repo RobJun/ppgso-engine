@@ -64,22 +64,22 @@ bool Rabbit::update(Scene& scene, float dt, glm::mat4 parentModelMatrix)
 		fox->children.push_back(move(chicken));
 
 		ppgso::KeyFrame<glm::vec3> firstPosition;
-		firstPosition.transformTo = { 10,0,15 };
+		firstPosition.transformTo = { 10,-0.2,15 };
 		firstPosition.time = 0;
 		fox->translateFrames.addFrame(firstPosition);
 
 		ppgso::KeyFrame<glm::vec3> finalPosition;
-		finalPosition.transformTo = position + glm::vec3{ 3,0,-3 };
+		finalPosition.transformTo = position + glm::vec3{ 3,-0.2,-3 };
 		finalPosition.time = 10;
 		finalPosition.interpolation = ppgso::LINEAR;
 		fox->translateFrames.addFrame(finalPosition);
 
-		finalPosition.transformTo = position + glm::vec3{ 3,0,-3 };
+		finalPosition.transformTo = position + glm::vec3{ 3,-0.2,-3 };
 		finalPosition.time = 15;
 		finalPosition.interpolation = ppgso::LINEAR;
 		fox->translateFrames.addFrame(finalPosition);
 
-		finalPosition.transformTo = { -20,0,25 };
+		finalPosition.transformTo = { -20,-0.2,25 };
 		finalPosition.time = 20;
 		finalPosition.interpolation = ppgso::LINEAR;
 		fox->translateFrames.addFrame(finalPosition);

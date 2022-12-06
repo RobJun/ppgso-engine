@@ -14,6 +14,7 @@
 std::unique_ptr<Scene> createScene9() {
     auto scene = std::make_unique<Scene>();
     scene->clearObjects();
+    scene->m_globalLight.size = { 90,90 };
     scene->m_globalLight.direction = { 0,-1,1 };
     scene->m_globalLight.ambient = 1.f;
     scene->m_globalLight.diffuse = 0.7f;
@@ -55,7 +56,6 @@ std::unique_ptr<Scene> createScene9() {
 
     auto zem = std::make_unique<Plane>(scene.get());
     zem->scale = { 90, 90, 90 };
-
 
     auto men = std::make_unique<Men>(scene.get());
     men->scale = { 0.8,0.8,0.8 };

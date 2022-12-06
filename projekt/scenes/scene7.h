@@ -18,6 +18,7 @@ std::unique_ptr<Scene> createScene7() {
     auto scene = std::make_unique<Scene>();
     scene->clearObjects();
     scene->m_globalLight.direction = { 0,-1,1 };
+    scene->m_globalLight.size = { 100,100};
     scene->m_globalLight.ambient = 1.f;
     scene->m_globalLight.diffuse = 0.7f;
     scene->m_globalLight.specular = 0.05f;
@@ -28,10 +29,10 @@ std::unique_ptr<Scene> createScene7() {
     auto camera = std::make_unique<CurveCamera>(60.0f, 1.0f, 0.1f, 100.0f);
     //camera->position = { 18.057,5.f,-59.0985 };
     std::vector<glm::vec3> controlPoints = {
-        {18.057,5.f,-59.0985},
-        { -32.69 , 5, -52.8 },
-        {0, 5, -26.8 },
-        { 0., 5, 0 }
+        {18.057,4.f,-59.0985},
+        { -32.69 , 4, -52.8 },
+        {0, 4, -26.8 },
+        { 0., 4, 0 }
     };
     camera->controlPoints.push_back(controlPoints);
     camera->maxTime.push_back(30);

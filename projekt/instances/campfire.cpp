@@ -56,7 +56,7 @@ Campfire::Campfire(Scene* scene)
 	particles->particleLifeSpan = 10;
 	children.push_back(move(particles));
 
-	lightIndex = scene->generatePointLight(glm::vec3{ 0,1,0 }, glm::vec3{ 1.f,.4f,0.f }, glm::vec3{ 1,0,0.5 }, glm::vec3{0.32, 0.09, 1});
+	lightIndex = scene->generatePointLight(glm::vec3{ 0,1,0 }, glm::vec3{ 1.f,1.f,1.f }, glm::vec3{ 1,0.8,0.5 }, glm::vec3{ 0.045, 0.0075, 1});
 	scene->enableLight_point(lightIndex);
 }
 
@@ -64,7 +64,7 @@ bool Campfire::update(Scene& scene, float dt, glm::mat4 parentModelMatrix)
 {
 	generateModelMatrix();
 	modelMatrix = parentModelMatrix * modelMatrix;
-	scene.pointLights[lightIndex]->position = position + glm::vec3{0,1,0};
+	scene.pointLights[lightIndex]->position = position + glm::vec3{0,1.,0};
 	for (auto& ch : children) {
 		ch->update(scene, dt, modelMatrix);
 	}

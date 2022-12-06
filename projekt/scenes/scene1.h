@@ -23,8 +23,9 @@
 std::unique_ptr<Scene> createScene1() {
     auto scene = std::make_unique<Scene>();
     scene->clearObjects();
+    scene->m_globalLight.size = { 60,60 };
     scene->m_globalLight.direction = { 0,-1,1 };
-    scene->m_globalLight.ambient = 1.f;
+    scene->m_globalLight.ambient = 0.7f;
     scene->m_globalLight.diffuse = 0.7f;
     scene->m_globalLight.specular = 0.05f;
     scene->m_globalLight.color = { 1,1,1 };
@@ -134,13 +135,13 @@ std::unique_ptr<Scene> createScene1() {
     plane->children.push_back(move(campfire));
 
 
-    auto gen = std::make_unique<Generator<Tree1, Tree3,Tree2,Bush>>(scene.get(), 65, &RectangelGenShape(100, 40), tranformTrees);
+    auto gen = std::make_unique<Generator<Tree1, Tree3,Tree2,Bush>>(scene.get(), 55, &RectangelGenShape(100, 40), tranformTrees);
     gen->position = { 0,0,40 };
     
-    auto trava_kvety = std::make_unique<Generator<Grass, Flower, Mushroom>>(scene.get(), 60, &RectangelGenShape(60,60));
+    auto trava_kvety = std::make_unique<Generator<Grass, Flower, Mushroom>>(scene.get(), 50, &RectangelGenShape(60,60));
 
 
-    auto gen2 = std::make_unique<Generator<Tree1, Tree3,Bush,Tree2>>(scene.get(), 60, &RectangelGenShape(40,100),tranformTrees);
+    auto gen2 = std::make_unique<Generator<Tree1, Tree3,Bush,Tree2>>(scene.get(), 50, &RectangelGenShape(40,100),tranformTrees);
     gen2->position = { -40,0,-5 };
 
     auto gen3 = std::make_unique<Generator<Tree1, Tree3, Bush, Tree2>>(scene.get(), 30, &RectangelGenShape(10, 100), tranformTrees);

@@ -85,7 +85,7 @@ float ShadowCalculation(sampler2D shadowMap, vec3 lighDir,vec3 normal)
     // get depth of current fragment from light's perspective
     float currentDepth = projCoords.z;
     // check whether current frag pos is in shadow
-    float bias = max(0.025 * 1.0 - dot(lighDir,normal),0.025);
+    float bias = max(0.005 * 1.0 - dot(lighDir,normal),0.0025);
     float shadow = currentDepth > closestDepth+bias  ? 1.0 : 0.0;
 
     //return 0.0;

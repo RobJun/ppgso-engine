@@ -80,17 +80,17 @@ bool Apple::update(Scene& scene, float dt, glm::mat4 parentModelMatrix)
 		rabbit->translateFrames.addFrame(firstPosition);
 
 		ppgso::KeyFrame<glm::vec3> finalPosition;
-		finalPosition.transformTo = position + glm::vec3{-1,0.3,1};
+		finalPosition.transformTo = position + glm::vec3{-1,0.1,1};
 		finalPosition.time = 5;
 		finalPosition.interpolation = ppgso::LINEAR;
 		rabbit->translateFrames.addFrame(finalPosition);
 
-		finalPosition.transformTo = position + glm::vec3{ -1,0.3,1 };
+		finalPosition.transformTo = position + glm::vec3{ -1,0.1,1 };
 		finalPosition.time = 20;
 		finalPosition.interpolation = ppgso::LINEAR;
 		rabbit->translateFrames.addFrame(finalPosition);
 
-		finalPosition.transformTo = { -20,0.3,25 };
+		finalPosition.transformTo = { -20,0.1,25 };
 		finalPosition.time = 23;
 		finalPosition.interpolation = ppgso::LINEAR;
 		rabbit->translateFrames.addFrame(finalPosition);

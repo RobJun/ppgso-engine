@@ -21,6 +21,7 @@ std::unique_ptr<Scene> createScene6() {
     auto scene = std::make_unique<Scene>();
     scene->clearObjects();
     scene->m_globalLight.direction = { 0,-1,1 };
+    scene->m_globalLight.size = { 40,40 };
     scene->m_globalLight.ambient = 1.f;
     scene->m_globalLight.diffuse = 0.7f;
     scene->m_globalLight.specular = 0.05f;

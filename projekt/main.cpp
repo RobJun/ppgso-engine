@@ -19,7 +19,6 @@
 #include "scenes/scene1.h"
 #include "scenes/scene2.h"
 #include "scenes/scene6.h"
-#include "scenes/scene8.h"
 #include "scenes/scene9.h"
 #include "scenes/scene7.h"
 
@@ -199,11 +198,11 @@ private:
         }
 #if DEBUG_SHADOW_MAPS
         shader_debug.use();
-        shader_debug.setUniform("near_plane", preloadedScenes[currentScene]->spotLights[0]->near_plane);
-        shader_debug.setUniform("far_plane", preloadedScenes[currentScene]->spotLights[0]->far_plane);
+        shader_debug.setUniform("near_plane", preloadedScenes[currentScene]->m_globalLight.near_plane);
+        shader_debug.setUniform("far_plane", preloadedScenes[currentScene]->m_globalLight.far_plane);
         glActiveTexture(GL_TEXTURE0);
         //glBindTexture(GL_TEXTURE_2D, preloadedScenes[currentScene]->m_globalLight.depthMap.getTexture());
-        glBindTexture(GL_TEXTURE_2D, preloadedScenes[currentScene]->spotLights[1]->depthMap.getTexture());
+        glBindTexture(GL_TEXTURE_2D, preloadedScenes[currentScene]->m_globalLight.depthMap.getTexture());
         renderQuad();
 #else    
         glViewport(0, 0, width, height);
@@ -326,7 +325,7 @@ private:
 
 int main() {
     // Initialize our window
-    OurWindow window = {800,16/9 };
+    OurWindow window = {900,16/9 };
     std::cout << "Loading Scene 1" << std::endl;
     window.preloadedScenes.push_back(move(createScene1()));
     std::cout << "Loading Scene 2" << std::endl;
